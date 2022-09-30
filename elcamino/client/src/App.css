@@ -51,9 +51,9 @@
   align-items: center;
   min-height: 3%;
   max-height: 7%;
-  background-color: #282c34;
+  background-color: #2774ae;
   font-size: calc(10px + 1vmin);
-  color: #343579;
+  color: #dde5ed;
   text-align: center;
 }
 
@@ -62,7 +62,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:#282c34;
+  background-color:#2774ae;
   ;
   
 }

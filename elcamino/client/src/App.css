@@ -51,9 +51,9 @@
   align-items: center;
   min-height: 3%;
   max-height: 7%;
-  background-color: #2774ae;
+  background-color: #dde5ed;
   font-size: calc(10px + 1vmin);
-  color: #dde5ed;
+  color: #2774ae;
   text-align: center;
 }
 
@@ -62,9 +62,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:#2774ae;
-  ;
-  
+  background-color:#dde5ed;
 }
 
 .menuItems li {
@@ -73,14 +71,14 @@
 
 .menuItems li a {
   display: block;
-  color: white;
+  color: #2774ae;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .menuItems li a:hover {
-  background-color: rgb(117, 115, 115);
+  background-color: #d4ecff;
 }
 
 .OptionGrid{

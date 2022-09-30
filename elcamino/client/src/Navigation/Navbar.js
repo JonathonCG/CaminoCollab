@@ -1,12 +1,12 @@
 import '../App.css';
-import claytonwhite from '../Graphics/claytonwhite.svg';
+import clayton from '../Graphics/clayton.svg';
 
 export  function Navbar() {
   return (
     <div className="Navbar">
       <div>
         <a href='https://claytoncountyga.gov'>
-          <img src={claytonwhite} alt='County Logo' />
+          <img src={clayton} alt='County Logo' />
         </a>
       </div>
       <ul className="menuItems">

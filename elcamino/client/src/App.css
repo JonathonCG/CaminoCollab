@@ -1,4 +1,45 @@
+.Navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 3%;
+  max-height: 7%;
+  background-color: #2774ae;
+  font-size: calc(10px + 1vmin);
+  color: #dde5ed;
+  text-align: center;
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-bottom: 4px;
+  position: fixed;
+}
+
+.menuItems {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#2774ae;
+}
+
+.menuItems li {
+  float: left;
+}
+
+.menuItems li a {
+  display: block;
+  color: #dde5ed;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menuItems li a:hover {
+  background-color: #468ec6;
+}
+
 .App {
+  padding: 80px;
   text-align: center;
   background-color: #c2c2c2;
   min-height: 100vh;
@@ -23,13 +64,6 @@
 
 .App-header {
   
-  
-  
-  
-  
-  
-  
-  
 }
 
 .App-link {
@@ -43,42 +77,6 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.Navbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  min-height: 3%;
-  max-height: 7%;
-  background-color: #dde5ed;
-  font-size: calc(10px + 1vmin);
-  color: #2774ae;
-  text-align: center;
-}
-
-.menuItems {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color:#dde5ed;
-}
-
-.menuItems li {
-  float: left;
-}
-
-.menuItems li a {
-  display: block;
-  color: #2774ae;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.menuItems li a:hover {
-  background-color: #d4ecff;
 }
 
 .OptionGrid{

@@ -1,7 +1,7 @@
 import '../App.css';
-import clayton from '../Graphics/clayton.svg';
+import clayton from '../Graphics/claytonwhite.svg';
 
-export  function Navbar() {
+export function Navbar() {
   return (
     <div className="Navbar">
       <div>

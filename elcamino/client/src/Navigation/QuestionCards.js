@@ -25,9 +25,9 @@ export function Cards() {
                         className="questionButtons" //CSS class
                         //onClick function that changes the state to the ID of the question displayed.
                         onClick={()=>{
-                            const paramID = '/nextsteps/' + Questions[cardList].nextPage;
+                            const paramID = '/nextsteps/' + Questions[cardList].id;
                             console.log(Questions[cardList].nextPage);
-                            if(Questions[cardList].nextPage.includes('e')){
+                            if(Questions[cardList].endpage){
                                 return navigate(paramID);
                             }
                             else{

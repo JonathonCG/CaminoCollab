@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Questions, QuestionGroups } from './QuestionCardsInfo'
-import rightchevron from '../Graphics/32rightchevron.png';
+import rightchevron from '../Graphics/icons8-chevron-right-50.png';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -36,7 +36,7 @@ export function Cards() {
                            }}>
                         
                         <div className='Button_inline_image'><img src={Questions[cardList].icon}></img></div>
-                        <div className='Button_inline_text'>{Questions[cardList].questionText} {/*- to page {Questions[cardList].nextPage + 1}*/}</div>
+                        <div className='Button_inline_text'><h3>{Questions[cardList].questionText}</h3>{/*- to page {Questions[cardList].nextPage + 1}*/}</div>
                         <div className='Button_inline_icon'><img src={rightchevron}></img></div>
                     </button>
                 </li>

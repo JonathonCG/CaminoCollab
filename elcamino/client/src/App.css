@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #c2c2c2;
+  background-color: #dde5ed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,16 +45,21 @@
   }
 }
 
+
+.preinfo{
+  color: black;
+}
 .Navbar {
   width: 100%;
   display: flex;
   align-items: center;
   min-height: 3%;
   max-height: 7%;
-  background-color: #dde5ed;
+  background-color: #343579;
   font-size: calc(10px + 1vmin);
   color: #2774ae;
   text-align: center;
+  
 }
 
 .menuItems {
@@ -62,7 +67,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:#dde5ed;
+  background-color:#343579;
 }
 
 .menuItems li {
@@ -71,14 +76,14 @@
 
 .menuItems li a {
   display: block;
-  color: #2774ae;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .menuItems li a:hover {
-  background-color: #d4ecff;
+  background-color: #4c4d85;
 }
 
 .OptionGrid{
@@ -102,11 +107,15 @@ flex: 1;
   background-color: white;
   border: 1px solid transparent;
   border-radius: 4px;
-  color: #1b2a3f;
+  color: #343579;
   text-align: left;
   margin: calc(10px + 1vh);
   cursor: pointer;
   padding: 10px;
+  box-shadow: 10px 10px #343579;
+  transition: width .08s;
+  transition: background-color .5s;
+  transition: color .3s;
   
 }
 
@@ -116,7 +125,10 @@ ul {
 }
 
 .questionButtons:hover {
-  border: solid blue 1px;
+  border: solid #343579 1px;
+  width: 705px;
+  background-color: #b4b4e7;
+  color: white;
 }
 
 .questionButtons {
@@ -127,8 +139,8 @@ ul {
 
 .Button_inline_image{
   display: flex;
-  width:100px;
-  height:100px;
+  width:50px;
+  height:50px;
   flex-shrink: 0;
   padding: 6px;
   /* border: solid 1px purple; */
@@ -137,7 +149,7 @@ ul {
 .Button_inline_text{
   display: flex;
   width: calc(100% - 100px);
-  padding: 0 50px 0 10px;
+  padding: 0 100px 0 30px;
   /* background-color: green; */
   margin: auto;
   font-size: 25px;

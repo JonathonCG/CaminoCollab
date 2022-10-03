@@ -1,13 +1,14 @@
-import { TurnstoneSearch } from "../Searchbox"
-import { Cards } from "../Navigation/QuestionCards"
-import {AddressSearchResults} from '../Addressearch'
+import { TurnstoneSearch } from "../elements/Searchbox"
+import { Cards } from "../elements/QuestionCards"
+import { AddressSearchResults } from '../Addressearch'
+
 export function Home() {
     return (
     <div className="App">
     <div className="preinfo">
     <AddressSearchResults />
     <h1>Check your address</h1>
-    <p>Before starting, please check your address to verify that your project will take place in unencorporated clayton county</p>
+    <p>Before you begin, verify that your address is in Unincorporated Clayton County</p>
     <hr />
     </div>
     <TurnstoneSearch /> 

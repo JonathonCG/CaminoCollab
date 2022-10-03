@@ -79,50 +79,11 @@
   }
 }
 
-<<<<<<< HEAD
-=======
 
 .preinfo{
-  color: black;
-}
-.Navbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  min-height: 3%;
-  max-height: 7%;
-  background-color: #343579;
-  font-size: calc(10px + 1vmin);
   color: #2774ae;
-  text-align: center;
-  
 }
 
-.menuItems {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color:#343579;
-}
-
-.menuItems li {
-  float: left;
-}
-
-.menuItems li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.menuItems li a:hover {
-  background-color: #4c4d85;
-}
-
->>>>>>> d259c2baa95a93b471d9a3d7941dbd3283b18ed8
 .OptionGrid{
 /* background-color: red;   */
 max-width: 1600px;
@@ -144,12 +105,12 @@ flex: 1;
   background-color: white;
   border: 1px solid transparent;
   border-radius: 4px;
-  color: #343579;
+  /* color: #343579; */
   text-align: left;
   margin: calc(10px + 1vh);
   cursor: pointer;
   padding: 10px;
-  box-shadow: 10px 10px #343579;
+  box-shadow: 5px 5px #2774ae;
   transition: width .08s;
   transition: background-color .5s;
   transition: color .3s;
@@ -187,6 +148,7 @@ ul {
   display: flex;
   width: calc(100% - 100px);
   padding: 0 100px 0 30px;
+  color: #2774ae;
   /* background-color: green; */
   margin: auto;
   font-size: 25px;

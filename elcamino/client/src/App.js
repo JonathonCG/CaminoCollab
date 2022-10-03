@@ -1,10 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import {BasicExample} from './Searchbox';
-import {Cards} from './Navigation/QuestionCards';
 import { Route, Routes } from "react-router-dom"
-import { Home  } from "./Pages/Home"
-import { EndPage } from './Pages/EndPage';
+import { Home  } from "./pages/Home"
+import { EndPage } from './pages/EndPage';
 
 
 function App() {

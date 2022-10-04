@@ -1,5 +1,5 @@
 import '../App.css';
-import clayton from '../Graphics/claytonwhite.svg';
+import clayton from '../graphics/claytonwhite.svg';
 
 export function Navbar() {
   return (

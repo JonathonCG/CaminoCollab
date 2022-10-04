@@ -6,13 +6,13 @@ export function Home() {
     return (
     <div className="App">
     <div className="preinfo">
-    <AddressSearchRedirect />
+    
     <h1>Check your address</h1>
     <p>Before you begin, verify that your address is in Unincorporated Clayton County</p>
     <hr />
     </div>
     <TurnstoneSearch /> 
-     <Cards /> 
+    <Cards /> 
   </div> 
     )
 }

@@ -14,7 +14,7 @@ export function Cards() {
         
         <div className='OptionGrid'>
         {/* <p>Page: {value + 1} of {QuestionGroups.length}</p> */}
-        <button onClick={()=>setValue(0)}>Back to start</button>
+        <button className='returnbutton' onClick={()=>setValue(0)}>Back to start</button>
          <ul>{
             QuestionGroups[value].map(cardList=>( //Maps the QuestionGroups array
                 //Key to keep items organized per React rules
@@ -25,7 +25,7 @@ export function Cards() {
                         className="questionButtons" //CSS class
                         //onClick function that changes the state to the ID of the question displayed.
                         onClick={()=>{
-                            const paramID = '/nextsteps/id=:' + Questions[cardList].id;
+                            const paramID = '/nextsteps/' + Questions[cardList].id;
                             console.log(Questions[cardList].nextPage);
                             if(Questions[cardList].endpage){
                                 return navigate(paramID);

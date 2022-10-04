@@ -46,6 +46,7 @@
     font-size: calc(24px + 1vh);
     font-family: sans-serif;
     margin-top: 15px;
+    align-items: center;
     
   }
   #autocomplete-listbox {
@@ -55,7 +56,7 @@
     padding-left: 8px;
     color: black;
     transition: background-color 3s;
-    
+    align-items: center;
   }
   #autocomplete-listbox :hover{
     background-color: rgba(0, 0, 255, 0.212);

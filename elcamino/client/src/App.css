@@ -51,6 +51,72 @@
   background-color: #e5e5f7;
 }
 
+.centerdiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: black;
+}
+
+.addresssearchredirect{
+  background-color: white;
+  border-radius: 5px;
+  color: rgb(32, 51, 138);
+  padding: 1px 15px 1px 15px;
+  margin-top: 15px;
+}
+.inclayton{
+  color: green;
+}
+
+
+.endpageapp {
+  padding: 80px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: #e5e5f7;
+}
+
+#endpagecard{
+  background-color: #343579;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#endpagecard a {
+  color: white;
+}
+
+.returnbutton {
+  min-height: calc(20px + 1vh);
+  min-width: calc(120px + 3vh);
+  width: 100px;
+  /* align-items: center; */
+  background-color: rgb(32, 51, 138);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: left;
+  margin: calc(10px + 1vh);
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 5px 5px #2774ae;
+  transition: width .08s;
+  transition: background-color .5s;
+  transition: color .3s;
+}
+.returnbutton:hover{
+  background-color: white;
+  color:rgb(32, 51, 138);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

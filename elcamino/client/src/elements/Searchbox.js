@@ -28,7 +28,8 @@ export function TurnstoneSearch() {
         console.log('query is ---')
         console.log(query)
         console.log('search result is ---' + selectedResult);
-        setIsInClaytonCounty(query.withinname === undefined || query.withinname === null)
+        // setIsInClaytonCounty(query.withinname === undefined || query.withinname === null)
+        setIsInClaytonCounty(query.withinname)
         console.log('isInClaytonCounty is ---' + isInClaytonCounty);
         //<AddressSearchRedirect isInClaytonCounty={isInClaytonCounty}/>
       }
@@ -37,9 +38,13 @@ export function TurnstoneSearch() {
 
   
   return  (
-    <div>
+  <div>
+  <div className='centerdiv'>
   <Turnstone id="autocomplete" matchText={true} listbox={listbox}  typeahead={false} styles={styles} onSelect={onSelect}/>
+  </div>
+  <div className='addresssearchredirect'>
   <AddressSearchRedirect isInClaytonCounty={isInClaytonCounty} />
+  </div>
   </div>
   );
  }

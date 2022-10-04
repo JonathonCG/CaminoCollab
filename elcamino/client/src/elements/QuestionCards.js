@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Questions, QuestionGroups } from './QuestionCardsInfo'
-import rightchevron from '../Graphics/icons8-chevron-right-50.png';
+import rightchevron from '../graphics/icons8-chevron-right-50.png';
 import { useNavigate } from 'react-router-dom';
 
 

@@ -1,9 +1,8 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom"
-import { Home } from "./Pages/Home"
-import { Wizard } from "./Pages/Wizard"
-import { EndPage } from './Pages/EndPage';
-import { Wizard } from './Pages/Wizard'
+import { Home } from "./pages/Home"
+import { Wizard } from "./pages/Wizard"
+import { EndPage } from './pages/EndPage';
 
 function App() {
   return <Routes>

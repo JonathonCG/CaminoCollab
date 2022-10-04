@@ -116,6 +116,31 @@
   transition: background-color .5s;
   transition: color .3s;
 }
+
+.continuebutton{
+  min-height: calc(20px + 1vh);
+  min-width: calc(120px + 3vh);
+  width: 500px;
+  /* align-items: center; */
+  background-color: rgb(32, 51, 138);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: left;
+  margin: calc(10px + 1vh);
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 5px 5px #2774ae;
+  transition: width .08s;
+  transition: background-color .5s;
+  transition: color .3s;
+}
+
+.continuebutton:hover{
+  background-color: white;
+  color:rgb(32, 51, 138);
+  border:
+}
 .returnbutton:hover{
   background-color: white;
   color:rgb(32, 51, 138);

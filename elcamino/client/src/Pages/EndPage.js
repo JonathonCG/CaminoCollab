@@ -14,7 +14,7 @@ export function EndPage() {
           <h2>We can help with this. The resources you are looking for are available on Munis</h2>
           <h3><a href={Questions[id].endpagelink} target='blank'>Click here to view the permit you need on Munis</a></h3>
         </div>
-        <div><button className="returnbutton" onClick={() => {return navigate('/')}}>Return to the homepage <img src=''></img></button></div>
+        <div><button className="continuebutton" onClick={() => {return navigate('/')}}>Return to the homepage <img src=''></img></button></div>
     </div>
     )
 }

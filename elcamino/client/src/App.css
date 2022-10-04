@@ -1,5 +1,5 @@
 .Navbar {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
   min-height: 3%;
@@ -44,7 +44,7 @@ p {
 .App {
   padding: 20px;
   text-align: center;
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,10 +128,10 @@ p {
   width: 500px;
   /* align-items: center; */
   background-color: rgb(32, 51, 138);
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   border-radius: 4px;
   color: #ffffff;
-  text-align: left;
+  text-align: center;
   margin: calc(10px + 1vh);
   cursor: pointer;
   padding: 10px;
@@ -141,10 +141,13 @@ p {
   transition: color .3s;
 }
 
+.logo{
+  max-width: 400px;
+}
 .continuebutton:hover{
   background-color: white;
   color:rgb(32, 51, 138);
-  border:
+  border: 3px solid rgb(32, 51, 138)
 }
 .returnbutton:hover{
   background-color: white;

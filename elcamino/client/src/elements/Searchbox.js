@@ -1,8 +1,7 @@
-import React,{useCallback, useState} from 'react'
+import React,{useCallback, useRef, useState} from 'react'
 import Turnstone from 'turnstone'
 import { AddressSearchRedirect } from '../AddressSearchRedirect'
 import styles from './SearchBox.css'
-
 
 // const styles = {
   // input : 
@@ -22,6 +21,10 @@ export function TurnstoneSearch() {
   // selected result is the name of the database field that the search returned
   // query
   const [isInClaytonCounty, setIsInClaytonCounty] = useState(0);
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
   const onSelect = useCallback(
     (query, selectedResult) => {
       if (query !== undefined && query !== null) {
@@ -39,10 +42,10 @@ export function TurnstoneSearch() {
   
   return  (
   <div>
-  <div className='centerdiv'>
-  <Turnstone id="autocomplete" matchText={true} listbox={listbox}  typeahead={false} styles={styles} onSelect={onSelect}/>
+  <div className='centerdiv' onClick={handleClick}>
+  <Turnstone id="autocomplete" matchText={true} listbox={listbox}  typeahead={false} styles={styles} onSelect={onSelect} />
   </div>
-  <div className='addresssearchredirect'>
+  <div className='addresssearchredirect' ref={ref}>
   <AddressSearchRedirect isInClaytonCounty={isInClaytonCounty} />
   </div>
   </div>

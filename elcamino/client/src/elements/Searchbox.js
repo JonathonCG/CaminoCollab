@@ -16,8 +16,13 @@ const listbox = {
       .then(res => res.json()),
 }
 
+
 export function TurnstoneSearch() {
-  return  (<Turnstone id="autocomplete" matchText={true} listbox={listbox}  typeahead={false} styles={styles} onSelect/>);
+  return  (
+    <>
+      <Turnstone id="autocomplete" matchText={true} listbox={listbox} typeahead={false} styles={styles} />
+    </>
+  );
  }
 
 // const styles = {

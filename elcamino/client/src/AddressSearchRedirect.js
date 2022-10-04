@@ -59,7 +59,7 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
         return (
             <div>
         <p className='notinclayton'>You are in Forest Park</p>
-        <button className="continuebutton" onClick={() => {return navigate('https://www.jonesboroga.com/OfficeOfTheCityManager.aspx')}}><h2>Continue to the Permit Wizard</h2></button>https://www.jonesboroga.com/OfficeOfTheCityManager.aspx
+        <button className="continuebutton" onClick={() => {return navigate('https://www.forestparkga.gov/')}}><h2>Go to the City of Forest Park website</h2></button>https://www.jonesboroga.com/OfficeOfTheCityManager.aspx
             </div>
         );
     }

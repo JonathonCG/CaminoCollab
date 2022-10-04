@@ -11,8 +11,8 @@ export function EndPage() {
      <div className="endpageapp">
         <div id="endpagecard">
           <h1>{Questions[id].questionText}</h1>
-          <h2>We can help with this. The resources you are looking for are available on Munis</h2>
-          <h3><a href={Questions[id].endpagelink} target='blank'>Click here to view the permit you need on Munis</a></h3>
+          <h2>We can help with this. The resources you are looking for are available on EnerGov</h2>
+          <h3><a href={Questions[id].endpagelink} target='blank'>Click here to view the permit you need on EnerGov</a></h3>
         </div>
         <div><button className="continuebutton" onClick={() => {return navigate('/')}}>Return to the homepage <img src=''></img></button></div>
     </div>

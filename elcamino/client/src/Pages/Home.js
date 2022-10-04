@@ -12,7 +12,6 @@ export function Home() {
     <hr />
     </div>
     <TurnstoneSearch /> 
-    <Cards />
   </div> 
     )
 }

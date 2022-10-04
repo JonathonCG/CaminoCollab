@@ -42,7 +42,7 @@ export function Cards() {
                 </li>
                 ))
          }</ul>  
-         <button className='returnbutton' onClick={()=>setValue(0)}>Back to start</button>
+         <button className='returnbutton' onClick={() => {return navigate('/')}}>Back to start</button>
          </div>
          )   
 }

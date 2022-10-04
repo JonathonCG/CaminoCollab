@@ -14,7 +14,7 @@ export function Cards() {
         
         <div className='OptionGrid'>
         {/* <p>Page: {value + 1} of {QuestionGroups.length}</p> */}
-        <button className='returnbutton' onClick={()=>setValue(0)}>Back to start</button>
+        
          <ul>{
             QuestionGroups[value].map(cardList=>( //Maps the QuestionGroups array
                 //Key to keep items organized per React rules
@@ -42,6 +42,7 @@ export function Cards() {
                 </li>
                 ))
          }</ul>  
+         <button className='returnbutton' onClick={()=>setValue(0)}>Back to start</button>
          </div>
          )   
 }

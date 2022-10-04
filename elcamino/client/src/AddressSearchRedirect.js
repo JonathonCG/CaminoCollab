@@ -28,7 +28,11 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
 
     if(isInClaytonCounty === 'JONESBORO'){
     return ( 
+        <div>
         <p className='notinclayton'>You are in Jonesboro</p>
+        <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
+        <a className="" href='https://www.jonesboroga.com/OfficeOfTheCityManager.aspx' target='blank'><h2>Go to the City of Jonesboro website</h2></a>
+            </div>
         );
     }
     else if(isInClaytonCounty === 'LOVEJOY'){
@@ -53,7 +57,10 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
     }
     else if(isInClaytonCounty === 'FOREST PARK'){
         return (
+            <div>
         <p className='notinclayton'>You are in Forest Park</p>
+        <button className="continuebutton" onClick={() => {return navigate('https://www.jonesboroga.com/OfficeOfTheCityManager.aspx')}}><h2>Continue to the Permit Wizard</h2></button>https://www.jonesboroga.com/OfficeOfTheCityManager.aspx
+            </div>
         );
     }
     else if(isInClaytonCounty === 'UNINCORPORATED'){

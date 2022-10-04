@@ -14,6 +14,9 @@
   /* position: fixed; */
 }
 
+p {
+  color:#2774ae;
+}
 .menuItems {
   list-style-type: none;
   margin: 0;
@@ -66,13 +69,15 @@
   color: rgb(32, 51, 138);
   padding: 1px 15px 1px 15px;
   margin-top: 15px;
+  animation: 
 }
 .inclayton{
-  color: green;
+  color: #6ba539;
+  
 }
 
 .notinclayton{
-  color: red;
+  color: #ee2737;
 }
 
 .endpageapp {

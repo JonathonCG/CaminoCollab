@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Questions, QuestionGroups } from './QuestionCardsInfo'
-import rightchevron from '../graphics/icons8-chevron-right-50.png';
+import rightchevron from '../Graphics/icons8-chevron-right-50.png';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -25,7 +25,7 @@ export function Cards() {
                         className="questionButtons" //CSS class
                         //onClick function that changes the state to the ID of the question displayed.
                         onClick={()=>{
-                            const paramID = '/nextsteps/' + Questions[cardList].id;
+                            const paramID = '/nextsteps/id=:' + Questions[cardList].id;
                             console.log(Questions[cardList].nextPage);
                             if(Questions[cardList].endpage){
                                 return navigate(paramID);

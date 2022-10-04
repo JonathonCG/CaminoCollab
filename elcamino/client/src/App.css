@@ -11,7 +11,7 @@
   padding-top: 6px;
   padding-left: 6px;
   padding-bottom: 4px;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .menuItems {
@@ -41,7 +41,6 @@
 .App {
   padding: 80px;
   text-align: center;
-  background-color: #dde5ed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -49,6 +48,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-color: #e5e5f7;
 }
 
 .App-logo {
@@ -126,7 +126,7 @@ ul {
   border: solid #343579 1px;
   width: 705px;
   background-color: #b4b4e7;
-  color: white;
+  
 }
 
 .questionButtons {

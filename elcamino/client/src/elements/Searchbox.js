@@ -1,5 +1,6 @@
-import React,{useState} from 'react'
+import React,{useCallback, useState} from 'react'
 import Turnstone from 'turnstone'
+import { AddressSearchRedirect } from '../AddressSearchRedirect'
 import styles from './SearchBox.css'
 
 
@@ -16,8 +17,31 @@ const listbox = {
       .then(res => res.json()),
 }
 
+
 export function TurnstoneSearch() {
-  return  (<Turnstone id="autocomplete" matchText={true} listbox={listbox}  typeahead={false} styles={styles} onSelect/>);
+  // selected result is the name of the database field that the search returned
+  // query
+  const [isInClaytonCounty, setIsInClaytonCounty] = useState(0);
+  const onSelect = useCallback(
+    (query, selectedResult) => {
+      if (query !== undefined && query !== null) {
+        console.log('query is ---')
+        console.log(query)
+        console.log('search result is ---' + selectedResult);
+        setIsInClaytonCounty(query.withinname === undefined || query.withinname === null)
+        console.log('isInClaytonCounty is ---' + isInClaytonCounty);
+        //<AddressSearchRedirect isInClaytonCounty={isInClaytonCounty}/>
+      }
+    }, 
+  )
+
+  
+  return  (
+    <div>
+  <Turnstone id="autocomplete" matchText={true} listbox={listbox}  typeahead={false} styles={styles} onSelect={onSelect}/>
+  <AddressSearchRedirect isInClaytonCounty={isInClaytonCounty} />
+  </div>
+  );
  }
 
 // const styles = {

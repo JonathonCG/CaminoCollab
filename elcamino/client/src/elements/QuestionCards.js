@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Questions, QuestionGroups } from './QuestionCardsInfo'
-import rightchevron from '../graphics/icons8-chevron-right-50.png';
+import rightchevron from '../Graphics/icons8-chevron-right-50.png';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -14,7 +14,7 @@ export function Cards() {
         
         <div className='OptionGrid'>
         {/* <p>Page: {value + 1} of {QuestionGroups.length}</p> */}
-        <button onClick={()=>setValue(0)}>Back to start</button>
+        
          <ul>{
             QuestionGroups[value].map(cardList=>( //Maps the QuestionGroups array
                 //Key to keep items organized per React rules
@@ -42,6 +42,7 @@ export function Cards() {
                 </li>
                 ))
          }</ul>  
+         <button className='returnbutton' onClick={()=>setValue(0)}>Back to start</button>
          </div>
          )   
 }

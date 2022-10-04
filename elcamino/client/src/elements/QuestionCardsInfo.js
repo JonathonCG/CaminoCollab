@@ -1,30 +1,30 @@
-import _24rightchevron from '../graphics/24rightchevron.png'
-import _32rightchevron from '../graphics/32rightchevron.png'
-import _clayconn from '../graphics/clayconn.svg'
-import _clayton from '../graphics/clayton.svg'
-import _claytonwhite from '../graphics/claytonwhite.svg'
-import _add_new from '../graphics/icons8-add-new-50.png'
-import _building_with_rooftop_terrace from '../graphics/icons8-building-with-rooftop-terrace-50.png'
-import _city from '../graphics/icons8-city-50.png'
-import _company from '../graphics/icons8-company-50.png'
-import _contract from '../graphics/icons8-contract-50.png'
-import _foundation from '../graphics/icons8-foundation-50.png'
-import _hammer from '../graphics/icons8-hammer-50.png'
-import _house from '../graphics/icons8-house-50.png'
-import _jackhammer from '../graphics/icons8-jackhammer-50.png'
-import _jigsaw from '../graphics/icons8-jigsaw-50.png'
-import _paint_brush from '../graphics/icons8-paint-brush-50.png'
-import _paint_roller from '../graphics/icons8-paint-roller-50.png'
-import _pallet from '../graphics/icons8-pallet-50.png'
-import _plus from '../graphics/icons8-plus-50.png'
-import _prefab_house from '../graphics/icons8-prefab-house-50.png'
-import _roof_tiles from '../graphics/icons8-roof-tiles-50.png'
-import _roofing from '../graphics/icons8-roofing-50.png'
-import _sawing_man from '../graphics/icons8-sawing-man-50.png'
-import _small_business from '../graphics/icons8-small-business-50.png'
-import _tools from '../graphics/icons8-tools-50.png'
-import _logo from '../graphics/logo.svg'
-import _rightchevron from '../graphics/rightchevron.png'
+import _24rightchevron from '../Graphics/24rightchevron.png'
+import _32rightchevron from '../Graphics/32rightchevron.png'
+import _clayconn from '../Graphics/clayconn.svg'
+import _clayton from '../Graphics/clayton.svg'
+import _claytonwhite from '../Graphics/claytonwhite.svg'
+import _add_new from '../Graphics/icons8-add-new-50.png'
+import _building_with_rooftop_terrace from '../Graphics/icons8-building-with-rooftop-terrace-50.png'
+import _city from '../Graphics/icons8-city-50.png'
+import _company from '../Graphics/icons8-company-50.png'
+import _contract from '../Graphics/icons8-contract-50.png'
+import _foundation from '../Graphics/icons8-foundation-50.png'
+import _hammer from '../Graphics/icons8-hammer-50.png'
+import _house from '../Graphics/icons8-house-50.png'
+import _jackhammer from '../Graphics/icons8-jackhammer-50.png'
+import _jigsaw from '../Graphics/icons8-jigsaw-50.png'
+import _paint_brush from '../Graphics/icons8-paint-brush-50.png'
+import _paint_roller from '../Graphics/icons8-paint-roller-50.png'
+import _pallet from '../Graphics/icons8-pallet-50.png'
+import _plus from '../Graphics/icons8-plus-50.png'
+import _prefab_house from '../Graphics/icons8-prefab-house-50.png'
+import _roof_tiles from '../Graphics/icons8-roof-tiles-50.png'
+import _roofing from '../Graphics/icons8-roofing-50.png'
+import _sawing_man from '../Graphics/icons8-sawing-man-50.png'
+import _small_business from '../Graphics/icons8-small-business-50.png'
+import _tools from '../Graphics/icons8-tools-50.png'
+import _logo from '../Graphics/logo.svg'
+import _rightchevron from '../Graphics/rightchevron.png'
 
 export const Questions = [
     {questionText : 'This project is for a Home', 
@@ -35,7 +35,7 @@ export const Questions = [
     endpagelink : '',
     price : '',
     addinfo : '',
-    endpage : true},
+    endpage : false},
     {questionText : 'This project is for a Business', 
     id : 1, 
     nextPage : 6,
@@ -66,7 +66,7 @@ export const Questions = [
     {questionText : 'New Dwelling Construction', 
     id : 4, 
     nextPage : 2,
-    icon : _house,
+    icon : _sawing_man,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -84,7 +84,7 @@ export const Questions = [
     {questionText : 'Addition', 
     id : 6, 
     nextPage : 3,
-    icon : _house,
+    icon : _prefab_house,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -93,7 +93,7 @@ export const Questions = [
     {questionText : 'Interior Alteration', 
     id : 7, 
     nextPage : 3,
-    icon : _house,
+    icon : _tools,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -102,7 +102,7 @@ export const Questions = [
     {questionText : 'Deck', 
     id : 8, 
     nextPage : 3,
-    icon : _house,
+    icon : _pallet,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -129,7 +129,7 @@ export const Questions = [
     {questionText : 'Solar Panels', 
     id : 11, 
     nextPage : 5,
-    icon : _house,
+    icon : _roofing,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -138,7 +138,7 @@ export const Questions = [
     {questionText : 'Shed or pole barn', 
     id : 12, 
     nextPage : 3,
-    icon : _house,
+    icon : _prefab_house,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -170,7 +170,7 @@ export const Questions = [
     endpagelink : '',
     price : '',
     addinfo : '',
-    endpage : false},
+    endpage : true},
     {questionText : 'Fireplace',
     id : 16, 
     nextPage : 3,
@@ -179,7 +179,7 @@ export const Questions = [
     endpagelink : '',
     price : '',
     addinfo : '',
-    endpage : false},
+    endpage : true},
     {questionText : 'Gazebo',
     id : 17, 
     nextPage : 3,
@@ -188,7 +188,7 @@ export const Questions = [
     endpagelink : '',
     price : '',
     addinfo : '',
-    endpage : false},
+    endpage : true},
     {questionText : 'Pool House',
     id : 18, 
     nextPage : 3,
@@ -197,7 +197,7 @@ export const Questions = [
     endpagelink : '',
     price : '',
     addinfo : '',
-    endpage : false},
+    endpage : true},
     {questionText : 'Pellet Stove',
     id : 19, 
     nextPage : 3,
@@ -255,7 +255,7 @@ export const Questions = [
     {questionText : 'Change of Occupancy',
     id : 25, 
     nextPage : 3,
-    icon : _house,
+    icon : _company,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -264,7 +264,7 @@ export const Questions = [
     {questionText : 'Commercial Alterations',
     id : 26, 
     nextPage : 3,
-    icon : _house,
+    icon : _tools,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -273,7 +273,7 @@ export const Questions = [
     {questionText : 'Commercial Additions',
     id : 27, 
     nextPage : 3,
-    icon : _house,
+    icon : _hammer,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -282,16 +282,16 @@ export const Questions = [
     {questionText : 'New Commercial Building',
     id : 28, 
     nextPage : 3,
-    icon : _house,
+    icon : _city,
     endpagetext : '',
-    endpagelink : '',
+    endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/businessLicense/apply/business/149',
     price : '',
     addinfo : '',
-    endpage : false},
+    endpage : true},
     {questionText : 'Miscellaneous Commercial Permits',
     id : 29, 
     nextPage : 3,
-    icon : _house,
+    icon : _contract,
     endpagetext : '',
     endpagelink : '',
     price : '',

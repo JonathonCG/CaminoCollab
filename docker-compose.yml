@@ -13,7 +13,7 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
   server:
-    build: ./elcamino
+    build: ./elcamino/server
     ports: '3001:3001'
   client:
     build: ./elcamino/client

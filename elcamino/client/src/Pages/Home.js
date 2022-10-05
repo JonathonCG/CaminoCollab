@@ -17,7 +17,7 @@ export function Home() {
         <h2>Permit Assistant</h2>
         <hr ref={ref}/>
       </div>
-      {/* <p>Click and type through the following prompts to figure out what you need to do to get your permit</p> */}
+      {/* <p>Click and type through the following prompts to figure out what you need to do to obtain a permit</p> */}
         <p>Before you begin, type the address of concern to verify that it is in Unincorporated Clayton County.</p>
       <div onClick={handleClick}>
         <TurnstoneSearch /> 

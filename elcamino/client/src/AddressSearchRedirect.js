@@ -1,7 +1,4 @@
-import { defaults } from 'autoprefixer';
 import { useEffect, useRef, useState } from 'react';
-import turstone from 'turnstone'
-import { TurnstoneSearch } from './elements/Searchbox';
 import { useNavigate } from 'react-router-dom';
 import _rightchevron from './graphics/rightchevron.png'
 
@@ -27,49 +24,75 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
 
 
     if(isInClaytonCounty === 'JONESBORO'){
-    return ( 
-        <div>
-        <p className='notinclayton'>You are in Jonesboro</p>
-        <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
-        <a className="" href='https://www.jonesboroga.com/OfficeOfTheCityManager.aspx' target='blank'><h2>Go to the City of Jonesboro website</h2></a>
+        return ( 
+            <div>
+                <p className='notinclayton'>You are in Jonesboro</p>
+                <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
+                <a className="link" href='https://www.jonesboroga.com/OfficeOfTheCityManager.aspx'>
+                    <h2>Go to the City of Jonesboro website</h2>
+                </a>
             </div>
         );
     }
     else if(isInClaytonCounty === 'LOVEJOY'){
         return (
-        <p className='notinclayton'>You are in LOVEJOY</p>
+            <div>
+                <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
+                <a className="link" href='https://www.cityoflovejoy.com/936/Permits'>
+                    <h2>Go to the City of Lovejoy website</h2>
+                </a>
+            </div>
         );
     }
     else if(isInClaytonCounty === 'LAKE CITY'){
         return (
-        <p className='notinclayton'>You are in Lake City</p>
+            <div>
+                <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
+                <a className="link" href='https://lakecityga.net/departments-permitapplications.asp'>
+                    <h2>Go to the Lake City website</h2>
+                </a>
+            </div>
         );
     }
     else if(isInClaytonCounty === 'RIVERDALE'){
         return (
-        <p className='notinclayton'>You are in Riverdale</p>
+            <div>
+                <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
+                <a className="link" href='https://www.riverdalega.gov/470/Permitting-Services'>
+                    <h2>Go to City of Riverdale website</h2>
+                </a>
+            </div>
         );
     }
     else if(isInClaytonCounty === 'MORROW'){
         return (
-        <p className='notinclayton'>You are in Morrow</p>
+            <div>
+                <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
+                <a className="link" href='https://www.cityofmorrow.com/government-cityhall-permitsforms.asp'>
+                    <h2>Go to City of Morrow website</h2>
+                </a>
+            </div>
         );
     }
     else if(isInClaytonCounty === 'FOREST PARK'){
         return (
             <div>
-        <p className='notinclayton'>You are in Forest Park</p>
-        <button className="continuebutton" onClick={() => {return navigate('https://www.forestparkga.gov/')}}><h2>Go to the City of Forest Park website</h2></button>https://www.jonesboroga.com/OfficeOfTheCityManager.aspx
+                <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
+                <a className="link" href='https://www.forestparkga.gov/planning/page/permits-and-applications'>
+                    <h2>Go to the City of Forest Park website</h2>
+                </a>
             </div>
         );
     }
     else if(isInClaytonCounty === 'UNINCORPORATED'){
         return (
         <div className='addresssearchredirect'>
-        <h3 className='inclayton'>You are in Unincorporated Clayton County.</h3>
-        <p>We can direct where you need to go.</p>
-        <p>Please answer a few questions and you will be linked to either documentation or an application</p>
-        <button className="continuebutton" onClick={() => {return navigate('/Wizard')}}><h2>Continue to the Permit Wizard</h2></button>
+            <h3 className='inclayton'>You are in Unincorporated Clayton County.</h3>
+            <p>We can direct where you need to go.</p>
+            <p>Please answer a few questions and you will be linked to either documentation or an application</p>
+            <button className="continuebutton" onClick={() => {return navigate('/Wizard')}}>
+                <h2>Continue to the Permit Wizard</h2>
+            </button>
         </div>
 
         );

@@ -11,7 +11,8 @@
   padding-top: 6px;
   padding-left: 6px;
   padding-bottom: 4px;
-  /* position: fixed; */
+  position: fixed;
+  width: 100%
 }
 
 p {
@@ -42,9 +43,9 @@ p {
 }
 
 .App {
-  padding: 20px;
+  padding: 100px;
   text-align: center;
-  min-height: 150vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +61,7 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .addresssearchredirect{
@@ -69,8 +70,8 @@ p {
   color: rgb(32, 51, 138);
   padding: 1px 15px 1px 15px;
   margin-top: 15px;
-  animation: 
 }
+
 .inclayton{
   color: #6ba539;
   
@@ -274,9 +275,9 @@ ul {
   width: 1px;
 }
 
-
-
-
+.link {
+  color: #343579
+}
 
 
 

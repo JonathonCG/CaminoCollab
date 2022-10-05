@@ -10,18 +10,18 @@ export function Home() {
   const handleClick = () => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
   };
-    return (
+  return (
     <div className="App">
-    <div className="preinfo">
-    <h1>Community Development's Permitting Wizard</h1>
-    <img className="logo" src={commdevlogo} alt='alt text'></img>
-    
-    <hr ref={ref}/>
-    </div>
-    <p>Before you begin, verify that your address is in Unincorporated Clayton County.</p>
-    <div onClick={handleClick}>
-    <TurnstoneSearch /> 
-    </div>
-  </div> 
-    )
+      <div className="preinfo">
+        <img width="200" src={commdevlogo} alt='alt text'></img>
+        <h2>Clayton County Permits</h2>
+        <hr ref={ref}/>
+      </div>
+      {/* <p>Click and type through the following prompts to figure out what you need to do to get your permit</p> */}
+        <p>Before you begin, type the address of concern to verify that it is in Unincorporated Clayton County.</p>
+      <div onClick={handleClick}>
+        <TurnstoneSearch /> 
+      </div>
+    </div> 
+  )
 }

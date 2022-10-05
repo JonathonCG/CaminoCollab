@@ -29,7 +29,7 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
                 <p className='notinclayton'>This address is within Morrow City Limits</p>
                 <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
                 <a className="link" href='https://www.jonesboroga.com/OfficeOfTheCityManager.aspx'>
-                    <h2>Go to the City of Jonesboro website</h2>
+                    <h2>City of Jonesboro Permits</h2>
                 </a>
             </div>
         );
@@ -39,7 +39,7 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
             <div>
                 <p className='notinclayton'>This address is within Lovejoy City Limits</p>
                 <a className="link" href='https://www.cityoflovejoy.com/936/Permits'>
-                    <h2>Go to the City of Lovejoy website</h2>
+                    <h2>City of Lovejoy Permits</h2>
                 </a>
             </div>
         );
@@ -49,7 +49,7 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
             <div>
                 <p className='notinclayton'>This address is within Lake City's Limits</p>
                 <a className="link" href='https://lakecityga.net/departments-permitapplications.asp'>
-                    <h2>Go to the Lake City website</h2>
+                    <h2>Lake City Permits</h2>
                 </a>
             </div>
         );
@@ -59,7 +59,7 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
             <div>
                 <p className='notinclayton'>This address is within Riverdale City Limits</p>
                 <a className="link" href='https://www.riverdalega.gov/470/Permitting-Services'>
-                    <h2>Go to City of Riverdale website</h2>
+                    <h2>City of Riverdale Permits</h2>
                 </a>
             </div>
         );
@@ -69,7 +69,7 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
             <div>
                 <p className='notinclayton'>This address is within Morrow City Limits</p>
                 <a className="link" href='https://www.cityofmorrow.com/government-cityhall-permitsforms.asp'>
-                    <h2>Go to City of Morrow website</h2>
+                    <h2>City of Morrow Permits</h2>
                 </a>
             </div>
         );
@@ -79,7 +79,7 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
             <div>
                 <p className='notinclayton'>This address is within Forest Park City Limits</p>
                 <a className="link" href='https://www.forestparkga.gov/planning/page/permits-and-applications'>
-                    <h2>Go to the City of Forest Park website</h2>
+                    <h2>City of Forest Park Permits</h2>
                 </a>
             </div>
         );

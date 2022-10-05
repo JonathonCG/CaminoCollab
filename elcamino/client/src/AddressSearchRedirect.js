@@ -88,9 +88,9 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
         return (
         <div className='addresssearchredirect'>
             <h3 className='inclayton'>You are in Unincorporated Clayton County.</h3>
-            <p>We can direct where you need to go.</p>
+            {/* <p>We can direct where you need to go.</p> */}
             {/* <p>Answer a few questions and you will be linked to either documentation or an application</p> */}
-            <button className="continuebutton" onClick={() => {return navigate('/Wizard')}}>
+            <button className="continuebutton" onClick={() => {return navigate('/Assistant')}}>
                 <h2>Continue to the Permit Assistant</h2>
             </button>
         </div>

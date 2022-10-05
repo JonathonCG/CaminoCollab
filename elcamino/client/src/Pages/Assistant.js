@@ -1,6 +1,6 @@
 import { Cards } from "../elements/QuestionCards"
 
-export function Wizard() {
+export function Assistant() {
     return (
         <div class="App">
             <Cards />

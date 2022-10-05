@@ -16,7 +16,7 @@
 }
 
 p {
-  color:#2774ae;
+  color:#101820;
 }
 .menuItems {
   list-style-type: none;
@@ -128,7 +128,7 @@ p {
   min-width: calc(120px + 3vh);
   width: 500px;
   /* align-items: center; */
-  background-color: rgb(32, 51, 138);
+  background-color: #2774ae;
   border: 3px solid transparent;
   border-radius: 4px;
   color: #ffffff;
@@ -136,7 +136,7 @@ p {
   margin: calc(10px + 1vh);
   cursor: pointer;
   padding: 10px;
-  box-shadow: 5px 5px #2774ae;
+  /* box-shadow: 5px 5px #2774ae; */
   transition: width .08s;
   transition: background-color .5s;
   transition: color .3s;
@@ -184,7 +184,7 @@ p {
 
 
 .preinfo{
-  color: #2774ae;
+  color: #101820;
 }
 
 .OptionGrid{

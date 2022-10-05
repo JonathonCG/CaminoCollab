@@ -14,7 +14,7 @@ export function Home() {
     <div className="App">
       <div className="preinfo">
         <img width="200" src={commdevlogo} alt='alt text'></img>
-        <h2>Clayton County Permits</h2>
+        <h2>Permit Assistant</h2>
         <hr ref={ref}/>
       </div>
       {/* <p>Click and type through the following prompts to figure out what you need to do to get your permit</p> */}

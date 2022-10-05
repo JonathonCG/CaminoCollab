@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom"
 import { Home } from "./pages/Home"
-import { Wizard } from "./pages/Wizard"
+import { Assistant } from "./pages/Assistant"
 import { EndPage } from './pages/EndPage';
 import ScrollToTop from './elements/Scrolltotop';
 
@@ -10,9 +10,8 @@ function App() {
 <ScrollToTop>
   <Routes>
     <Route path="/" element={<Home />}/>
-    <Route path="/Wizard" element={<Wizard />}/>
+    <Route path="/Assistant" element={<Assistant />}/>
     <Route path="/nextsteps/:id" element={<EndPage />}/>
-    <Route path="/wizard" element={<Wizard />}/>
   </Routes>    
 </ScrollToTop>
   )

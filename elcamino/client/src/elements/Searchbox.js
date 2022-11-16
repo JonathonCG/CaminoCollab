@@ -41,15 +41,15 @@ export function TurnstoneSearch() {
 
   
   return  (
-  <div>
-  <div className='centerdiv' onClick={handleClick}>
-  <Turnstone id="autocomplete" matchText={true} listbox={listbox}  typeahead={false} styles={styles} onSelect={onSelect} />
-  </div>
-  <div className='addresssearchredirect'>
-  <AddressSearchRedirect isInClaytonCounty={isInClaytonCounty} />
-  </div>
-  </div>
-  );
+    <div>
+      <div className='centerdiv' onClick={handleClick}>
+        <Turnstone id="autocomplete" matchText={true} listbox={listbox}  typeahead={false} styles={styles} onSelect={onSelect} />
+      </div>
+      <div className='addresssearchredirect'>
+        <AddressSearchRedirect isInClaytonCounty={isInClaytonCounty} />
+      </div>
+    </div>
+    );
  }
 
 // const styles = {

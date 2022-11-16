@@ -12,7 +12,7 @@ export function Cards() {
     let crumbs = [1,2,3];
     return (
         
-        <div className='OptionGrid'>
+        <div className='optionGrid'>
         {/* <p>Page: {value + 1} of {QuestionGroups.length}</p> */}
         {/* ~~this is where the back button should be rendered~~ */}
          <ul>{

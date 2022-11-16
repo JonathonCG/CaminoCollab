@@ -44,7 +44,7 @@
   /* } */
   @media (max-width: 900px) {
     #autocomplete {
-      width: calc(300px + 2vh);
+      width: 98%;
       height: calc(30px + 1vh);
       font-size: calc(24px + 1vh);
       font-family: sans-serif;
@@ -53,6 +53,7 @@
       color: #101820
     }
   }
+  
   @media (min-width: 900px) {
     #autocomplete {
       width: calc(900px + 2vh);
@@ -64,6 +65,7 @@
       color: #101820
     }
   }
+
   #autocomplete-listbox {
     background-color: rgb(255, 255, 255);
     width: 99%;
@@ -73,6 +75,7 @@
     transition: background-color 3s;
     align-items: center;
   }
+
   #autocomplete-listbox :hover{
     background-color: rgba(0, 0, 255, 0.212);
     cursor: pointer;

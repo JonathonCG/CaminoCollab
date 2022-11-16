@@ -42,14 +42,27 @@
     /* background-color: #2b5c3a; */
     /* padding: 5px; */
   /* } */
-  #autocomplete {
-    width: calc(900px + 2vh);
-    height: calc(30px + 1vh);
-    font-size: calc(24px + 1vh);
-    font-family: sans-serif;
-    margin-top: 15px;
-    align-items: center;
-    color: #101820
+  @media (max-width: 900px) {
+    #autocomplete {
+      width: calc(300px + 2vh);
+      height: calc(30px + 1vh);
+      font-size: calc(24px + 1vh);
+      font-family: sans-serif;
+      margin-top: 15px;
+      align-items: center;
+      color: #101820
+    }
+  }
+  @media (min-width: 900px) {
+    #autocomplete {
+      width: calc(900px + 2vh);
+      height: calc(30px + 1vh);
+      font-size: calc(24px + 1vh);
+      font-family: sans-serif;
+      margin-top: 15px;
+      align-items: center;
+      color: #101820
+    }
   }
   #autocomplete-listbox {
     background-color: rgb(255, 255, 255);

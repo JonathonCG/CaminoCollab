@@ -1,3 +1,70 @@
+@media (max-width: 900px) {
+  .continuebutton {
+    width: 90%;
+    /* align-items: center; */
+    background-color: #2774ae;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    color: #ffffff;
+    text-align: center;
+    margin: 15px;
+    cursor: pointer;
+    padding: 3px;
+    /* box-shadow: 5px 5px #2774ae; */
+    transition: width .08s;
+    transition: background-color .5s;
+    transition: color .3s;
+  }
+  
+  .App {
+    padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    background-color: #e5e5f7;
+  }
+}
+
+@media (min-width: 901px) {
+  .continuebutton {
+    min-height: calc(20px + 1vh);
+    min-width: calc(120px + 3vh);
+    width: 500px;
+    /* align-items: center; */
+    background-color: #2774ae;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    color: #ffffff;
+    text-align: center;
+    margin: calc(10px + 1vh);
+    cursor: pointer;
+    padding: 10px;
+    /* box-shadow: 5px 5px #2774ae; */
+    transition: width .08s;
+    transition: background-color .5s;
+    transition: color .3s;
+  }
+
+  .App {
+    padding: 100px;
+    text-align: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    color: white;
+    background-color: #e5e5f7;
+  }
+}
+
 .Navbar {
   /* width: 100%; */
   display: flex;
@@ -18,6 +85,7 @@
 p {
   color:#101820;
 }
+
 .menuItems {
   list-style-type: none;
   margin: 0;
@@ -40,19 +108,6 @@ p {
 
 .menuItems li a:hover {
   background-color: #468ec6;
-}
-
-.App {
-  padding: 100px;
-  text-align: center;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  font-size: calc(10px + 2vmin);
-  color: white;
-  background-color: #e5e5f7;
 }
 
 .centerdiv{
@@ -123,25 +178,6 @@ p {
   transition: color .3s;
 }
 
-.continuebutton{
-  min-height: calc(20px + 1vh);
-  min-width: calc(120px + 3vh);
-  width: 500px;
-  /* align-items: center; */
-  background-color: #2774ae;
-  border: 3px solid transparent;
-  border-radius: 4px;
-  color: #ffffff;
-  text-align: center;
-  margin: calc(10px + 1vh);
-  cursor: pointer;
-  padding: 10px;
-  /* box-shadow: 5px 5px #2774ae; */
-  transition: width .08s;
-  transition: background-color .5s;
-  transition: color .3s;
-}
-
 .logo{
   max-width: 400px;
 }
@@ -163,10 +199,6 @@ p {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  
 }
 
 .App-link {
@@ -194,16 +226,10 @@ width: 900px;
 flex: 1;
 }
 
-.questionListItems{
-/* background-color: black; */
-
-
-}
-
 .questionButtons {
   min-height: calc(120px + 1vh);
   min-width: calc(92px + 1vh);
-  width: 700px;
+  width: 40%;
   /* align-items: center; */
   background-color: white;
   border: 1px solid transparent;

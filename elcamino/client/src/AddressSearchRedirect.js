@@ -5,9 +5,6 @@ import _rightchevron from './graphics/rightchevron.png'
 export function AddressSearchRedirect({isInClaytonCounty}) {
     const [displayedString, setDisplayedString] = useState(0);
     const isFirstRender = useRef(true);
-    const outOfJurisdiction = "Go somewhere else"
-    const inJurisdiction = "ding ding you've found it"
-    const Jonesboro = "https://www.jonesboroga.com/OfficeOfTheCityManager.aspx"
     let displayMessage = '';
     const navigate = useNavigate();
     useEffect(() => {

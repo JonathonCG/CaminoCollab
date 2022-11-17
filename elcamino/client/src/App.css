@@ -15,7 +15,7 @@
     background-color: #e5e5f7;
   }
 
-  .continue-button {
+  .home__asr--continue-button {
     width: 90%;
     /* align-items: center; */
     background-color: #2774ae;
@@ -44,16 +44,18 @@
     background-color: #e5e5f7;
   }
 
-  .optionGrid{
+  .assistant__optiongrid {
     /* background-color: red;   */
     width: 90%;
     flex: 1;
     }
 
-  .questionButtons {
+  .assistant__cards {
     /* align-items: center; */
     /* color: #343579; */
-    display: flex;
+    flex-direction: row;
+    display: inline-flex;
+    align-items: center;
     width: 100%;
     text-align: left;
     margin: 2%;
@@ -63,11 +65,11 @@
     border-radius: 4px;
   }
 
-  .questionButtons:active {
+  .assistant__cards:active {
     transform: scale(0.98);
   }
 
-  .Button_inline_image{
+  .assistant__cards-image {
     display: flex;
     width:25px;
     height:25px;
@@ -76,7 +78,7 @@
     /* border: solid 1px purple; */
   }
   
-  .Button_inline_text{
+  .assistant__cards-text {
     display: flex;
     width: calc(100% - 120px);
     padding: 0 50px 0 15px;
@@ -86,7 +88,7 @@
     font-size: 16px;
   }
   
-  .Button_inline_icon{
+  .assistant__cards-icon {
     display: flex;
     width: 20px;
     height: 20px;
@@ -124,7 +126,7 @@
     background-color: #e5e5f7;
   }  
 
-  .continue-button {
+  .home__asr--continue-button {
     min-height: calc(20px + 1vh);
     min-width: calc(120px + 3vh);
     width: 500px;
@@ -156,14 +158,17 @@
     background-color: #e5e5f7;
   }
 
-  .OptionGrid{
+  .assistant__optiongrid{
     /* background-color: red;   */
     max-width: 1600px;
     width: 900px;
     flex: 1;
     }
 
-  .questionButtons {
+  .assistant__cards {
+    flex-direction: row;
+    display: inline-flex;
+    align-items: center;
     min-height: calc(120px + 1vh);
     min-width: calc(92px + 1vh);
     width: 100%;
@@ -182,14 +187,15 @@
     transition: color .3s;
   }
 
-  .questionButtons:hover {
+  .assistant__cards:hover {
     border: solid #343579 1px;
     width: 100%;
     background-color: #b4b4e7;
   }
 
-  .Button_inline_image{
+  .assistant__cards-image {
     display: flex;
+    flex-direction: row;
     width:50px;
     height:50px;
     flex-shrink: 0;
@@ -197,8 +203,9 @@
     /* border: solid 1px purple; */
   }
   
-  .Button_inline_text{
+  .assistant__cards-text {
     display: flex;
+    flex-direction: row;
     width: calc(100% - 100px);
     padding: 0 100px 0 30px;
     color: #2774ae;
@@ -207,8 +214,9 @@
     font-size: 25px;
   }
   
-  .Button_inline_icon{
+  .assistant__cards-icon {
     display: flex;
+    flex-direction: row;
     width:40px;
     height:40px;
   }
@@ -227,7 +235,16 @@
   }
 }
 
-.Navbar {
+/* CSS that works universally */
+p {
+  color: #101820
+}
+
+ul {
+  list-style-type: none; 
+}
+
+.navbar {
   /* width: 100%; */
   display: flex;
   align-items: center;
@@ -243,44 +260,32 @@
   width: 100%
 }
 
-p {
-  color:#101820;
-}
-
-.menuItems {
+.navbar__menu-items {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color:#2774ae;
 }
-
-.menuItems li {
+.navbar__menu-items li {
   float: left;
 }
-
-.menuItems li a {
+.navbar__menu-items li a {
   display: block;
   color: #dde5ed;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-
-.menuItems li a:hover {
+.navbar__menu-items li a:hover {
   background-color: #468ec6;
 }
 
-.centerdiv{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  color: rgb(0, 0, 0);
+.home__preinfo {
+  color: #101820;
 }
 
-.addresssearchredirect{
+.home__asr {
   background-color: white;
   border-radius: 5px;
   color: rgb(32, 51, 138);
@@ -288,39 +293,22 @@ p {
   margin-top: 15px;
 }
 
-.inclayton{
+.home__asr--inclayton {
   color: #6ba539;
   
 }
 
-.notinclayton{
+.home__asr--notinclayton {
   color: #ee2737;
 }
 
-.endpageapp {
-  padding: 80px;
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  font-size: calc(10px + 2vmin);
-  color: white;
-  background-color: #e5e5f7;
+.home__asr--continue-button:hover {
+  background-color: white;
+  color:rgb(32, 51, 138);
+  border: 3px solid rgb(32, 51, 138)
 }
 
-#endpagecard{
-  background-color: #343579;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-#endpagecard a {
-  color: white;
-}
-
-.returnbutton {
+.assistant__back-button {
   min-height: calc(20px + 1vh);
   min-width: calc(120px + 3vh);
   width: 100px;
@@ -338,40 +326,32 @@ p {
   transition: background-color .5s;
   transition: color .3s;
 }
-
-.logo{
-  max-width: 400px;
-}
-.continuebutton:hover{
-  background-color: white;
-  color:rgb(32, 51, 138);
-  border: 3px solid rgb(32, 51, 138)
-}
-.returnbutton:hover{
+.assistant__back-button:hover {
   background-color: white;
   color:rgb(32, 51, 138);
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-.preinfo{
-  color: #101820;
-}
-
-ul {
-  list-style-type: none; 
-}
-
-.questionButtons {
-  flex-direction: row;
-  display: inline-flex;
+.endpage {
+  padding: 80px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: #e5e5f7;
+}
+
+#endpage__card {
+  background-color: #343579;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#endpage__card a {
+  color: white;
 }
 
 /* This hides the screen reader text on the search bar */

@@ -10,7 +10,7 @@ export function Home() {
   };
   return (
     <div className="home">
-      <div className="preinfo">
+      <div className="home__preinfo">
         <img width="200" src={commdevlogo} alt='alt text'></img>
         <h2>Permit Assistant</h2>
         <hr ref={ref}/>

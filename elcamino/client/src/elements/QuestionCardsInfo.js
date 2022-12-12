@@ -25,7 +25,8 @@ import _small_business from '../graphics/icons8-small-business-50.png'
 import _tools from '../graphics/icons8-tools-50.png'
 import _logo from '../graphics/logo.svg'
 import _rightchevron from '../graphics/rightchevron.png'
-
+export const requirementGroups = [[0,1,2]]
+export const prereqs = ['Site Plan','Survey (For Fence: Plat or Tax Map)','Flood Elevation Certificate (If Appliable)','*Environmental Health','Contractor Affidavits','Energy Code Compliance Certificate','Sewer Bond','Floor Plan','Variance (If Applicable)','Grading Permit (If applicable)','State License','Business License','Authorized Agent Form   (If Applicable)','Homeowner Affidavit (If Applicable','Identification','HVAC Letter','Engineering Letter  (If Applicable)','Mobile Home Registration','Mobile Home Tax Receipt','Property Tax Verification','Refund Request Letter','Cash Bond Required','Event Route','Elevations w/ Finish Materials','Police Approval','Fire Marshal Permit','GDOT / County T&D Permit'];
 export const Questions = [
     {questionText : 'Commercial building', 
     id : 0, 
@@ -36,8 +37,7 @@ export const Questions = [
     price : '',
     addinfo : '',
     endpage : false,
-    requirements : 'Survey (For Fence: Plat or Tax Map)',
-    requirements : ''},
+    requirements : 0},
     {questionText : 'Residential building', 
     id : 1, 
     nextPage : 2,
@@ -582,3 +582,4 @@ export const Questions = [
 
     //each array is a 'group' of cards displayed on screen at one time, values are the index of the 'Questions' array above.
 export const QuestionGroups = [[0,1,2,3,4,5,6],[7,8,9,10,11,12,13,14,15,16],[17,18,19,20,21,22,23,24,25],[26,27,28,29],[30,31,32,33,34,35,36],[37,38,39,40,41,42,43],[44,45,46,47,48,49,50],[51,52,53,54]];
+

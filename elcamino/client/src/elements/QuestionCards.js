@@ -9,7 +9,21 @@ export function Cards() {
     const [value, setValue] = useState(0); //standard function component state changing 
     const navigate = useNavigate();
     
-    let crumbs = [1,2,3];
+    const handleClick = () => { /**this function scroll the window back to the top of the page, is called on the "go back button" */
+        window.scrollTo(0,0);
+      };
+
+      const goBack = () => { /**this function changes the state setter back to 0, which is the 'first' page for the /Assistant page with the cards on it. */
+        setValue(0);
+      };
+
+    function BackButton({endpage}) { /* Function changes what is displayed in the continue button element based on if we are on the first page or not */
+        if(endpage){
+         return <button className='assistant__back-button'onClick={() => {goBack(); handleClick();}}>Go Back</button> 
+    }
+         return 
+}
+
     return (
         
         <div className='assistant__optiongrid'>
@@ -42,7 +56,8 @@ export function Cards() {
                 </li>
                 ))
          }</ul>  
-         <button className='assistant__back-button' onClick={() => {return navigate('/')}}>Back to start</button>
+         <button className='assistant__back-button' onClick={() => {return navigate('/')}}>Check another Address</button>
+         <BackButton endpage={value} />
          </div>
          )   
 }

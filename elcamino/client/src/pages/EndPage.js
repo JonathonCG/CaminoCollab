@@ -16,18 +16,19 @@ export function EndPage() {
       if(ischecked){
         return <a href={Questions[id].endpagelink} target='blank'>Click here to view the permit you need on EnerGov</a>
       }
-      return <p>other</p>
+      return <a target='blank'>Confirm you have read and understand the above before proceeding</a>
     }
-
-
+    console.log(useParams().id)
+    console.log(id)
+    console.log(Questions[id].id)
     return (
      <div className="endpage">
         <div id="endpage__card">
           <h1>{Questions[id].questionText}</h1>
           <h2>We can help with this. The resources you are looking for are available on EnerGov</h2>
-          <p>Below are the requirements for your license, please make sure you have all of them completed <em>before</em> submitting your application through EnerGov</p>
-          <ol> {/**list of requirements from the requirement groups array of arrays in questioncardsinfo.js */}
-          {requirementGroups[Questions[id].requirements].map((reqs) => (
+          <p>Below are the requirements you will need <em>before</em> applying for your license, you will need to present these during the process.</p>
+          <ol> 
+          {requirementGroups[Questions[id].id].map((reqs) => (
             <li>{prereqs[reqs]}</li>
           ))}
           </ol>

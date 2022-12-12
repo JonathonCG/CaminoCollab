@@ -1,6 +1,4 @@
 import { TurnstoneSearch } from "../elements/Searchbox"
-import { Cards } from "../elements/QuestionCards"
-import { AddressSearchRedirect } from '../AddressSearchRedirect'
 import  commdevlogo  from '../graphics/Commdevlogo.png'
 import { useRef } from 'react'
 
@@ -11,8 +9,8 @@ export function Home() {
     ref.current?.scrollIntoView({behavior: 'smooth'});
   };
   return (
-    <div className="App">
-      <div className="preinfo">
+    <div className="home">
+      <div className="home__preinfo">
         <img width="200" src={commdevlogo} alt='alt text'></img>
         <h2>Permit Assistant</h2>
         <hr ref={ref}/>

@@ -8,8 +8,8 @@ export function EndPage() {
     const navigate = useNavigate()
 
     return (
-     <div className="endpageapp">
-        <div id="endpagecard">
+     <div className="endpage">
+        <div id="endpage__card">
           <h1>{Questions[id].questionText}</h1>
           <h2>We can help with this. The resources you are looking for are available on EnerGov</h2>
           <h3><a href={Questions[id].endpagelink} target='blank'>Click here to view the permit you need on EnerGov</a></h3>

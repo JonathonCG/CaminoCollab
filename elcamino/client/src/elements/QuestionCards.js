@@ -12,7 +12,7 @@ export function Cards() {
     let crumbs = [1,2,3];
     return (
         
-        <div className='OptionGrid'>
+        <div className='assistant__optiongrid'>
         {/* <p>Page: {value + 1} of {QuestionGroups.length}</p> */}
         {/* ~~this is where the back button should be rendered~~ */}
          <ul>{
@@ -22,7 +22,7 @@ export function Cards() {
                 className="questionListItems"
                 key={Questions[cardList].id}> 
                     <button 
-                        className="questionButtons" //CSS class
+                        className="assistant__cards" //CSS class
                         //onClick function that changes the state to the ID of the question displayed.
                         onClick={()=>{
                             const paramID = '/nextsteps/id=:' + Questions[cardList].id;
@@ -35,14 +35,14 @@ export function Cards() {
                             }
                            }}>
                         
-                        <div className='Button_inline_image'><img src={Questions[cardList].icon}></img></div>
-                        <div className='Button_inline_text'><h3>{Questions[cardList].questionText}</h3>{/*- to page {Questions[cardList].nextPage + 1}*/}</div>
-                        <div className='Button_inline_icon'><img src={rightchevron}></img></div>
+                        <div className='assistant__cards-image'><img src={Questions[cardList].icon}></img></div>
+                        <div className='assistant__cards-text'><h3>{Questions[cardList].questionText}</h3>{/*- to page {Questions[cardList].nextPage + 1}*/}</div>
+                        <div className='assistant__cards-icon'><img src={rightchevron}></img></div>
                     </button>
                 </li>
                 ))
          }</ul>  
-         <button className='returnbutton' onClick={() => {return navigate('/')}}>Back to start</button>
+         <button className='assistant__back-button' onClick={() => {return navigate('/')}}>Back to start</button>
          </div>
          )   
 }

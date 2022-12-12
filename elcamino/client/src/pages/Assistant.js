@@ -2,7 +2,7 @@ import { Cards } from "../elements/QuestionCards"
 
 export function Assistant() {
     return (
-        <div class="App">
+        <div class="assistant">
             <Cards />
         </div>
     )

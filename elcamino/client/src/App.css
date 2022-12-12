@@ -1,5 +1,21 @@
+/* Mobile CSS */
 @media (max-width: 900px) {
-  .continuebutton {
+  
+  .home {
+    padding-top: 10vh;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    background-color: #e5e5f7;
+  }
+
+  .home__asr--continue-button {
     width: 90%;
     /* align-items: center; */
     background-color: #2774ae;
@@ -15,13 +31,76 @@
     transition: background-color .5s;
     transition: color .3s;
   }
-  
-  .App {
-    padding-top: 100px;
-    padding-left: 10px;
-    padding-right: 10px;
+
+  .assistant {
+    padding-top: 7vh;
     text-align: center;
-    min-height: 90vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    /* justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    background-color: #e5e5f7;
+  }
+
+  .assistant__optiongrid {
+    /* background-color: red;   */
+    width: 90%;
+    flex: 1;
+    }
+
+  .assistant__cards {
+    /* align-items: center; */
+    /* color: #343579; */
+    flex-direction: row;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    margin: 2%;
+    box-shadow: 5px 5px #2774ae;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+
+  .assistant__cards:active {
+    transform: scale(0.98);
+  }
+
+  .assistant__cards-image {
+    display: flex;
+    width:25px;
+    height:25px;
+    flex-shrink: 0;
+    padding: 3px;
+    /* border: solid 1px purple; */
+  }
+  
+  .assistant__cards-text {
+    display: flex;
+    width: calc(100% - 120px);
+    padding: 0 50px 0 15px;
+    color: #2774ae;
+    /* background-color: green; */
+    margin: 3px 3px 3px 3px;
+    font-size: 16px;
+  }
+  
+  .assistant__cards-icon {
+    display: flex;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* .App is only used on EndPage, not yet configured */
+  .App {
+    padding-top: 70px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,8 +110,23 @@
   }
 }
 
+/* PC CSS */
 @media (min-width: 901px) {
-  .continuebutton {
+
+  .home {
+    padding: 100px;
+    text-align: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    color: white;
+    background-color: #e5e5f7;
+  }  
+
+  .home__asr--continue-button {
     min-height: calc(20px + 1vh);
     min-width: calc(120px + 3vh);
     width: 500px;
@@ -51,6 +145,82 @@
     transition: color .3s;
   }
 
+  .assistant {
+    padding: 100px;
+    text-align: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: calc(10px + 2vmin);
+    color: white;
+    background-color: #e5e5f7;
+  }
+
+  .assistant__optiongrid{
+    /* background-color: red;   */
+    max-width: 1600px;
+    width: 900px;
+    flex: 1;
+    }
+
+  .assistant__cards {
+    flex-direction: row;
+    display: inline-flex;
+    align-items: center;
+    min-height: calc(120px + 1vh);
+    min-width: calc(92px + 1vh);
+    width: 100%;
+    /* align-items: center; */
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    /* color: #343579; */
+    text-align: left;
+    margin: calc(10px + 1vh);
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 5px 5px #2774ae;
+    transition: width .08s;
+    transition: background-color .5s;
+    transition: color .3s;
+  }
+
+  .assistant__cards:hover {
+    border: solid #343579 1px;
+    width: 100%;
+    background-color: #b4b4e7;
+  }
+
+  .assistant__cards-image {
+    display: flex;
+    flex-direction: row;
+    width:50px;
+    height:50px;
+    flex-shrink: 0;
+    padding: 6px;
+    /* border: solid 1px purple; */
+  }
+  
+  .assistant__cards-text {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 100px);
+    padding: 0 100px 0 30px;
+    color: #2774ae;
+    /* background-color: green; */
+    margin: auto;
+    font-size: 25px;
+  }
+  
+  .assistant__cards-icon {
+    display: flex;
+    flex-direction: row;
+    width:40px;
+    height:40px;
+  }
+
   .App {
     padding: 100px;
     text-align: center;
@@ -65,12 +235,20 @@
   }
 }
 
-.Navbar {
+/* CSS that works universally */
+p {
+  color: #101820
+}
+
+ul {
+  list-style-type: none; 
+}
+
+.navbar {
   /* width: 100%; */
   display: flex;
   align-items: center;
-  min-height: 3%;
-  max-height: 7%;
+  height: 6vh;
   background-color: #2774ae;
   font-size: calc(10px + 1vmin);
   color: #dde5ed;
@@ -82,44 +260,32 @@
   width: 100%
 }
 
-p {
-  color:#101820;
-}
-
-.menuItems {
+.navbar__menu-items {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color:#2774ae;
 }
-
-.menuItems li {
+.navbar__menu-items li {
   float: left;
 }
-
-.menuItems li a {
+.navbar__menu-items li a {
   display: block;
   color: #dde5ed;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-
-.menuItems li a:hover {
+.navbar__menu-items li a:hover {
   background-color: #468ec6;
 }
 
-.centerdiv{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  color: rgb(0, 0, 0);
+.home__preinfo {
+  color: #101820;
 }
 
-.addresssearchredirect{
+.home__asr {
   background-color: white;
   border-radius: 5px;
   color: rgb(32, 51, 138);
@@ -127,39 +293,22 @@ p {
   margin-top: 15px;
 }
 
-.inclayton{
+.home__asr--inclayton {
   color: #6ba539;
   
 }
 
-.notinclayton{
+.home__asr--notinclayton {
   color: #ee2737;
 }
 
-.endpageapp {
-  padding: 80px;
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  font-size: calc(10px + 2vmin);
-  color: white;
-  background-color: #e5e5f7;
+.home__asr--continue-button:hover {
+  background-color: white;
+  color:rgb(32, 51, 138);
+  border: 3px solid rgb(32, 51, 138)
 }
 
-#endpagecard{
-  background-color: #343579;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-#endpagecard a {
-  color: white;
-}
-
-.returnbutton {
+.assistant__back-button {
   min-height: calc(20px + 1vh);
   min-width: calc(120px + 3vh);
   width: 100px;
@@ -177,119 +326,34 @@ p {
   transition: background-color .5s;
   transition: color .3s;
 }
-
-.logo{
-  max-width: 400px;
-}
-.continuebutton:hover{
-  background-color: white;
-  color:rgb(32, 51, 138);
-  border: 3px solid rgb(32, 51, 138)
-}
-.returnbutton:hover{
+.assistant__back-button:hover {
   background-color: white;
   color:rgb(32, 51, 138);
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.preinfo{
-  color: #101820;
-}
-
-.OptionGrid{
-/* background-color: red;   */
-max-width: 1600px;
-width: 900px;
-flex: 1;
-}
-
-.questionButtons {
-  min-height: calc(120px + 1vh);
-  min-width: calc(92px + 1vh);
-  width: 40%;
-  /* align-items: center; */
-  background-color: white;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  /* color: #343579; */
-  text-align: left;
-  margin: calc(10px + 1vh);
-  cursor: pointer;
-  padding: 10px;
-  box-shadow: 5px 5px #2774ae;
-  transition: width .08s;
-  transition: background-color .5s;
-  transition: color .3s;
-  
-}
-
-ul {
-  list-style-type: none; 
-  
-}
-
-.questionButtons:hover {
-  border: solid #343579 1px;
-  width: 705px;
-  background-color: #b4b4e7;
-  
-}
-
-.questionButtons {
-  flex-direction: row;
-  display: inline-flex;
+.endpage {
+  padding: 80px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: #e5e5f7;
 }
 
-.Button_inline_image{
-  display: flex;
-  width:50px;
-  height:50px;
-  flex-shrink: 0;
-  padding: 6px;
-  /* border: solid 1px purple; */
+#endpage__card {
+  background-color: #343579;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.Button_inline_text{
-  display: flex;
-  width: calc(100% - 100px);
-  padding: 0 100px 0 30px;
-  color: #2774ae;
-  /* background-color: green; */
-  margin: auto;
-  font-size: 25px;
+#endpage__card a {
+  color: white;
 }
 
-.Button_inline_icon{
-  display: flex;
-  color:rgb(117, 115, 115);
-  /* border: 1px solid orange; */
-  width:40px;
-  height:40px;
-}
 /* This hides the screen reader text on the search bar */
 .visually-hidden {
   clip: rect(0 0 0 0);

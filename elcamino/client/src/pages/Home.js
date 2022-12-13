@@ -4,10 +4,13 @@ import { useRef } from 'react'
 
 
 export function Home() {
+  document.title = "Permit Assistant Home"
+  
   const ref = useRef(null);
   const handleClick = () => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
   };
+
   return (
     <div className="home">
       <div className="home__preinfo">

@@ -25,8 +25,11 @@ import _small_business from '../graphics/icons8-small-business-50.png'
 import _tools from '../graphics/icons8-tools-50.png'
 import _logo from '../graphics/logo.svg'
 import _rightchevron from '../graphics/rightchevron.png'
+
 export const requirementGroups = [[1,8,14],[0,2,7,8,9,10,11,12,14,23],[0,7,9,10,11,12,14,23],[0,7,9,10,11,12,14,16,23],[0,7,9,10,11,12,14,23],[0,8,9,10,11,12,14,16],[0,9,10,11,12,14,23],[0,8,9,10,11,12,14,23],[7,10,11,12,14,23],[0,7,8,9,10,11,12,14,23],[0,3,4,5,7,8,9,10,11,12,14,23],[1,3,8,9,10,11,12,13,14],[0,1,3,4,8,9,10,11,12,13,14,22,26],[1,2,3,4,5,6,7,8,9,10,11,12,14,21,22,23,26],[10,11,14,19,21,23,26],[10,11,14,17,18,19],[10,11,14,17,18],[0,2,3,4,5,6,7,8,9,10,11,12,13,14,23],[6,10,11,12,13,14,23],[11,14,19,20,21],[11,14],[0,10,11,23],[0],[10,11,14],[10,11],[10,11,14],[14],[10,11,14],[10,11,14],[10,11,14],[10,11,14],[10,11,14],[10,11,14],[10,11,14],[],[10,11,14],[],[10,11,14],[10,11,14],[10,11,14],[4,10,11,14],[10,11,14],[],[],[],[],[],[],[3,22,24,25,26]]
+
 export const prereqs = ['Site Plan','Survey (For Fence: Plat or Tax Map)','Flood Elevation Certificate (If Appliable)','*Environmental Health','Contractor Affidavits','Energy Code Compliance Certificate','Sewer Bond','Floor Plan','Variance (If Applicable)','Grading Permit (If applicable)','State License','Business License','Authorized Agent Form   (If Applicable)','Homeowner Affidavit (If Applicable','Identification','HVAC Letter','Engineering Letter  (If Applicable)','Mobile Home Registration','Mobile Home Tax Receipt','Property Tax Verification','Refund Request Letter','Cash Bond Required','Event Route','Elevations w/ Finish Materials','Police Approval','Fire Marshal Permit','GDOT / County T&D Permit'];
+
 export const Questions = [
     {questionText : 'Commercial building', 
     id : 0, 
@@ -106,7 +109,7 @@ export const Questions = [
     endpagelink : '',
     price : '',
     addinfo : '',
-    endpage : false,
+    endpage : true,
     requirements : 'Survey (For Fence: Plat or Tax Map)'},
     {questionText : 'Addition', 
     id : 8, 
@@ -116,7 +119,7 @@ export const Questions = [
     endpagelink : '',
     price : '',
     addinfo : '',
-    endpage : false,
+    endpage : true,
     requirements : 'Survey (For Fence: Plat or Tax Map)'},
     {questionText : 'Building shell', 
     id : 9, 

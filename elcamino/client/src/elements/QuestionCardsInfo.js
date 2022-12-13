@@ -1,37 +1,43 @@
 import _24rightchevron from '../graphics/24rightchevron.png'
 import _32rightchevron from '../graphics/32rightchevron.png'
-import _clayconn from '../graphics/clayconn.svg'
-import _clayton from '../graphics/clayton.svg'
-import _claytonwhite from '../graphics/claytonwhite.svg'
-import _add_new from '../graphics/icons8-add-new-50.png'
-import _building_with_rooftop_terrace from '../graphics/icons8-building-with-rooftop-terrace-50.png'
-import _city from '../graphics/icons8-city-50.png'
-import _company from '../graphics/icons8-company-50.png'
-import _contract from '../graphics/icons8-contract-50.png'
-import _foundation from '../graphics/icons8-foundation-50.png'
-import _hammer from '../graphics/icons8-hammer-50.png'
-import _house from '../graphics/icons8-house-50.png'
-import _jackhammer from '../graphics/icons8-jackhammer-50.png'
-import _jigsaw from '../graphics/icons8-jigsaw-50.png'
-import _paint_brush from '../graphics/icons8-paint-brush-50.png'
-import _paint_roller from '../graphics/icons8-paint-roller-50.png'
-import _pallet from '../graphics/icons8-pallet-50.png'
-import _plus from '../graphics/icons8-plus-50.png'
-import _prefab_house from '../graphics/icons8-prefab-house-50.png'
-import _roof_tiles from '../graphics/icons8-roof-tiles-50.png'
-import _roofing from '../graphics/icons8-roofing-50.png'
-import _sawing_man from '../graphics/icons8-sawing-man-50.png'
-import _small_business from '../graphics/icons8-small-business-50.png'
-import _tools from '../graphics/icons8-tools-50.png'
 import _logo from '../graphics/logo.svg'
 import _rightchevron from '../graphics/rightchevron.png'
+
+import _celltowernew from '../graphics/cell-tower-new.png'
+import _celltowerupgrade from '../graphics/cell-tower-upgrade.png'
+import _commercialbuilding from '../graphics/commercial-building.png'
+import _company from '../graphics/company.png'
+import _factory from '../graphics/factory.png'
+import _firesprinkler from '../graphics/fire-sprinkler.png'
+import _garage from '../graphics/garage.png'
+import _house from '../graphics/house.png'
+import _househouse from '../graphics/house-house.png'
+import _jackhammer from '../graphics/jackhammer.png'
+import _lightning from '../graphics/lightning.png'
+import _mechanical from '../graphics/mechanical.png'
+import _mobilehome from '../graphics/mobile-home.png'
+import _office from '../graphics/office.png'
+import _plumbing from '../graphics/plumbing.png'
+import _plus from '../graphics/plus.png'
+import _prefabhome from '../graphics/prefab-home.png'
+import _religion from '../graphics/religion.png'
+import _shop from '../graphics/shop.png'
+import _signfix from '../graphics/sign-fix.png'
+import _signnew from '../graphics/sign-new.png'
+import _signresurface from '../graphics/sign-resurface.png'
+import _signtemporary from '../graphics/sign-temporary.png'
+import _sign from '../graphics/sign.png'
+import _structural from '../graphics/structural.png'
+import _tools from '../graphics/tools.png'
+import _truckhouse from '../graphics/truck-house.png'
+
 export const requirementGroups = [[1,8,14],[0,2,7,8,9,10,11,12,14,23],[0,7,9,10,11,12,14,23],[0,7,9,10,11,12,14,16,23],[0,7,9,10,11,12,14,23],[0,8,9,10,11,12,14,16],[0,9,10,11,12,14,23],[0,8,9,10,11,12,14,23],[7,10,11,12,14,23],[0,7,8,9,10,11,12,14,23],[0,3,4,5,7,8,9,10,11,12,14,23],[1,3,8,9,10,11,12,13,14],[0,1,3,4,8,9,10,11,12,13,14,22,26],[1,2,3,4,5,6,7,8,9,10,11,12,14,21,22,23,26],[10,11,14,19,21,23,26],[10,11,14,17,18,19],[10,11,14,17,18],[0,2,3,4,5,6,7,8,9,10,11,12,13,14,23],[6,10,11,12,13,14,23],[11,14,19,20,21],[11,14],[0,10,11,23],[0],[10,11,14],[10,11],[10,11,14],[14],[10,11,14],[10,11,14],[10,11,14],[10,11,14],[10,11,14],[10,11,14],[10,11,14],[],[10,11,14],[],[10,11,14],[10,11,14],[10,11,14],[4,10,11,14],[10,11,14],[],[],[],[],[],[],[3,22,24,25,26]]
 export const prereqs = ['Site Plan','Survey (For Fence: Plat or Tax Map)','Flood Elevation Certificate (If Appliable)','*Environmental Health','Contractor Affidavits','Energy Code Compliance Certificate','Sewer Bond','Floor Plan','Variance (If Applicable)','Grading Permit (If applicable)','State License','Business License','Authorized Agent Form   (If Applicable)','Homeowner Affidavit (If Applicable','Identification','HVAC Letter','Engineering Letter  (If Applicable)','Mobile Home Registration','Mobile Home Tax Receipt','Property Tax Verification','Refund Request Letter','Cash Bond Required','Event Route','Elevations w/ Finish Materials','Police Approval','Fire Marshal Permit','GDOT / County T&D Permit'];
 export const Questions = [
     {questionText : 'Commercial building', 
     id : 0, 
     nextPage : 1,
-    icon : _house,
+    icon : _company,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -41,7 +47,7 @@ export const Questions = [
     {questionText : 'Residential building', 
     id : 1, 
     nextPage : 2,
-    icon : _small_business,
+    icon : _house,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -51,7 +57,7 @@ export const Questions = [
     {questionText : 'Demolition', 
     id : 2, 
     nextPage : 3,
-    icon : _contract,
+    icon : _jackhammer,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -61,7 +67,7 @@ export const Questions = [
     {questionText : 'Electrical', 
     id : 3, 
     nextPage : 4,
-    icon : _house,
+    icon : _lightning,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -71,7 +77,7 @@ export const Questions = [
     {questionText : 'Mechanical', 
     id : 4, 
     nextPage : 5,
-    icon : _sawing_man,
+    icon : _mechanical,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -81,7 +87,7 @@ export const Questions = [
     {questionText : 'Plumbing', 
     id : 5, 
     nextPage : 6,
-    icon : _house,
+    icon : _plumbing,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -91,7 +97,7 @@ export const Questions = [
     {questionText : 'Sign', 
     id : 6, 
     nextPage : 7,
-    icon : _prefab_house,
+    icon : _sign,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -101,7 +107,7 @@ export const Questions = [
     {questionText : 'Accessory structure', 
     id : 7, 
     nextPage : 0,
-    icon : _tools,
+    icon : _garage,
     endpagetext : 'An accessory structure is a structure which is on the same parcel of property as a principal structure and the use of which is incidental to the use of the principal structure. For example a residential structure may have a detached garage or storage shed for garden tools as accessory structures',
     endpagelink : '',
     price : '',
@@ -111,7 +117,7 @@ export const Questions = [
     {questionText : 'Addition', 
     id : 8, 
     nextPage : 0,
-    icon : _pallet,
+    icon : _plus,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -121,7 +127,7 @@ export const Questions = [
     {questionText : 'Building shell', 
     id : 9, 
     nextPage : 1,
-    icon : _house,
+    icon : _structural,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -131,7 +137,7 @@ export const Questions = [
     {questionText : 'Communication tower upgrade', 
     id : 10, 
     nextPage : 4,
-    icon : _house,
+    icon : _celltowerupgrade,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -141,7 +147,7 @@ export const Questions = [
     {questionText : 'Industrial', 
     id : 11, 
     nextPage : 5,
-    icon : _roofing,
+    icon : _factory,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -151,7 +157,7 @@ export const Questions = [
     {questionText : 'New communication tower', 
     id : 12, 
     nextPage : 3,
-    icon : _prefab_house,
+    icon : _celltowernew,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -161,7 +167,7 @@ export const Questions = [
     {questionText : 'Office/Institutional',
     id : 13, 
     nextPage : 3,
-    icon : _house,
+    icon : _office,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -171,7 +177,7 @@ export const Questions = [
     {questionText : 'Places of worship',
     id : 14, 
     nextPage : 3,
-    icon : _house,
+    icon : _religion,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -181,7 +187,7 @@ export const Questions = [
     {questionText : 'Renovation/Alteration',
     id : 15, 
     nextPage : 3,
-    icon : _house,
+    icon : _tools,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -191,7 +197,7 @@ export const Questions = [
     {questionText : 'Retail',
     id : 16, 
     nextPage : 3,
-    icon : _house,
+    icon : _shop,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -201,7 +207,7 @@ export const Questions = [
     {questionText : 'Accessory dwelling',
     id : 17, 
     nextPage : 3,
-    icon : _house,
+    icon : _househouse,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -211,7 +217,7 @@ export const Questions = [
     {questionText : 'Accessory structure',
     id : 18, 
     nextPage : 3,
-    icon : _house,
+    icon : _garage,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -221,7 +227,7 @@ export const Questions = [
     {questionText : 'Addition',
     id : 19, 
     nextPage : 3,
-    icon : _house,
+    icon : _plus,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -231,7 +237,7 @@ export const Questions = [
     {questionText : 'House moving, into the county',
     id : 20, 
     nextPage : 3,
-    icon : _house,
+    icon : _truckhouse,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -241,7 +247,7 @@ export const Questions = [
     {questionText : 'House moving, out/thru the county',
     id : 21, 
     nextPage : 3,
-    icon : _house,
+    icon : _truckhouse,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -251,7 +257,7 @@ export const Questions = [
     {questionText : 'Mobile home',
     id : 22, 
     nextPage : 3,
-    icon : _house,
+    icon : _mobilehome,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -261,7 +267,7 @@ export const Questions = [
     {questionText : 'Model home',
     id : 23, 
     nextPage : 3,
-    icon : _house,
+    icon : _prefabhome,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -281,7 +287,7 @@ export const Questions = [
     {questionText : 'Renovation/Alteration',
     id : 25, 
     nextPage : 3,
-    icon : _company,
+    icon : _tools,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -291,7 +297,7 @@ export const Questions = [
     {questionText : 'Demolition not to rebuild',
     id : 26, 
     nextPage : 3,
-    icon : _tools,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -301,7 +307,7 @@ export const Questions = [
     {questionText : 'Demolition to rebuild',
     id : 27, 
     nextPage : 3,
-    icon : _hammer,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -311,7 +317,7 @@ export const Questions = [
     {questionText : 'Facade demolition',
     id : 28, 
     nextPage : 3,
-    icon : _city,
+    icon : '',
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/businessLicense/apply/business/149',
     price : '',
@@ -321,7 +327,7 @@ export const Questions = [
     {questionText : 'Interior demolition',
     id : 29, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -331,7 +337,7 @@ export const Questions = [
     {questionText : 'Commericial new',
     id : 30, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -341,7 +347,7 @@ export const Questions = [
     {questionText : 'Commercial stand alone',
     id : 31, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -351,7 +357,7 @@ export const Questions = [
     {questionText : 'Low voltage',
     id : 32, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -361,7 +367,7 @@ export const Questions = [
     {questionText : 'Reconnect_disconnect only',
     id : 33, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -371,7 +377,7 @@ export const Questions = [
     {questionText : 'Residential New',
     id : 34, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -381,7 +387,7 @@ export const Questions = [
     {questionText : 'Residential stand alone',
     id : 35, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -391,7 +397,7 @@ export const Questions = [
     {questionText : 'Temporary utility - electrical',
     id : 36, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -401,7 +407,7 @@ export const Questions = [
     {questionText : 'Commericial New',
     id : 37, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -411,7 +417,7 @@ export const Questions = [
     {questionText : 'Commerical stand alone',
     id : 38, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -421,7 +427,7 @@ export const Questions = [
     {questionText : 'Duct work only',
     id : 39, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -431,7 +437,7 @@ export const Questions = [
     {questionText : 'Gas reconnect',
     id : 40, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -441,7 +447,7 @@ export const Questions = [
     {questionText : 'Residential new',
     id : 41, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -451,7 +457,7 @@ export const Questions = [
     {questionText : 'Residential stand alone',
     id : 42, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -461,7 +467,7 @@ export const Questions = [
     {questionText : 'Temporary utility - mechanicial',
     id : 43, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -471,7 +477,7 @@ export const Questions = [
     {questionText : 'Commericial New',
     id : 44, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -481,7 +487,7 @@ export const Questions = [
     {questionText : 'Commerical stand alone',
     id : 45, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -491,7 +497,7 @@ export const Questions = [
     {questionText : 'Gas reconnect',
     id : 46, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -501,7 +507,7 @@ export const Questions = [
     {questionText : 'Residential new',
     id : 47, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -511,7 +517,7 @@ export const Questions = [
     {questionText : 'Residential stand alone',
     id : 48, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -521,7 +527,7 @@ export const Questions = [
     {questionText : 'Sprinkler',
     id : 49, 
     nextPage : 3,
-    icon : _contract,
+    icon : _firesprinkler,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -531,7 +537,7 @@ export const Questions = [
     {questionText : 'Temporary utility - plumbing',
     id : 50, 
     nextPage : 3,
-    icon : _contract,
+    icon : '',
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -541,7 +547,7 @@ export const Questions = [
     {questionText : 'New signage',
     id : 51, 
     nextPage : 3,
-    icon : _contract,
+    icon : _signnew,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -551,7 +557,7 @@ export const Questions = [
     {questionText : 'Reface existing sign',
     id : 52, 
     nextPage : 3,
-    icon : _contract,
+    icon : _signresurface,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -561,7 +567,7 @@ export const Questions = [
     {questionText : 'Repair existing sign',
     id : 53, 
     nextPage : 3,
-    icon : _contract,
+    icon : _signfix,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -571,7 +577,7 @@ export const Questions = [
     {questionText : 'Temporary sign',
     id : 54, 
     nextPage : 3,
-    icon : _contract,
+    icon : _signtemporary,
     endpagetext : '',
     endpagelink : '',
     price : '',

@@ -79,7 +79,7 @@
   }
   
   .assistant__cards-text {
-    display: flex;
+    display: unset;
     width: calc(100% - 120px);
     padding: 0 50px 0 15px;
     color: #2774ae;

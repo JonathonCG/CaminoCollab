@@ -23,7 +23,7 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
     if(isInClaytonCounty === 'JONESBORO'){
         return ( 
             <div>
-                <p className='home__asr--notinclayton'>This address is within Morrow City Limits</p>
+                <p className='home__asr--notinclayton'>This address is within Jonesboro City Limits</p>
                 <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
                 <a className="link" href='https://www.jonesboroga.com/OfficeOfTheCityManager.aspx'>
                     <h2>City of Jonesboro Permits</h2>

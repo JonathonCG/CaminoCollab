@@ -363,7 +363,7 @@ ul {
   border-radius: 5px;
 }
 
-#endpage__card a {
+#endpage__card {
   color: white;
 }
 
@@ -386,6 +386,54 @@ ul {
   color: white;
 }
 
+.endpage-acknowledgement-no {
+  color: black;
+  border: 1px black solid;
+  cursor: pointer;
+  flex-direction: row;
+  display: inline-flex;
+  align-items: center;
+  min-height: calc(120px + 1vh);
+  min-width: calc(92px + 1vh);
+  width: 80%;
+  transition: background-color .3s;
+  background-color: rgb(255, 255, 255);
+}
+
+.endpage-acknowledgement-no:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+.endpage-acknowledgement-yes {
+  color: white;
+  border: 1px black solid;
+  cursor: pointer;
+  flex-direction: row;
+  display: inline-flex;
+  align-items: center;
+  min-height: calc(120px + 1vh);
+  min-width: calc(92px + 1vh);
+  width: 80%;
+  background-color: #c7ffcc;
+}
+
+.larger {
+  transform: scale(3);
+  margin-left: 20px
+}
+
+.endpage ol li{
+  text-align: left;
+  margin-left: 5em;
+}
+
+.end-unconfirmed p {
+color: grey;
+}
+
+.end-confirmed a {
+color: rgb(238, 255, 238);
+}
 .continuebutton-endpage {
   display: inline-block;
 	font-weight: 400;

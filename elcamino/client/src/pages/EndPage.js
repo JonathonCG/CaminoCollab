@@ -16,9 +16,10 @@ export function EndPage() {
   }
   function ContinueButton({ischecked}) { /* Function changes what is displayed in the continue button element based on if "ischecked" is true or false */
     if(ischecked){
-      return <button><a href={Questions[id].endpagelink} target='blank'>Click here to view the permit you need on EnerGov</a></button>
+      return <div className="end-confirmed"><a href={Questions[id].endpagelink} target='blank'>Continue to the license application on EnerGov </a></div>
+      
     }
-    return <div><a target='blank'>Confirm you have read and understand the above before proceeding</a></div>
+    return <div className="end-unconfirmed"><p>Continue to the license application on EnerGov</p></div>
   }
   console.log(useParams().id)
   console.log(id)
@@ -30,15 +31,19 @@ export function EndPage() {
         <h2>We can help with this. The resources you are looking for are available on EnerGov</h2>
           <hr></hr>
         <p className="endpage-p">Below are the requirements you will need <em>before</em> applying for your license, you will need to present these during the process.</p>
+        
+        
         <ol> 
         {requirementGroups[Questions[id].id].map((reqs) => (
           <li>{prereqs[reqs]}</li>
         ))}
         </ol>
-        <div className="endpage-acknowledgement">
-        <input className="endpage-checkbox" type="checkbox" onChange={handleChange}></input><p className="endpage-p" onClick={handleChange}>I have read the requirements and acknowledge that I have completed them prior to my application</p>
+        
+        <div className={` ${isChecked ? "endpage-acknowledgement-yes":"endpage-acknowledgement-no"}`}onClick={handleChange}>
+        <input type="checkbox" className="larger" checked={isChecked}></input>
+        <p className="">I have read the requirements and acknowledge that I have completed them prior to my application</p>
         </div>
-        <p>{console.log(isChecked)}</p>
+        
         
         
 

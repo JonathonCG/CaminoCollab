@@ -335,12 +335,12 @@ ul {
 	line-height: 1.5;
 	border-radius: .25rem;
 	color: #fff;
-	background-color: #007bff;
+	background-color: #468ec6;
 }
 .assistant__back-button:hover {
   background-color: #ffffff;
-  color:rgb(32, 51, 138);
-  border: rgb(32, 51, 138) 1px solid;
+  color: #468ec6;
+  border: #468ec6 1px solid;
   cursor: pointer;
 }
 

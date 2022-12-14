@@ -204,7 +204,7 @@
   }
   
   .assistant__cards-text {
-    display: flex;
+    display: unset;
     flex-direction: row;
     width: calc(100% - 100px);
     padding: 0 100px 0 30px;
@@ -466,7 +466,10 @@ color: rgb(238, 255, 238);
   align-items: center;
 }
 
-
+.assistant__cards p {
+  color:#2774ae;
+  display: unset;
+}
 
 
 

@@ -51,9 +51,11 @@ export function Cards() {
                            }}>
                         
                         <div className='assistant__cards-image'><img src={Questions[cardList].icon}></img></div>
-                        <div className='assistant__cards-text'><h3>{Questions[cardList].questionText}</h3>{/*- to page {Questions[cardList].nextPage + 1}*/}</div>
+                        <div className='assistant__cards-text'><h3>{Questions[cardList].questionText}</h3><p>{Questions[cardList].addinfo}</p></div>
+                        
                         <div className='assistant__cards-icon'><img src={rightchevron}></img></div>
                     </button>
+                    
                 </li>
                 ))
          }</ul>  

@@ -27,6 +27,7 @@ export function Cards() {
     return (
         
         <div className='assistant__optiongrid'>
+        <BackButton endpage={value} />
         {/* <p>Page: {value + 1} of {QuestionGroups.length}</p> */}
         {/* ~~this is where the back button should be rendered~~ */}
          <ul>{
@@ -57,7 +58,7 @@ export function Cards() {
                 ))
          }</ul>  
          <button className='assistant__back-button' onClick={() => {return navigate('/')}}>Check another Address</button>
-         <BackButton endpage={value} />
+         
          </div>
          )   
 }

@@ -16,9 +16,9 @@ export function EndPage() {
   }
   function ContinueButton({ischecked}) { /* Function changes what is displayed in the continue button element based on if "ischecked" is true or false */
     if(ischecked){
-      return <a href={Questions[id].endpagelink} target='blank'>Click here to view the permit you need on EnerGov</a>
+      return <button><a href={Questions[id].endpagelink} target='blank'>Click here to view the permit you need on EnerGov</a></button>
     }
-    return <a target='blank'>Confirm you have read and understand the above before proceeding</a>
+    return <div><a target='blank'>Confirm you have read and understand the above before proceeding</a></div>
   }
   console.log(useParams().id)
   console.log(id)
@@ -28,26 +28,27 @@ export function EndPage() {
       <div id="endpage__card">
         <h1>{Questions[id].questionText}</h1>
         <h2>We can help with this. The resources you are looking for are available on EnerGov</h2>
-        <p>Below are the requirements you will need <em>before</em> applying for your license, you will need to present these during the process.</p>
+          <hr></hr>
+        <p className="endpage-p">Below are the requirements you will need <em>before</em> applying for your license, you will need to present these during the process.</p>
         <ol> 
         {requirementGroups[Questions[id].id].map((reqs) => (
           <li>{prereqs[reqs]}</li>
         ))}
         </ol>
-        
-        <input type="checkbox" onChange={handleChange}></input><p>I have read the requirements and acknowledge that I have completed them prior to my application</p>
-        
+        <div className="endpage-acknowledgement">
+        <input className="endpage-checkbox" type="checkbox" onChange={handleChange}></input><p className="endpage-p" onClick={handleChange}>I have read the requirements and acknowledge that I have completed them prior to my application</p>
+        </div>
         <p>{console.log(isChecked)}</p>
         
         
 
-        
-        <h3><ContinueButton ischecked={isChecked} /></h3>
-        
-      </div>
-      <div><button className="continuebutton" onClick={() => {return navigate('/')}}>Return to the homepage <img src=''></img></button></div>
-  </div>
-  )
+          
+          <h3><ContinueButton ischecked={isChecked} /></h3>
+          
+        </div>
+        <div><button className="continuebutton-endpage" onClick={() => {return navigate('/assistant')}}>Go back</button></div>
+    </div>
+    )
 }
 
 // <input type="checkbox" id={reqs} checked={isChecked} onChange={handleChange} />

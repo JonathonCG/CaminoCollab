@@ -12,14 +12,14 @@ services:
       - '5432:5432'
     volumes:
       - db_data:/var/lib/postgresql/data
-  server:
-    build: ./elcamino/server
-    ports: 
-      - '3001:3001'
-  client:
-    build: ./elcamino/client
-    ports: 
-      - '443:443'
+#  server:
+#    build: ./elcamino/server
+#    ports: 
+#      - '3001:3001'
+#  client:
+#    build: ./elcamino/client
+#    ports: 
+#      - '443:443'
 
 
 volumes:

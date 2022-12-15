@@ -29,12 +29,6 @@ const getAddr = (request, response) => {
       response.status(200).json(results.rows)
     })
   }
-// const getAddr = (request, response) => {
-  // pool.query('SELECT * FROM addresses WHERE fulladdr = $req', [request], (err, res) => {
-    // if (err) {
-      // throw err
-    // }
-    // console.log('user:', res.rows[0])
-  // })
-// }
+
+  
 module.exports = {getAddr}

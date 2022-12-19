@@ -12,7 +12,7 @@ const listbox = {
   name: "Addresses",
   displayField: 'fulladdr',
   data: (query) =>
-    fetch(`permitassistant.claytoncountyga.gov/addr?q=${encodeURIComponent(query)}`)
+    fetch(`/addr?q=${encodeURIComponent(query)}`)
       .then(res => res.json()),
 }
 

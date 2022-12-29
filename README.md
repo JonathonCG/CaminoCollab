@@ -19,7 +19,9 @@ Local Dev server, no Docker
         npm i
         npm start
 
-Dev Server, with Docker:
+Production Server, with Docker:
     sudo docker compose up
+        This starts up 3 docker containers with the pgSQL db, api server, and client server
+        The client docker container runs 'npm run build' to create a production build of the app, then serves it using the 'serve' node.js add-on; command: 'serve -s build'
 
 *if it's configured correctly with Dockerfiles in '/elcamino/server'  '/elcamino/client', this should work

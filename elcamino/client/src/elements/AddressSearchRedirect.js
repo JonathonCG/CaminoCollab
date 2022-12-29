@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import _rightchevron from './graphics/rightchevron.png'
+import _rightchevron from '../graphics/rightchevron.png'
 
 export function AddressSearchRedirect({isInClaytonCounty}) {
     const [displayedString, setDisplayedString] = useState(0);

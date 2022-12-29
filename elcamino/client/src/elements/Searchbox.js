@@ -1,6 +1,6 @@
 import React,{useCallback, useRef, useState} from 'react'
 import Turnstone from 'turnstone'
-import { AddressSearchRedirect } from '../AddressSearchRedirect'
+import { AddressSearchRedirect } from './AddressSearchRedirect'
 import styles from './SearchBox.css'
 
 // const styles = {

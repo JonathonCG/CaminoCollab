@@ -16,10 +16,10 @@ export function EndPage() {
   }
   function ContinueButton({ischecked}) { /* Function changes what is displayed in the continue button element based on if "ischecked" is true or false */
     if(ischecked){
-      return <div className="end-confirmed"><a href={Questions[id].endpagelink} target='blank'>Continue to the license application on EnerGov </a></div>
+      return <div className="end-confirmed"><a href={Questions[id].endpagelink} target='blank'>Continue to the permit application in Citizen Self Service </a></div>
       
     }
-    return <div className="end-unconfirmed"><p>Continue to the license application on EnerGov</p></div>
+    return <div className="end-unconfirmed"><p>Continue to the permit application in Citizen Self Service</p></div>
   }
   console.log(useParams().id)
   console.log(id)
@@ -28,9 +28,9 @@ export function EndPage() {
     <div className="endpage">
       <div id="endpage__card">
         <h1>{Questions[id].questionText}</h1>
-        <h2>We can help with this. The resources you are looking for are available on EnerGov</h2>
+        <h2>We can help with this. The resources you are looking for are available in Citizen Self Service</h2>
           <hr></hr>
-        <p className="endpage-p">Below are the requirements you will need <em>before</em> applying for your license, you will need to present these during the process.</p>
+        <p className="endpage-p">Below are the requirements you will need <em>before</em> applying for your permit. You will need to present these during the permitting process.</p>
         
         
         <ol> 
@@ -41,7 +41,7 @@ export function EndPage() {
         
         <div className={` ${isChecked ? "endpage-acknowledgement-yes":"endpage-acknowledgement-no"}`}onClick={handleChange}>
         <input type="checkbox" className="larger" checked={isChecked}></input>
-        <p className="">I have read the requirements and acknowledge that I have completed them prior to my application</p>
+        <p className="">I have read the requirements and acknowledge that I have completed/acquired them prior to my application</p>
         </div>
         
         

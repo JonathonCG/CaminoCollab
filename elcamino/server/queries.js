@@ -1,10 +1,10 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'node',
+  user: 'webdev',
   host: '172.16.15.205',
-  database: 'node',
+  database: 'webdev',
   password: 'Cl@yt0n42!',
-  port: 5432,
+  port: 5433,
 })
 
 // const getAddr = (request, response) => {
@@ -21,7 +21,7 @@ const pool = new Pool({
 
 const getAddr = (request, response) => {
     requestQuery = "%" + request.query.q + "%"
-    pool.query('SELECT fulladdr, withinname FROM addresses WHERE fulladdr ILIKE $1 LIMIT 10', [requestQuery], 
+    pool.query('SELECT fulladdr, withinname, zone FROM addresses WHERE fulladdr ILIKE $1 LIMIT 10', [requestQuery], 
     (err, results) => {
       if (err) {
         throw err

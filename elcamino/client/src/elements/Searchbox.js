@@ -19,8 +19,8 @@ const listbox = {
 
 export function TurnstoneSearch() {
   // selected result is the name of the database field that the search returned
-  // query
-  const [isInClaytonCounty, setIsInClaytonCounty] = useState(0);
+  const [isInClaytonCounty, setIsInClaytonCounty] = useState('');
+  const [zone, setZone] = useState('');
   const ref = useRef(null);
   const handleClick = () => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
@@ -31,14 +31,13 @@ export function TurnstoneSearch() {
         console.log('query is ---')
         console.log(query)
         console.log('search result is ---' + selectedResult);
-        // setIsInClaytonCounty(query.withinname === undefined || query.withinname === null)
         setIsInClaytonCounty(query.withinname)
         console.log('isInClaytonCounty is ---' + isInClaytonCounty);
-        //<AddressSearchRedirect isInClaytonCounty={isInClaytonCounty}/>
+        setZone(query.zone)
+        console.log('zone is ---' + zone)
       }
     }, 
   )
-
   
   return  (
     <div>
@@ -46,7 +45,7 @@ export function TurnstoneSearch() {
         <Turnstone id="autocomplete" matchText={true} listbox={listbox}  typeahead={false} styles={styles} onSelect={onSelect} />
       </div>
       <div className='addresssearchredirect'>
-        <AddressSearchRedirect isInClaytonCounty={isInClaytonCounty} />
+        <AddressSearchRedirect isInClaytonCounty={isInClaytonCounty} zone={zone} />
       </div>
     </div>
     );

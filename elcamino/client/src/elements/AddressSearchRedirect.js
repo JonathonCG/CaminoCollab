@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import _rightchevron from '../graphics/rightchevron.png'
 
-export function AddressSearchRedirect({isInClaytonCounty}) {
+export function AddressSearchRedirect({isInClaytonCounty, zone}) {
+    console.log ('zone is ' + zone)
     const [displayedString, setDisplayedString] = useState(0);
     const isFirstRender = useRef(true);
     let displayMessage = '';
@@ -15,9 +16,10 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
             return; // 👈️ return early if first render
           }
         // setDisplayedString();
-    }, [isInClaytonCounty]);
+    }, [isInClaytonCounty], [zone]);
 
         console.log('outside the effect'+displayMessage)
+
 
 
     if(isInClaytonCounty === 'JONESBORO'){
@@ -85,8 +87,7 @@ export function AddressSearchRedirect({isInClaytonCounty}) {
         return (
         <div className='home__asr'>
             <h3 className='home__asr--inclayton'>You are in Unincorporated Clayton County.</h3>
-            {/* <p>We can direct where you need to go.</p> */}
-            {/* <p>Answer a few questions and you will be linked to either documentation or an application</p> */}
+            <p>Zoning for this address is: {zone}</p>
             <button className="home__asr--continue-button" onClick={() => {return navigate('/Assistant')}}>
                 <h2>Continue to the Permit Assistant</h2>
             </button>

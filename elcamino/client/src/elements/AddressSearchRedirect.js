@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import _rightchevron from '../graphics/rightchevron.png'
+import _rightchevron from '../graphics/png/rightchevron.png'
+import { Grid, Card, Row, Text, Button, Spacer } from "@nextui-org/react";
 
 export function AddressSearchRedirect({isInClaytonCounty, zone}) {
     console.log ('zone is ' + zone)
@@ -23,75 +24,191 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
 
 
     if(isInClaytonCounty === 'JONESBORO'){
-        return ( 
-            <div>
-                <p className='home__asr--notinclayton'>This address is within Jonesboro City Limits</p>
-                <p>Your project appears to be located outside of Clayton County's Jurisdiction</p>
-                <a className="link" href='https://www.jonesboroga.com/OfficeOfTheCityManager.aspx'>
-                    <h2>City of Jonesboro Permits</h2>
-                </a>
-            </div>
+        return (
+            <>
+            <Spacer y={1} />
+            <Row>
+                <Card css={{padding: "1%"}}>
+                    <Card.Header>
+                        <Text h3>This address is within Jonesboro's City Limits</Text>
+                    </Card.Header>
+                    <Card.Body>
+                        <Text h5>Zoning for this address is: {zone}</Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Grid.Container justify="center">
+                            <a href='https://www.jonesboroga.com/OfficeOfTheCityManager.aspx'>
+                                <Button auto flat color="warning">
+                                    Go to Jonesboro Permits Page
+                                </Button>
+                            </a>
+                        </Grid.Container>
+                    </Card.Footer>
+                </Card>
+            </Row>
+            </>
         );
     }
     else if(isInClaytonCounty === 'LOVEJOY'){
         return (
-            <div>
-                <p className='home__asr--notinclayton'>This address is within Lovejoy City Limits</p>
-                <a className="link" href='https://www.cityoflovejoy.com/936/Permits'>
-                    <h2>City of Lovejoy Permits</h2>
-                </a>
-            </div>
+            <>
+            <Spacer y={1} />
+            <Row>
+                <Card css={{padding: "1%"}}>
+                    <Card.Header>
+                        <Text h3>This address is within Lovejoy's City Limits</Text>
+                    </Card.Header>
+                    <Card.Body>
+                        <Text h5>Zoning for this address is: {zone}</Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Grid.Container justify="center">
+                            <a href='https://www.cityoflovejoy.com/936/Permits'>
+                                <Button auto flat color="warning">
+                                    Go to Lovejoy Permits Page
+                                </Button>
+                            </a>
+                        </Grid.Container>
+                    </Card.Footer>
+                </Card>
+            </Row>
+            </>
         );
     }
     else if(isInClaytonCounty === 'LAKE CITY'){
         return (
-            <div>
-                <p className='home__asr--notinclayton'>This address is within Lake City's Limits</p>
-                <a className="link" href='https://lakecityga.net/departments-permitapplications.asp'>
-                    <h2>Lake City Permits</h2>
-                </a>
-            </div>
+            <>
+            <Spacer y={1} />
+            <Row>
+                <Card css={{padding: "1%"}}>
+                    <Card.Header>
+                        <Text h3>This address is within Lake City's City Limits</Text>
+                    </Card.Header>
+                    <Card.Body>
+                        <Text h5>Zoning for this address is: {zone}</Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                    <Grid.Container justify="center">
+                        <a href='https://lakecityga.net/departments-permitapplications.asp'>
+                            <Button auto flat color="warning">
+                                Go to Lake City Permits Page
+                            </Button>
+                        </a>
+                    </Grid.Container>
+                    </Card.Footer>
+                </Card>
+            </Row>
+            </>
         );
     }
     else if(isInClaytonCounty === 'RIVERDALE'){
         return (
-            <div>
-                <p className='home__asr--notinclayton'>This address is within Riverdale City Limits</p>
-                <a className="link" href='https://www.riverdalega.gov/470/Permitting-Services'>
-                    <h2>City of Riverdale Permits</h2>
-                </a>
-            </div>
+            <>
+            <Spacer y={1} />
+            <Row>
+                <Card css={{padding: "1%"}}>
+                    <Card.Header>
+                        <Text h3>This address is within Riverdale's City Limits</Text>
+                    </Card.Header>
+                    <Card.Body>
+                        <Text h5>Zoning for this address is: {zone}</Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Grid.Container justify="center">
+                            <a href='https://www.riverdalega.gov/470/Permitting-Services'>
+                                <Button auto flat color="warning">
+                                    Go to Riverdale Permits Page
+                                </Button>
+                            </a>
+                        </Grid.Container>
+                    </Card.Footer>
+                </Card>
+            </Row>
+            </>
         );
     }
     else if(isInClaytonCounty === 'MORROW'){
         return (
-            <div>
-                <p className='home__asr--notinclayton'>This address is within Morrow City Limits</p>
-                <a className="link" href='https://www.cityofmorrow.com/government-cityhall-permitsforms.asp'>
-                    <h2>City of Morrow Permits</h2>
-                </a>
-            </div>
+            <>
+            <Spacer y={1} />
+            <Row>
+                <Card css={{padding: "1%"}}>
+                    <Card.Header>
+                        <Text h3>This address is within Morrow City Limits</Text>
+                    </Card.Header>
+                    <Card.Body>
+                        <Text h5>Zoning for this address is: {zone}</Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Grid.Container justify="center">
+                            <a href='http://www.cityofmorrow.com/government-cityhall-permitsforms.asp'>
+                                <Button auto flat color="warning">
+                                    Go to Morrow's Permits Page
+                                </Button>
+                            </a>
+
+                        </Grid.Container>
+                    </Card.Footer>
+                </Card>
+            </Row>
+            </>
         );
     }
     else if(isInClaytonCounty === 'FOREST PARK'){
         return (
-            <div>
-                <p className='home__asr--notinclayton'>This address is within Forest Park City Limits</p>
-                <a className="link" href='https://www.forestparkga.gov/planning/page/permits-and-applications'>
-                    <h2>City of Forest Park Permits</h2>
-                </a>
-            </div>
+            <>
+            <Spacer y={1} />
+            <Row>
+                <Card css={{padding: "1%"}}>
+                    <Card.Header>
+                        <Text h3>This address is within Forest Park City Limits</Text>
+                    </Card.Header>
+                    <Card.Body>
+                        <Text h5>Zoning for this address is: {zone}</Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer>
+                        <Grid.Container justify="center">
+                            <a href='https://www.forestparkga.gov/planning/page/permits-and-applications'>
+                                <Button auto flat color="warning">
+                                    Go to Forest Park Permits Page
+                                </Button>
+                            </a>
+                        </Grid.Container>
+                    </Card.Footer>
+                </Card>
+            </Row>
+            </>
         );
     }
     else if(isInClaytonCounty === 'UNINCORPORATED'){
         return (
-        <div className='home__asr'>
-            <h3 className='home__asr--inclayton'>You are in Unincorporated Clayton County.</h3>
-            <p>Zoning for this address is: {zone}</p>
-            <button className="home__asr--continue-button" onClick={() => {return navigate('/Assistant')}}>
-                <h2>Continue to the Permit Assistant</h2>
-            </button>
-        </div>
+            <>
+            <Spacer y={1} />
+            <Row>
+                <Card css={{padding: "1%"}}>
+                    <Card.Header>
+                        <Text h3>This address in Unincorporated Clayton County</Text>
+                    </Card.Header>
+                    <Card.Body>
+                        <Text h5>Zoning for this address is: {zone}</Text>
+                    </Card.Body>
+                    <Card.Divider />
+                    <Card.Footer alignItems="center">
+                        <Grid.Container justify="center">
+                            <Button auto flat color="success" onPress={() => {return navigate('/Assistant')}}>
+                                Continue to the Permit Assistant
+                            </Button>
+                        </Grid.Container>
+                    </Card.Footer>
+                </Card>
+            </Row>
+            </>
 
         );
     }

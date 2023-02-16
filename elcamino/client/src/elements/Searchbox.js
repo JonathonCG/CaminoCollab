@@ -42,7 +42,13 @@ export function TurnstoneSearch() {
   return  (
     <div>
       <div className='centerdiv' onClick={handleClick}>
-        <Turnstone id="autocomplete" matchText={true} listbox={listbox}  typeahead={false} styles={styles} onSelect={onSelect} />
+        <Turnstone 
+        id="autocomplete" 
+        matchText={true} 
+        listbox={listbox}  
+        typeahead={false} 
+        styles={styles} 
+        onSelect={onSelect} />
       </div>
       <div className='addresssearchredirect'>
         <AddressSearchRedirect isInClaytonCounty={isInClaytonCounty} zone={zone} />

@@ -1,22 +1,40 @@
-import '../App.css';
-import clayton from '../graphics/claytonwhite.svg';
+import { Navbar } from '@nextui-org/react'
+import { ClaytonLogo } from './ClaytonLogo.js'
 
-export function Navbar() {
-  return (
-    <div className="navbar">
-      <div>
-        <a href='https://claytoncountyga.gov'>
-          <img src={clayton} alt='County Logo' />
-        </a>
-      </div>
-      <ul className="navbar__menu-items">
-      {/* <li><a href="#">Clayton County Permitting</a></li> */}
-      <li><a href="https://claytoncountyga.gov/">Go to Claytoncountyga.gov</a></li>
-      <li></li>
-      <li></li>
-      </ul>
-        
-      
-    </div>
-  )
-}
+
+export function HomeNavbar() {
+
+    return (
+        <Navbar isBordered variant="floating">
+            <Navbar.Brand>
+                <ClaytonLogo href="https://claytoncountyga.gov"/>
+                <text b color="inherit" hideIn="xs">
+                    Permit Assistant
+                </text>
+            </Navbar.Brand>
+            <Navbar.Content activeColor="primary" hideIn="sm" variant="underline">
+                <Navbar.Link isActive href="/">Address Lookup</Navbar.Link>
+                <Navbar.Link href="/Assistant">Permit Assistant</Navbar.Link>
+                <Navbar.Item>Permit Requirements</Navbar.Item>
+            </Navbar.Content>
+        </Navbar>
+    )
+};
+
+export function AssistantNavbar() {
+    return (
+        <Navbar isBordered variant="floating">
+            <Navbar.Brand>
+                    <ClaytonLogo href="https://claytoncountyga.gov"/>
+                    <text b color ="inherit" hideIn="xs">
+                        Permit Assistant
+                    </text>
+            </Navbar.Brand>
+            <Navbar.Content activeColor="primary" hideIn="sm" variant="underline">
+                <Navbar.Link href="/">Address Lookup</Navbar.Link>
+                <Navbar.Link isActive href="/Assistant">Permit Assistant</Navbar.Link>
+                <Navbar.Item>Permit Requirements</Navbar.Item>
+            </Navbar.Content>
+        </Navbar>
+    )
+};

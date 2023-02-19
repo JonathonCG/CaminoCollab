@@ -1,5 +1,5 @@
 import { TurnstoneSearch } from "../elements/Searchbox"
-import  commdevlogo  from '../graphics/png/Commdevlogo.png'
+import CommDevLogo  from '../graphics/png/CommDevLogo.png'
 import { useRef } from 'react'
 import { HomeNavbar } from '../elements/Navbar';
 import { Container, Spacer, Grid, Card, Row, Text, Col } from "@nextui-org/react";
@@ -22,7 +22,7 @@ export function Home() {
           <Col css={{"width": "100%"}}>
             <Spacer y={1} />
             <Row justify="center">
-              <img width="200" src={commdevlogo} alt='alt text'></img>
+              <img width="150" src={CommDevLogo} alt='alt text'></img>
             </Row>
             <Row justify="center">
               <Text h1>Permit Assistant</Text>

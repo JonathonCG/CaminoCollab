@@ -18,19 +18,35 @@ export function Cards() {
     setCardPage(0);
     };
 
-    function BackButton({endpage}) { /* Function changes what is displayed in the continue button element based on if we are on the first page or not */
-        if(endpage){
+    function BackButton({page}) { /* Function changes what is displayed in the continue button element based on if we are on the first page or not */
+        if(page){
             return <Button auto rounded flat color="primary" onClick={() => {goBack(); handleClick();}}>Back</Button> 
         }
             return
     }
 
-    // Function for determining if the card has a background image
-    function renderBgImg(bgImg) {
-        if(Boolean(bgImg)){
-            return <Card.Image src={bgImg} objectFit="cover" />
+    // Function for giving non-endpage cards borders
+    function cardVariant(endpage) {
+        if(endpage === false){
+            return "bordered"
         }
-            return
+        return
+    }
+
+    // Function for determining <Card.Header>; either 'Permit' or 'Permit Category'
+    function QuestionHeader({endpage}) {
+        if(endpage){
+            return (
+                <Card.Header css={{}}>
+                    <Text weight="bold" color="secondary">Permit</Text>
+                </Card.Header>
+            )
+        }
+        return (
+            <Card.Header>
+                <Text weight="bold" color="primary">Permit Category</Text>
+            </Card.Header>
+        )
     }
 
     return (
@@ -38,10 +54,12 @@ export function Cards() {
             <Grid.Container gap={2} justify="center">
                 {QuestionGroups[cardPage].map((cardList) => ( //Maps the QuestionGroups array
                     //Key to keep items organized per React rules
-                    <Grid xs={6} sm={6} lg={3} justify="center" key={Questions[cardList].id}> 
+                    <Grid xs={6} sm={6} lg={3} xl={2} justify="center" key={Questions[cardList].id}> 
                         <Card 
                         isPressable
                         isHoverable
+                        variant={cardVariant(Questions[cardList].endpage)}
+                        borderWeight="bold"
                         onPress={()=>{ //onClick function that changes the 'cardPage' state to the ID of the question displayed.
                             const paramID = '/nextsteps/' + Questions[cardList].id;
                             console.log(Questions[cardList].nextPage);
@@ -52,7 +70,8 @@ export function Cards() {
                                 return setCardPage((Questions[cardList].nextPage))
                             }
                             }}>
-                            <Card.Header>
+                            <QuestionHeader endpage={Questions[cardList].endpage} />
+                            <Card.Body>
                                 <Row align="center">
                                     {/* <Image src={Questions[cardList].icon} /> */}
                                     <Spacer y={1} />
@@ -62,14 +81,6 @@ export function Cards() {
                                     </Col>
                                     {/* <Image src={rightchevron} width="10%" align="right" /> */}
                                 </Row>
-                            </Card.Header>
-                            <Card.Body css={{ p: 0 }}>
-                                {/* <Card.Image 
-                                src={Questions[cardList].bgImg} 
-                                width="100%"
-                                height="100%"
-                                objectFit="cover"
-                                /> */}
                             </Card.Body>
                         </Card>
                     </Grid>
@@ -77,7 +88,7 @@ export function Cards() {
             </Grid.Container>
             <Spacer y={1} />
             <Row justify="center">
-                <BackButton endpage={cardPage} /> 
+                <BackButton page={cardPage} /> 
             </Row>
         </Container>
         

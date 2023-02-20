@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 // import { requirementGroups } from "../elements/QuestionCardsInfo";
 import { prereqs } from "../elements/QuestionCardsInfo";
 import { useState } from "react";
-import { Container, Spacer, Grid, Card, Row, Text, Button, Col, Image } from "@nextui-org/react";
+import { Container, Spacer, Grid, Card, Row, Col, Text, Button, Checkbox } from "@nextui-org/react";
 import { EndPageNavbar } from '../elements/Navbar';
 
 export function EndPage() {
@@ -12,57 +12,73 @@ export function EndPage() {
 
   const { id } = useParams();
   const navigate = useNavigate()
-  const [isChecked, setIsChecked] = useState(false); /**State setting for the checkbox */
-  const handleChange = () => { /* handleChange changes the "isChecked" back and forth from true to false dependong on if the box is checked */
-    setIsChecked(!isChecked);
-  }
+  const [selected, setSelected] = useState(false); /**State setting for the checkbox */
 
-  function ContinueButton({ischecked}) { /* Function changes what is displayed in the continue button element based on if "ischecked" is true or false */
-    if(ischecked){
+  function ContinueButton({selected}) { /* Function changes what is displayed in the continue button element based on if "ischecked" is true or false */
+    if(selected){
       return (
-      <div className="end-confirmed">
-        <a href={Questions[id].endpagelink} target='blank'>
-          Continue to the permit application in Citizen Self Service 
-        </a>
-      </div>
+          <Button as="a" href={Questions[id].endpagelink} size="lg" shadow color="gradient">
+            Continue to the Permit Application
+          </Button>
       )
     }
     return (
-      <div className="end-unconfirmed">
-        <p>Continue to the permit application in Citizen Self Service</p>
-      </div>
+          <Button size="md" disabled>
+            Continue to the Permit Application
+          </Button>
     )
   }
 
-  console.log(useParams().id)
-  console.log(id)
-  console.log(Questions[id].id)
+  function labelColor() { /* Funtion that changes the text color next to the CheckBox */
+    if(selected){
+      return "success"
+    }
+    return
+  }
 
   return (
     <Container>
       <EndPageNavbar />
       <Spacer y={1} />
-      <Card>
-        <Text h1>{Questions[id].questionText}</Text>
-        <Text h2>We can help with this. The resources you are looking for are available in Citizen Self Service</Text>
-          {/* <hr></hr> */}
-        <Text h5 className="endpage-p">Below are the requirements you will need <em>before</em> applying for your permit. You will need to present these during the permitting process.</Text>
-        
-        <ol> 
-        {Questions[id].requirements.map((reqs) => (
-          <li>{prereqs[reqs]}</li>
-        ))}
-        </ol>
-        
-        <div className={` ${isChecked ? "endpage-acknowledgement-yes":"endpage-acknowledgement-no"}`}onClick={handleChange}>
-        <input type="checkbox" className="larger" checked={isChecked}></input>
-        <p className="">I have read the requirements and acknowledge that I have completed/acquired them prior to my application</p>
-        </div>
+      <Grid.Container>
+
+      <Grid css={{p: "20px"}} justify="center">
+        <Row>
+
+        </Row>
+          <Text h3>{Questions[id].questionText}</Text>
+          <Text h5>Below are the requirements you will need <em>before</em> applying for your permit. You will need to present these during the permitting process.</Text>
           
-          <ContinueButton ischecked={isChecked} />
-          
-        </Card>
-        <Button className="continuebutton-endpage" onPress={() => {return navigate('/assistant')}}>Go back</Button>
+          <ol> 
+          {Questions[id].requirements.map((reqs) => (
+            <li>{prereqs[reqs]}</li>
+          ))}
+          </ol>
+
+          {/* <CheckboxCard /> */}
+          <Card css={{p: "10px"}}>
+            <Row justify="center">
+              <Checkbox onChange={setSelected} color="success" labelColor={labelColor()}>
+                I have read the requirements and acknowledge that I have completed/acquired them prior to my application
+              </Checkbox>
+            </Row>
+          </Card>
+
+      </Grid>
+      <Grid css={{p: "10px", w: "100%"}} alignContent="center">
+          <Row justify="center">
+            <ContinueButton selected={selected} />
+          </Row>
+          <Spacer y={2} />
+          <Row justify="center">
+            <Button auto size="sm" onPress={() => {return navigate('/assistant')}}>
+            Go back
+            </Button>
+          </Row>
+      </Grid>
+
+
+      </Grid.Container>
     </Container>
     )
 }

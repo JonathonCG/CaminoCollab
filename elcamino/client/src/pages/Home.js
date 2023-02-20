@@ -1,5 +1,5 @@
 import { TurnstoneSearch } from "../elements/Searchbox"
-import CommDevLogo  from '../graphics/png/CommDevLogo.png'
+import CommDevLogo  from '../graphics/png/Commdevlogo.png'
 import { useRef } from 'react'
 import { HomeNavbar } from '../elements/Navbar';
 import { Container, Spacer, Grid, Card, Row, Text, Col } from "@nextui-org/react";
@@ -7,11 +7,6 @@ import { Container, Spacer, Grid, Card, Row, Text, Col } from "@nextui-org/react
 
 export function Home() {
   document.title = "Permit Assistant"
-  
-  const ref = useRef(null);
-  const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'});
-  };
 
   return (
     <Container alignContent="center" css={{w: "100%" }}>

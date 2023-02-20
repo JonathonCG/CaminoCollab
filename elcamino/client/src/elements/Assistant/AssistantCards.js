@@ -1,121 +1,27 @@
-import _24rightchevron from '../graphics/png/24rightchevron.png'
-import _32rightchevron from '../graphics/png/32rightchevron.png'
-import _logo from '../graphics/logo.svg'
-import _rightchevron from '../graphics/png/rightchevron.png'
-import _celltowernew from '../graphics/png/cell-tower-new.png'
-import _celltowerupgrade from '../graphics/png/cell-tower-upgrade.png'
-import _commercialbuilding from '../graphics/png/commercial-building.png'
-import _company from '../graphics/png/company.png'
-import _duct from '../graphics/png/duct.png'
-import _factory from '../graphics/png/factory.png'
-import _firesprinkler from '../graphics/png/fire-sprinkler.png'
-import _garage from '../graphics/png/garage.png'
-import _gas from '../graphics/png/gas.png'
-import _house from '../graphics/png/house.png'
-import _househouse from '../graphics/png/house-house.png'
-import _jackhammer from '../graphics/png/jackhammer.png'
-import _jackhammerhammer from '../graphics/png/jackhammer-hammer.png'
-import _jackhammerinterior from '../graphics/png/jackhammer-interior.png'
-import _jackhammershop from '../graphics/png/jackhammer-shop.png'
-import _lightning from '../graphics/png/lightning.png'
-import _lightningarrow from '../graphics/png/lightning-arrow.png'
-import _mechanical from '../graphics/png/mechanical.png'
-import _mobilehome from '../graphics/png/mobile-home.png'
-import _office from '../graphics/png/office.png'
-import _plugunplug from '../graphics/png/plug-unplug.png'
-import _plumbing from '../graphics/png/plumbing.png'
-import _plus from '../graphics/png/plus.png'
-import _prefabhome from '../graphics/png/prefab-home.png'
-import _religion from '../graphics/png/religion.png'
-import _shop from '../graphics/png/shop.png'
-import _signfix from '../graphics/png/sign-fix.png'
-import _signnew from '../graphics/png/sign-new.png'
-import _signresurface from '../graphics/png/sign-resurface.png'
-import _signtemporary from '../graphics/png/sign-temporary.png'
-import _sign from '../graphics/png/sign.png'
-import _structural from '../graphics/png/structural.png'
-import _timetablelightning from '../graphics/png/timetable-lightning.png'
-import _timetablemechanical from '../graphics/png/timetable-mechanical.png'
-import _timetableplumbing from '../graphics/png/timetable-plumbing.png'
-import _tools from '../graphics/png/tools.png'
-import _truckhouse from '../graphics/png/truck-house.png'
-import _commercialPicture from '../graphics/png/commercial-image.png'
-import _indutrialPicture from '../graphics/png/industrial-image.png'
-import _residentialPicture from '../graphics/png/residential-image.png'
-
-export const prereqs = [
-'Site Plan',
-'Survey',
-'Flood Elevation Certificate (If Appliable)',
-'*Environmental Health',
-'Contractor Affidavits',
-'Energy Code Compliance Certificate',
-'Sewer Bond',
-'Floor Plan',
-'Variance (If Applicable)',
-'Grading Permit (If applicable)',
-'State License',
-'Business License',
-'Authorized Agent Form (If Applicable)',
-'Homeowner Affidavit (If Applicable',
-'Identification',
-'HVAC Letter',
-'Engineering Letter (If Applicable)',
-'Mobile Home Registration',
-'Mobile Home Tax Receipt',
-'Property Tax Verification',
-'Refund Request Letter',
-'Cash Bond Required',
-'Event Route',
-'Elevations w/ Finish Materials',
-'Police Approval',
-'Fire Marshal Permit',
-'GDOT / County T&D Permit'
-];
-
-export const QuestionGroups = [
-    [0,1,11,55],                            //page 0
-    [2,3,4,5,6,7,8,9,10,12,13,14,15,16],    //page 1
-    [56,57,58,59,60,17,18,19,22,23,24,25],  //page 2
-    [26,27,28,29],                          //page 3
-    [26,27,29],                             //page 4
-    [30,31,32,33,36],                       //page 5
-    [34,35,32,33,36],                       //page 6
-    [37,38,39,40,43],                       //page 7
-    [41,42,39,40,43],                       //page 8
-    [44,45,46,49,50],                       //page 9
-    [47,48,46,50],                          //page 10
-    [51,52,53,54],                          //page 11
-    [20,21],                                //page 12
-];
-
-export const Questions = [
+export const AssistantCards = [
     {questionText : 'Commercial', 
     id : 0, 
     nextPage : 1,
-    icon : _company,
     endpagetext : '',
     endpagelink : '',
     price : '',
     addinfo : 'Places you shop and do business',
     endpage : false,
     requirements : [],
-    bgImg : _commercialPicture},
+    bgImg : ''},
     {questionText : 'Residential', 
     id : 1, 
     nextPage : 2,
-    icon : _house,
     endpagetext : '',
     endpagelink : '',
     price : '',
     addinfo : 'Places people live',
     endpage : false,
     requirements : [],
-    bgImg : _residentialPicture},
+    bgImg : ''},
     {questionText : 'Demolition', 
     id : 2, 
     nextPage : 3,
-    icon : _jackhammer,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -126,7 +32,6 @@ export const Questions = [
     {questionText : 'Electrical', 
     id : 3, 
     nextPage : 5,
-    icon : _lightning,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -137,7 +42,6 @@ export const Questions = [
     {questionText : 'Mechanical', 
     id : 4, 
     nextPage : 7,
-    icon : _mechanical,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -148,7 +52,6 @@ export const Questions = [
     {questionText : 'Plumbing', 
     id : 5, 
     nextPage : 9,
-    icon : _plumbing,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -159,7 +62,6 @@ export const Questions = [
     {questionText : 'Signs', 
     id : 6, 
     nextPage : 11,
-    icon : _sign,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -170,7 +72,6 @@ export const Questions = [
     {questionText : 'Accessory Structure', 
     id : 7, 
     nextPage : 0,
-    icon : _garage,
     endpagetext : 'An accessory structure is a structure which is on the same parcel of property as a principal structure and the use of which is incidental to the use of the principal structure. For example a residential structure may have a detached garage or storage shed for garden tools as accessory structures',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/66/0/0',
     price : '',
@@ -181,7 +82,6 @@ export const Questions = [
     {questionText : 'Addition', 
     id : 8, 
     nextPage : 0,
-    icon : _plus,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/46/0/0',
     price : '',
@@ -192,7 +92,6 @@ export const Questions = [
     {questionText : 'Building Shell', 
     id : 9, 
     nextPage : 1,
-    icon : _structural,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/47/0/0',
     price : '',
@@ -203,7 +102,6 @@ export const Questions = [
     {questionText : 'Communication Tower Upgrade', 
     id : 10, 
     nextPage : 4,
-    icon : _celltowerupgrade,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/65/0/0',
     price : '',
@@ -214,18 +112,16 @@ export const Questions = [
     {questionText : 'Industrial', 
     id : 11, 
     nextPage : 5,
-    icon : _factory,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/48/0/0',
     price : '',
     addinfo : 'Required when building an industrial building',
     endpage : true,
     requirements : [0,7,9,10,11,12,14,23],
-    bgImg : _indutrialPicture},
+    bgImg : ''},
     {questionText : 'New Communication Tower', 
     id : 12, 
     nextPage : 3,
-    icon : _celltowernew,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/64/0/0',
     price : '',
@@ -236,7 +132,6 @@ export const Questions = [
     {questionText : 'Office/Institutional',
     id : 13, 
     nextPage : 3,
-    icon : _office,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/61/0/0',
     price : '',
@@ -247,7 +142,6 @@ export const Questions = [
     {questionText : 'Places of Worship',
     id : 14, 
     nextPage : 3,
-    icon : _religion,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/62/0/0',
     price : '',
@@ -258,7 +152,6 @@ export const Questions = [
     {questionText : 'Renovation/Alteration',
     id : 15, 
     nextPage : 3,
-    icon : _tools,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/63/0/0',
     price : '',
@@ -269,7 +162,6 @@ export const Questions = [
     {questionText : 'Retail',
     id : 16, 
     nextPage : 3,
-    icon : _shop,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/49/0/0',
     price : '',
@@ -280,7 +172,6 @@ export const Questions = [
     {questionText : 'Accessory Dwelling',
     id : 17, 
     nextPage : 3,
-    icon : _househouse,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/38/0/0',
     price : '',
@@ -291,7 +182,6 @@ export const Questions = [
     {questionText : 'Accessory Structure',
     id : 18, 
     nextPage : 3,
-    icon : _garage,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/33/0/0',
     price : '',
@@ -302,7 +192,6 @@ export const Questions = [
     {questionText : 'Addition',
     id : 19, 
     nextPage : 3,
-    icon : _plus,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/34/0/0',
     price : '',
@@ -313,7 +202,6 @@ export const Questions = [
     {questionText : 'House Moving, Into the County',
     id : 20, 
     nextPage : 3,
-    icon : _truckhouse,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/44/0/0',
     price : '',
@@ -324,7 +212,6 @@ export const Questions = [
     {questionText : 'House Moving, Out/Thru the County',
     id : 21, 
     nextPage : 3,
-    icon : _truckhouse,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/44/0/0',
     price : '',
@@ -335,7 +222,6 @@ export const Questions = [
     {questionText : 'Mobile Home',
     id : 22, 
     nextPage : 3,
-    icon : _mobilehome,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/43/0/0',
     price : '',
@@ -346,7 +232,6 @@ export const Questions = [
     {questionText : 'Model Home',
     id : 23, 
     nextPage : 3,
-    icon : _prefabhome,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -357,7 +242,6 @@ export const Questions = [
     {questionText : 'New Home',
     id : 24, 
     nextPage : 3,
-    icon : _house,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/42/0/0',
     price : '',
@@ -368,7 +252,6 @@ export const Questions = [
     {questionText : 'Renovation/Alteration',
     id : 25, 
     nextPage : 3,
-    icon : _tools,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/45/0/0',
     price : '',
@@ -379,7 +262,6 @@ export const Questions = [
     {questionText : 'Demolition, Not to Rebuild',
     id : 26, 
     nextPage : 3,
-    icon : _jackhammer,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/95/0/0',
     price : '',
@@ -390,7 +272,6 @@ export const Questions = [
     {questionText : 'Demolition, to Rebuild',
     id : 27, 
     nextPage : 3,
-    icon : _jackhammerhammer,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/96/0/0',
     price : '',
@@ -401,7 +282,6 @@ export const Questions = [
     {questionText : 'Facade Demolition',
     id : 28, 
     nextPage : 3,
-    icon : _jackhammershop,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/97/0/0',
     price : '',
@@ -412,7 +292,6 @@ export const Questions = [
     {questionText : 'Interior Demolition',
     id : 29, 
     nextPage : 3,
-    icon : _jackhammerinterior,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/98/0/0',
     price : '',
@@ -423,7 +302,6 @@ export const Questions = [
     {questionText : 'Commercial, New',
     id : 30, 
     nextPage : 3,
-    icon : _company,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/39/0/0',
     price : '',
@@ -434,7 +312,6 @@ export const Questions = [
     {questionText : 'Commercial, Stand-Alone',
     id : 31, 
     nextPage : 3,
-    icon : _company,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/69/0/0',
     price : '',
@@ -445,7 +322,6 @@ export const Questions = [
     {questionText : 'Low-Voltage',
     id : 32, 
     nextPage : 3,
-    icon : _lightningarrow,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/71/0/0',
     price : '',
@@ -456,7 +332,6 @@ export const Questions = [
     {questionText : 'Reconnect/Disconnect Only',
     id : 33, 
     nextPage : 3,
-    icon : _plugunplug,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/70/0/0',
     price : '',
@@ -467,7 +342,6 @@ export const Questions = [
     {questionText : 'Residential, New',
     id : 34, 
     nextPage : 3,
-    icon : _house,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -478,7 +352,6 @@ export const Questions = [
     {questionText : 'Residential, Stand-Alone',
     id : 35, 
     nextPage : 3,
-    icon : _house,
     endpagetext : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/68/0/0',
     endpagelink : '',
     price : '',
@@ -489,7 +362,6 @@ export const Questions = [
     {questionText : 'Temporary Utility, Electrical',
     id : 36, 
     nextPage : 3,
-    icon : _timetablelightning,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/32/0/0',
     price : '',
@@ -500,7 +372,6 @@ export const Questions = [
     {questionText : 'Commercial, New',
     id : 37, 
     nextPage : 3,
-    icon : _company,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/99/0/0',
     price : '',
@@ -511,7 +382,6 @@ export const Questions = [
     {questionText : 'Commercial, Stand-Alone',
     id : 38, 
     nextPage : 3,
-    icon : _company,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/100/0/0',
     price : '',
@@ -522,7 +392,6 @@ export const Questions = [
     {questionText : 'Duct Work Only',
     id : 39, 
     nextPage : 3,
-    icon : _duct,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/79/0/0',
     price : '',
@@ -533,7 +402,6 @@ export const Questions = [
     {questionText : 'Gas Reconnect',
     id : 40, 
     nextPage : 3,
-    icon : _gas,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/78/0/0',
     price : '',
@@ -544,7 +412,6 @@ export const Questions = [
     {questionText : 'Residential, New',
     id : 41, 
     nextPage : 3,
-    icon : _house,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -555,7 +422,6 @@ export const Questions = [
     {questionText : 'Residential, Stand-Alone',
     id : 42, 
     nextPage : 3,
-    icon : _house,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/104/0/0',
     price : '',
@@ -566,7 +432,6 @@ export const Questions = [
     {questionText : 'Temporary Utility, Mechanicial',
     id : 43, 
     nextPage : 3,
-    icon : _timetablemechanical,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/102/0/0',
     price : '',
@@ -577,7 +442,6 @@ export const Questions = [
     {questionText : 'Commercial, New',
     id : 44, 
     nextPage : 3,
-    icon : _company,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/73/0/0',
     price : '',
@@ -588,7 +452,6 @@ export const Questions = [
     {questionText : 'Commercial, Stand-Alone',
     id : 45, 
     nextPage : 3,
-    icon : _company,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/74/0/0',
     price : '',
@@ -599,7 +462,6 @@ export const Questions = [
     {questionText : 'Gas Reconnect',
     id : 46, 
     nextPage : 3,
-    icon : _gas,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/94/0/0',
     price : '',
@@ -610,7 +472,6 @@ export const Questions = [
     {questionText : 'Residential, New',
     id : 47, 
     nextPage : 3,
-    icon : _house,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -621,7 +482,6 @@ export const Questions = [
     {questionText : 'Residential, Stand-Alone',
     id : 48, 
     nextPage : 3,
-    icon : _house,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/76/0/0',
     price : '',
@@ -632,7 +492,6 @@ export const Questions = [
     {questionText : 'Sprinkler',
     id : 49, 
     nextPage : 3,
-    icon : _firesprinkler,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/77/0/0',
     price : '',
@@ -643,7 +502,6 @@ export const Questions = [
     {questionText : 'Temporary Utility, Plumbing',
     id : 50, 
     nextPage : 3,
-    icon : _timetableplumbing,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -654,7 +512,6 @@ export const Questions = [
     {questionText : 'New Signage',
     id : 51, 
     nextPage : 3,
-    icon : _signnew,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/105/0/0',
     price : '',
@@ -665,7 +522,6 @@ export const Questions = [
     {questionText : 'Reface an Existing Sign',
     id : 52, 
     nextPage : 3,
-    icon : _signresurface,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/106/0/0',
     price : '',
@@ -676,7 +532,6 @@ export const Questions = [
     {questionText : 'Repair an Existing Sign',
     id : 53, 
     nextPage : 3,
-    icon : _signfix,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/82/0/0',
     price : '',
@@ -687,7 +542,6 @@ export const Questions = [
     {questionText : 'Temporary Signage',
     id : 54, 
     nextPage : 3,
-    icon : _signtemporary,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/107/0/0',
     price : '',
@@ -699,7 +553,6 @@ export const Questions = [
     {questionText : 'Special Event',
     id : 55, 
     nextPage : 3,
-    icon : _signfix,
     endpagetext : '',
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/80/0/0',
     price : '',
@@ -710,7 +563,6 @@ export const Questions = [
     {questionText : 'Demolition',
     id : 56, 
     nextPage : 4,
-    icon : _signfix,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -721,7 +573,6 @@ export const Questions = [
     {questionText : 'Electrical',
     id : 57, 
     nextPage : 6,
-    icon : _signfix,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -732,7 +583,6 @@ export const Questions = [
     {questionText : 'Mechanical',
     id : 58, 
     nextPage : 8,
-    icon : _signfix,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -743,7 +593,6 @@ export const Questions = [
     {questionText : 'Plumbing',
     id : 59, 
     nextPage : 10,
-    icon : _signfix,
     endpagetext : '',
     endpagelink : '',
     price : '',
@@ -754,7 +603,6 @@ export const Questions = [
     {questionText : 'Moving a House',
     id : 60, 
     nextPage : 12,
-    icon : _signfix,
     endpagetext : '',
     endpagelink : '',
     price : '',

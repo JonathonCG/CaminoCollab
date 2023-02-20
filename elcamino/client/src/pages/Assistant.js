@@ -1,6 +1,6 @@
-import { Cards } from "../elements/QuestionCards"
 import { AssistantNavbar } from '../elements/Navbar';
 import { Container } from "@nextui-org/react";
+import { AssistantContent } from "../elements/Assistant/AssistantContent";
 
 export function Assistant() {
     document.title = "Permit Assistant"
@@ -8,7 +8,7 @@ export function Assistant() {
     return (
         <Container>
             <AssistantNavbar />
-            <Cards />
+            <AssistantContent />
         </Container>
     )
 }

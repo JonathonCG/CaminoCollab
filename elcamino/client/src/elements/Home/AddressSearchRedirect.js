@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import _rightchevron from '../graphics/png/rightchevron.png'
 import { Grid, Card, Row, Text, Button, Spacer } from "@nextui-org/react";
 
 export function AddressSearchRedirect({isInClaytonCounty, zone}) {
@@ -199,7 +198,7 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                         <Text h5>Zoning for this address is: {zone}</Text>
                     </Card.Body>
                     <Card.Divider />
-                    <Card.Footer alignItems="center">
+                    <Card.Footer>
                         <Grid.Container justify="center">
                             <Button auto flat color="success" onPress={() => {return navigate('/Assistant')}}>
                                 Continue to the Permit Assistant

@@ -1,8 +1,7 @@
-import { Questions } from "../elements/QuestionCardsInfo"
+import { AssistantCards } from "../elements/Assistant/AssistantCards"
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-// import { requirementGroups } from "../elements/QuestionCardsInfo";
-import { prereqs } from "../elements/QuestionCardsInfo";
+import { prereqs } from "../elements/EndPage/prereqs";
 import { useState } from "react";
 import { Container, Spacer, Grid, Card, Row, Col, Text, Button, Checkbox } from "@nextui-org/react";
 import { EndPageNavbar } from '../elements/Navbar';
@@ -17,7 +16,7 @@ export function EndPage() {
   function ContinueButton({selected}) { /* Function changes what is displayed in the continue button element based on if "ischecked" is true or false */
     if(selected){
       return (
-          <Button as="a" href={Questions[id].endpagelink} size="lg" shadow color="gradient">
+          <Button as="a" href={AssistantCards[id].endpagelink} size="lg" shadow color="gradient">
             Continue to the Permit Application
           </Button>
       )
@@ -46,11 +45,11 @@ export function EndPage() {
         <Row>
 
         </Row>
-          <Text h3>{Questions[id].questionText}</Text>
+          <Text h3>{AssistantCards[id].questionText}</Text>
           <Text h5>Below are the requirements you will need <em>before</em> applying for your permit. You will need to present these during the permitting process.</Text>
           
           <ol> 
-          {Questions[id].requirements.map((reqs) => (
+          {AssistantCards[id].requirements.map((reqs) => (
             <li>{prereqs[reqs]}</li>
           ))}
           </ol>

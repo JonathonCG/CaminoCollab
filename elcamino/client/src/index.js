@@ -6,7 +6,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom"
 
-const darkTheme = createTheme({type: "dark"})
+const darkTheme = createTheme({
+  type: "dark"
+})
 const lightTheme = createTheme({type: "light"})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

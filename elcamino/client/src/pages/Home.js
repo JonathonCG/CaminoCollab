@@ -31,7 +31,10 @@ export function Home() {
             <Row justify="center">
               <TurnstoneSearch />
             </Row>
-            <Spacer y={1} />  
+            <Spacer y={1} /> 
+            <Row justify="center">
+              <Text p>Then you'll be able to find the right permit, along with the required documents you'll need while filing</Text>
+            </Row> 
           </Col>
         </Grid>
  

@@ -31,7 +31,7 @@ export function AssistantContent() {
 
     function BackButton() { /* Function changes what is displayed in the continue button element based on if we are on the first page or not */
             return (
-                <Button auto rounded flat color="primary" onPress={() => {goBack(); handlePress();}}>
+                <Button auto size="sm" rounded flat color="warning" onPress={() => {goBack(); handlePress();}}>
                     Back
                 </Button> 
             )

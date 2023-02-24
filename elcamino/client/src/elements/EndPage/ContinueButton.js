@@ -10,7 +10,7 @@ export function ContinueButton({selected, cardlink}) { /* Function changes what 
             </Button>
             </a>
         )
-        }
+    }
         return (
             <Button size="lg" disabled>
                 Continue to the Permit Application

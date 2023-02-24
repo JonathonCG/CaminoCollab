@@ -1,15 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { NextUIProvider, createTheme } from '@nextui-org/react';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom"
-
-const darkTheme = createTheme({
-  type: "dark"
-})
-const lightTheme = createTheme({type: "light"})
+import { darkTheme } from './theme'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

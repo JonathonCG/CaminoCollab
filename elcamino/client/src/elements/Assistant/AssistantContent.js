@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { AssistantCards } from './AssistantCards'
 import { AssistantPages } from './AssistantPages'
 import { useNavigate } from 'react-router-dom';
-import { Container, Spacer, Grid, Card, Row, Text, Button, Col } from "@nextui-org/react";
+import { Container, Spacer, Grid, Card, Row, Text, Button, Col, Divider } from "@nextui-org/react";
 
 
 //Draws the AssistantCards on the screen based on the AssistantPages array in QuestionCardsInfo.js
@@ -31,7 +31,7 @@ export function AssistantContent() {
 
     function BackButton() { /* Function changes what is displayed in the continue button element based on if we are on the first page or not */
             return (
-                <Button auto size="sm" rounded flat color="warning" onPress={() => {goBack(); handlePress();}}>
+                <Button auto size="sm" rounded flat color="secondary" onPress={() => {goBack(); handlePress();}}>
                     Back
                 </Button> 
             )
@@ -54,8 +54,8 @@ export function AssistantContent() {
     }
 
     // Function for displaying start page help, might need to be broken out into dedicated file
-    function StartHelp({page}) {
-        if(page === 0){
+    function StartHelp() {
+        if(cardPage === 0){
             return (
                 <>
                 <Spacer y={1} />
@@ -106,7 +106,8 @@ export function AssistantContent() {
             </Row>
             <StartHelp page={cardPage} />
             <PageIndicator />
-
+            <Spacer y={1} />
+            <Divider />
             <Spacer y={1} />
             <Grid.Container gap={2} justify="center">
                 {AssistantPages[cardPage].cards.map((cardList) => ( //Maps the AssistantPages array
@@ -147,9 +148,9 @@ export function AssistantContent() {
                     ))}
             </Grid.Container>
             <Spacer y={1} />
+            <Divider />
+            <Spacer y={1} />
             <PageIndicator />
         </Container>
-        
-        // <Button onClick={() => {return navigate('/')}}>Back to Address Lookup</Button>
          );  
 }

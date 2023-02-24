@@ -31,9 +31,6 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Header>
                         <Text h3>This address is within Jonesboro's City Limits</Text>
                     </Card.Header>
-                    <Card.Body>
-                        <Text h5>Zoning for this address is: {zone}</Text>
-                    </Card.Body>
                     <Card.Divider />
                     <Card.Footer>
                         <Grid.Container justify="center">
@@ -58,9 +55,6 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Header>
                         <Text h3>This address is within Lovejoy's City Limits</Text>
                     </Card.Header>
-                    <Card.Body>
-                        <Text h5>Zoning for this address is: {zone}</Text>
-                    </Card.Body>
                     <Card.Divider />
                     <Card.Footer>
                         <Grid.Container justify="center">
@@ -85,9 +79,6 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Header>
                         <Text h3>This address is within Lake City's City Limits</Text>
                     </Card.Header>
-                    <Card.Body>
-                        <Text h5>Zoning for this address is: {zone}</Text>
-                    </Card.Body>
                     <Card.Divider />
                     <Card.Footer>
                     <Grid.Container justify="center">
@@ -112,9 +103,6 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Header>
                         <Text h3>This address is within Riverdale's City Limits</Text>
                     </Card.Header>
-                    <Card.Body>
-                        <Text h5>Zoning for this address is: {zone}</Text>
-                    </Card.Body>
                     <Card.Divider />
                     <Card.Footer>
                         <Grid.Container justify="center">
@@ -139,9 +127,6 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Header>
                         <Text h3>This address is within Morrow City Limits</Text>
                     </Card.Header>
-                    <Card.Body>
-                        <Text h5>Zoning for this address is: {zone}</Text>
-                    </Card.Body>
                     <Card.Divider />
                     <Card.Footer>
                         <Grid.Container justify="center">
@@ -167,9 +152,6 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Header>
                         <Text h3>This address is within Forest Park City Limits</Text>
                     </Card.Header>
-                    <Card.Body>
-                        <Text h5>Zoning for this address is: {zone}</Text>
-                    </Card.Body>
                     <Card.Divider />
                     <Card.Footer>
                         <Grid.Container justify="center">
@@ -194,8 +176,24 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Header>
                         <Text h3>This address in Unincorporated Clayton County</Text>
                     </Card.Header>
+                    <Card.Divider />
                     <Card.Body>
-                        <Text h5>Zoning for this address is: {zone}</Text>
+                        <Text h4>Zoning for this address is: {zone}*</Text>
+                        <Text 
+                        p
+                        css={{textDecoration: "underline"}} 
+                        as="a" 
+                        href="https://claytoncountyga.gov">
+                            Clayton County Zoning Ordinance
+                        </Text>
+                        <Spacer y={.5} />
+                        <Text 
+                        p
+                        css={{textDecoration: "underline"}} 
+                        as="a" 
+                        href="https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/plan/apply/60/0/0">
+                            *For official zoning file a Zoning Verification Letter
+                        </Text>
                     </Card.Body>
                     <Card.Divider />
                     <Card.Footer>

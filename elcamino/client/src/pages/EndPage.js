@@ -2,10 +2,11 @@ import { AssistantCards } from "../elements/Assistant/AssistantCards"
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
-import { Container, Spacer, Grid, Card, Row, Text, Button, Checkbox } from "@nextui-org/react";
+import { Container, Spacer, Grid, Card, Row, Text, Button, Checkbox, Divider } from "@nextui-org/react";
 import { EndPageNavbar } from '../elements/Navbar';
 import { ContinueButton } from '../elements/EndPage/ContinueButton'
 import { prereqs } from "../elements/EndPage/prereqs";
+import { Footer } from "../elements/Footer";
 
 export function EndPage() {
   document.title = "Permit Requirements"
@@ -44,12 +45,6 @@ export function EndPage() {
     }
   }, [selected])
 
-  function labelColor() { /* Funtion that changes the text color next to the CheckBox */
-    if(selected){
-      return "secondary"
-    }
-  }
-
   function cardVariant() { /* Funtion that changes the text color next to the CheckBox */
   if(selected){
     return "bordered"
@@ -57,54 +52,61 @@ export function EndPage() {
 }
 
   return (
-    <Container>
-      <EndPageNavbar />
-      <Grid.Container>
-
-      <Grid css={{p: "20px"}} justify="center">
-        <Row>
-        <Text h1>Permit Requirements</Text>
-        </Row>
-        <Text h3>{card.questionText} Permit</Text>
-        <Text h5>Below are the requirements you will need <em>before</em> applying for your permit. You will need to present these during the permitting process.</Text>
-        <Checkbox.Group
-          label="Permit Requirements Checklist"
-          color="primary"
-          size="sm"
-          value={groupSelected}
-          onChange={setGroupSelected}
-          > 
-          {card.requirements.map((reqs) => ( //Mapping requirements to Checkboxes
-            <Checkbox lineThrough value={prereqs[reqs].id}>
-              {prereqs[reqs].name}
-            </Checkbox>
-          ))}
-        </Checkbox.Group>
-        <Spacer y={1} />
-        {/* <CheckboxCard /> */}
-        <Card isHoverable variant={cardVariant()} css={{p: "10px"}}>
+    <>
+    <EndPageNavbar />
+    <Container lg>
+      <Grid.Container justify="center">
+        <Grid  css={{p: "20px"}}>
           <Row justify="center">
-            <Checkbox isSelected={selected} onChange={setSelected} color="secondary" labelColor={labelColor()}>
-              I have read the requirements and acknowledge that I have completed/acquired them prior to my application
-            </Checkbox>
+            <Text h1>Permit Requirements</Text>
           </Row>
-        </Card>
-      </Grid>
-      <Grid css={{p: "10px", w: "100%"}} alignContent="center">
-          <Row justify="center">
-            <ContinueButton selected={selected} cardlink={card.endpagelink} />
-          </Row>
-          <Spacer y={2} />
-          <Row justify="center">
-            <Button auto size="sm" onPress={() => {return navigate('/assistant')}}>
-            Go back
-            </Button>
-          </Row>
-      </Grid>
+          <Card css={{p: "10px"}}>
+            <Text h3>{card.questionText} Permit</Text>
+            <Text h5>
+              Below are the requirements you will need <em>before</em> applying for your permit. You will need to present these during the permitting process.
+            </Text>
+            <Divider />
+            <Spacer y={0.5} />
+            <Checkbox.Group
+              label="Permit Requirements Checklist"
+              color="primary"
+              size="sm"
+              value={groupSelected}
+              onChange={setGroupSelected}
+              > 
+              {card.requirements.map((reqs) => ( //Mapping requirements to Checkboxes
+                <Checkbox lineThrough value={prereqs[reqs].id}>
+                  {prereqs[reqs].name}
+                </Checkbox>
+              ))}
+            </Checkbox.Group>
+          </Card>
 
-
+          <Spacer y={1} />
+          {/* <CheckboxCard /> */}
+          <Card isHoverable variant={cardVariant()} borderWeight="bold" css={{p: "10px"}}>
+            <Row justify="center">
+              <Checkbox isSelected={selected} onChange={setSelected} color="secondary">
+                I have read the requirements and acknowledge that I have completed/acquired them prior to my application
+              </Checkbox>
+            </Row>
+          </Card>
+        </Grid>
+        <Grid css={{p: "10px", w: "100%"}}>
+            <Row justify="center">
+              <ContinueButton selected={selected} cardlink={card.endpagelink} />
+            </Row>
+            <Spacer y={2} />
+            <Row justify="center">
+              <Button auto size="sm" onPress={() => {return navigate('/assistant')}}>
+              Go back
+              </Button>
+            </Row>
+        </Grid>
       </Grid.Container>
+      <Footer />
     </Container>
+    </>
     )
 }
 

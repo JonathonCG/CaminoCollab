@@ -12,7 +12,7 @@ const { id } = useParams();
         )
         }
         return (
-            <Button size="md" disabled>
+            <Button size="lg" disabled>
                 Continue to the Permit Application
             </Button>
         )

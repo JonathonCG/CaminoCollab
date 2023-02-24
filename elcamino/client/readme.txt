@@ -1,4 +1,4 @@
-# /client readme file
+# ./client readme file
 ____________________________________
 
 

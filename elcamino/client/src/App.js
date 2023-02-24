@@ -7,13 +7,13 @@ import ScrollToTop from './elements/Scrolltotop';
 
 function App() {
   return (
-<ScrollToTop>
-  <Routes>
-    <Route path="/" element={<Home />}/>
-    <Route path="/Assistant" element={<Assistant />}/>
-    <Route path="/nextsteps/:id" element={<EndPage />}/>
-  </Routes>    
-</ScrollToTop>
+    <ScrollToTop>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/Assistant" element={<Assistant />}/>
+        <Route path="/nextsteps/:id" element={<EndPage />}/>
+      </Routes>    
+    </ScrollToTop>
   )
 }
 

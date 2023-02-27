@@ -7,7 +7,9 @@ export function HomeNavbar() {
     return (
         <Navbar isBordered variant="floating" >
             <Navbar.Brand>
-                <ClaytonLogo as="a" href="claytoncountyga.gov" />            
+                <Link color="inherit" href="https://claytoncountyga.gov">
+                    <ClaytonLogo />
+                </Link>
             </Navbar.Brand>
             <Navbar.Content activeColor="primary" hideIn="xs" variant="underline">
                 <Navbar.Link isActive href="/">Address Lookup</Navbar.Link>
@@ -36,7 +38,9 @@ export function AssistantNavbar() {
     return (
         <Navbar isBordered variant="floating" >
             <Navbar.Brand>
-                <ClaytonLogo as="a" href="claytoncountyga.gov" />            
+                <Link color="inherit" href="https://claytoncountyga.gov">
+                    <ClaytonLogo />
+                </Link>
             </Navbar.Brand>
             <Navbar.Content activeColor="primary" hideIn="xs" variant="underline">
                 <Navbar.Link href="/">Address Lookup</Navbar.Link>
@@ -65,7 +69,9 @@ export function EndPageNavbar() {
     return (
         <Navbar isBordered variant="floating" >
             <Navbar.Brand>
-                <ClaytonLogo as="a" href="claytoncountyga.gov" />            
+                <Link color="inherit" href="https://claytoncountyga.gov">
+                    <ClaytonLogo />
+                </Link>
             </Navbar.Brand>
             <Navbar.Content activeColor="primary" hideIn="xs" variant="underline">
                 <Navbar.Link href="/">Address Lookup</Navbar.Link>

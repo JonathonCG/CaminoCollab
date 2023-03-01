@@ -24,7 +24,7 @@ export function Footer() {
             </Row>
             <Spacer y={0.3} />
             <Row justify="center">
-                <Text color="grey" small>©2023 Clayton County Government | 112 Smith Street, Jonesboro, GA 30236</Text>
+                <Text color="$black" small>©2023 Clayton County Government | 112 Smith Street, Jonesboro, GA 30236</Text>
             </Row>
             <Spacer y={0.5} />
         </Container>

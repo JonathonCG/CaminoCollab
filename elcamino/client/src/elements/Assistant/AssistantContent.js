@@ -30,11 +30,11 @@ export function AssistantContent() {
     };
 
     function BackButton() { /* Function changes what is displayed in the continue button element based on if we are on the first page or not */
-            return (
-                <Button auto size="sm" rounded flat color="secondary" onPress={() => {goBack(); handlePress();}}>
-                    Back
-                </Button> 
-            )
+        return (
+            <Button auto size="sm" rounded ghost color="warning" onPress={() => {goBack(); handlePress();}}>
+                Back
+            </Button> 
+        )
     }
 
     // Function for determining <Card.Header>; either 'Permit' or 'Permit Category'

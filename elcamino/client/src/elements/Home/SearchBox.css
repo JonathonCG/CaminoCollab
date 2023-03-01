@@ -25,33 +25,39 @@
     width: 100%;
     height: 80%;
     font-size: calc(12px + 1vh);
+    font-family: 'Open Sans';
     margin-top: 15px;
     align-items: center;
-    color: #ffffff;
+    color: #101820;
     padding: 4px 8px;
-    border-radius: 17px;
-    border-width: 3px;
-    border-color:#ffffff;
+    border-radius: 15px;
+    border-width: 2px;
+    border-color:#303030;
+    background-color: #dde5ed;
   }
 
   #autocomplete-listbox {
     width: 100%;
     text-align: left;
-    padding-left: 5px;
-    color: #ebebeb;
+    font-family: 'Open Sans';
+    padding: 8px;
+    color: #101820;
     transition: background-color 3s;
     align-items: center;
-    border-radius: 5px ;
-    background-color: rgb(55, 55, 55);
+    border-radius: 15px ;
+    background-color: #b5bcc4;
   }
 
   #autocomplete-listbox :hover{
-    background-color: rgb(42, 42, 42);
+    background-color: #dde5ed;
     cursor: pointer;
+    border-radius: 8px;
+    padding: 1px
   }
 
   #autocomplete-hightlighteditem{
     background: red;
+    border-radius: '5px';
   }
 
 

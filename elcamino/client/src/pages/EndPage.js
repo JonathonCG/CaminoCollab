@@ -86,7 +86,7 @@ export function EndPage() {
           {/* <CheckboxCard /> */}
           <Card isHoverable variant={cardVariant()} borderWeight="bold" css={{p: "10px"}}>
             <Row justify="center">
-              <Checkbox isSelected={selected} onChange={setSelected} color="secondary">
+              <Checkbox isSelected={selected} onChange={setSelected} color="warning">
                 I have read the requirements and acknowledge that I have completed/acquired them prior to my application
               </Checkbox>
             </Row>

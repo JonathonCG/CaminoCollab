@@ -35,7 +35,7 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Footer>
                         <Grid.Container justify="center">
                             <a href='https://www.jonesboroga.com/OfficeOfTheCityManager.aspx'>
-                                <Button auto flat color="warning">
+                                <Button auto color="warning">
                                     Go to Jonesboro Permits Page
                                 </Button>
                             </a>
@@ -59,7 +59,7 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Footer>
                         <Grid.Container justify="center">
                             <a href='https://www.cityoflovejoy.com/936/Permits'>
-                                <Button auto flat color="warning">
+                                <Button auto color="warning">
                                     Go to Lovejoy Permits Page
                                 </Button>
                             </a>
@@ -83,7 +83,7 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Footer>
                     <Grid.Container justify="center">
                         <a href='https://lakecityga.net/departments-permitapplications.asp'>
-                            <Button auto flat color="warning">
+                            <Button auto color="warning">
                                 Go to Lake City Permits Page
                             </Button>
                         </a>
@@ -107,7 +107,7 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Footer>
                         <Grid.Container justify="center">
                             <a href='https://www.riverdalega.gov/470/Permitting-Services'>
-                                <Button auto flat color="warning">
+                                <Button auto color="warning">
                                     Go to Riverdale Permits Page
                                 </Button>
                             </a>
@@ -131,7 +131,7 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Footer>
                         <Grid.Container justify="center">
                             <a href='http://www.cityofmorrow.com/government-cityhall-permitsforms.asp'>
-                                <Button auto flat color="warning">
+                                <Button auto color="warning">
                                     Go to Morrow's Permits Page
                                 </Button>
                             </a>
@@ -156,7 +156,7 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Footer>
                         <Grid.Container justify="center">
                             <a href='https://www.forestparkga.gov/planning/page/permits-and-applications'>
-                                <Button auto flat color="warning">
+                                <Button auto color="warning">
                                     Go to Forest Park Permits Page
                                 </Button>
                             </a>
@@ -198,7 +198,7 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     <Card.Divider />
                     <Card.Footer>
                         <Grid.Container justify="center">
-                            <Button auto flat color="success" onPress={() => {return navigate('/Assistant')}}>
+                            <Button auto color="primary" onPress={() => {return navigate('/Assistant')}}>
                                 Continue to the Permit Assistant
                             </Button>
                         </Grid.Container>

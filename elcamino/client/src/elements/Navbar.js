@@ -1,4 +1,4 @@
-import { Navbar, Link, Text } from '@nextui-org/react'
+import { css, Navbar, Link, Text } from '@nextui-org/react'
 import { ClaytonLogo } from './ClaytonLogo.js'
 
 
@@ -11,7 +11,7 @@ export function HomeNavbar() {
                     <ClaytonLogo />
                 </Link>
             </Navbar.Brand>
-            <Navbar.Content activeColor="primary" hideIn="xs" variant="underline">
+            <Navbar.Content activeColor="warning" hideIn="xs" variant="underline">
                 <Navbar.Link isActive href="/">Address Lookup</Navbar.Link>
                 <Navbar.Link href="/Assistant">Permit Assistant</Navbar.Link>
                 <Navbar.Item>Permit Requirements</Navbar.Item>
@@ -27,7 +27,7 @@ export function HomeNavbar() {
                     <Link color="inherit" href="/Assistant">Permit Assistant</Link>
                 </Navbar.CollapseItem>
                 <Navbar.CollapseItem>
-                    <Text>Permit Requirements</Text>
+                    <Text color="inherit">Permit Requirements</Text>
                 </Navbar.CollapseItem>
             </Navbar.Collapse>
         </Navbar>
@@ -36,13 +36,13 @@ export function HomeNavbar() {
 
 export function AssistantNavbar() {
     return (
-        <Navbar isBordered variant="floating" >
+        <Navbar isBordered variant="floating">
             <Navbar.Brand>
                 <Link color="inherit" href="https://claytoncountyga.gov">
                     <ClaytonLogo />
                 </Link>
             </Navbar.Brand>
-            <Navbar.Content activeColor="primary" hideIn="xs" variant="underline">
+            <Navbar.Content activeColor="warning" hideIn="xs" variant="underline">
                 <Navbar.Link href="/">Address Lookup</Navbar.Link>
                 <Navbar.Link isActive href="/Assistant">Permit Assistant</Navbar.Link>
                 <Navbar.Item>Permit Requirements</Navbar.Item>
@@ -73,7 +73,7 @@ export function EndPageNavbar() {
                     <ClaytonLogo />
                 </Link>
             </Navbar.Brand>
-            <Navbar.Content activeColor="primary" hideIn="xs" variant="underline">
+            <Navbar.Content activeColor="warning" hideIn="xs" variant="underline">
                 <Navbar.Link href="/">Address Lookup</Navbar.Link>
                 <Navbar.Link href="/Assistant">Permit Assistant</Navbar.Link>
                 <Navbar.Item isActive>Permit Requirements</Navbar.Item>

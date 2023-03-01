@@ -5,7 +5,7 @@ export function ContinueButton({selected, cardlink}) { /* Function changes what 
     if(selected){
         return (
             <a href={cardlink}>
-            <Button size="lg" shadow color="gradient">
+            <Button size="lg" color="gradient">
                 Continue to the Permit Application
             </Button>
             </a>

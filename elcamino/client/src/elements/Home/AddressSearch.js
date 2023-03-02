@@ -17,7 +17,7 @@ const listbox = {
 }
 
 
-export function TurnstoneSearch() {
+export function AddressSearch() {
   // selected result is the name of the database field that the search returned
   const [isInClaytonCounty, setIsInClaytonCounty] = useState('');
   const [zone, setZone] = useState('');

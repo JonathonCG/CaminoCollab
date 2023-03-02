@@ -11,12 +11,12 @@ export function HomeNavbar() {
                     <ClaytonLogo />
                 </Link>
             </Navbar.Brand>
-            <Navbar.Content activeColor="warning" hideIn="xs" variant="underline">
+            <Navbar.Content activeColor="warning" hideIn="sm" variant="underline-rounded">
                 <Navbar.Link isActive href="/">Address Lookup</Navbar.Link>
                 <Navbar.Link href="/Assistant">Permit Assistant</Navbar.Link>
                 <Navbar.Item>Permit Requirements</Navbar.Item>
             </Navbar.Content>
-            <Navbar.Content showIn="xs">
+            <Navbar.Content showIn="sm">
                 <Navbar.Toggle />
             </Navbar.Content>
             <Navbar.Collapse>
@@ -42,12 +42,12 @@ export function AssistantNavbar() {
                     <ClaytonLogo />
                 </Link>
             </Navbar.Brand>
-            <Navbar.Content activeColor="warning" hideIn="xs" variant="underline">
+            <Navbar.Content activeColor="warning" hideIn="sm" variant="underline-rounded">
                 <Navbar.Link href="/">Address Lookup</Navbar.Link>
                 <Navbar.Link isActive href="/Assistant">Permit Assistant</Navbar.Link>
                 <Navbar.Item>Permit Requirements</Navbar.Item>
             </Navbar.Content>
-            <Navbar.Content showIn="xs">
+            <Navbar.Content showIn="sm">
                 <Navbar.Toggle />
             </Navbar.Content>
             <Navbar.Collapse>
@@ -73,12 +73,12 @@ export function EndPageNavbar() {
                     <ClaytonLogo />
                 </Link>
             </Navbar.Brand>
-            <Navbar.Content activeColor="warning" hideIn="xs" variant="underline">
+            <Navbar.Content activeColor="warning" hideIn="sm" variant="underline-rounded">
                 <Navbar.Link href="/">Address Lookup</Navbar.Link>
                 <Navbar.Link href="/Assistant">Permit Assistant</Navbar.Link>
                 <Navbar.Item isActive>Permit Requirements</Navbar.Item>
             </Navbar.Content>
-            <Navbar.Content showIn="xs">
+            <Navbar.Content showIn="sm">
                 <Navbar.Toggle />
             </Navbar.Content>
             <Navbar.Collapse>

@@ -112,7 +112,7 @@ export function AssistantContent() {
             <Grid.Container gap={2} justify="center">
                 {AssistantPages[cardPage].cards.map((cardList) => ( //Maps the AssistantPages array
                     //Key to keep items organized per React rules
-                    <Grid xs={6} sm={6} lg={3} xl={3} justify="center" key={AssistantCards[cardList].id}> 
+                    <Grid xs={12} sm={6} md={5} lg={4} xl={4} justify="center" key={AssistantCards[cardList].id}> 
                         <Card 
                         isPressable
                         isHoverable

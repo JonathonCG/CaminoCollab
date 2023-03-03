@@ -21,7 +21,7 @@ const pool = new Pool({
 
 const getAddr = (request, response) => {
     requestQuery = "%" + request.query.q + "%"
-    pool.query('SELECT fulladdr, withinname, zone FROM addresses WHERE fulladdr ILIKE $1 LIMIT 10', [requestQuery], 
+    pool.query('SELECT addrnum, fulladdr, withinname, zone, parcelid FROM addresses WHERE fulladdr ILIKE $1 LIMIT 10', [requestQuery], 
     (err, results) => {
       if (err) {
         throw err

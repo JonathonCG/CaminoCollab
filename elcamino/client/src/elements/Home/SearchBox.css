@@ -46,6 +46,7 @@
     align-items: center;
     border-radius: 15px ;
     background-color: #b5bcc4;
+    position: relative;
   }
 
   #autocomplete-listbox :hover{

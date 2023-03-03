@@ -1,15 +1,12 @@
 import { AddressSearch } from "./AddressSearch"
-import CommDevLogo  from '.../graphics/CommDev.png'
 import { Spacer, Grid, Row, Text, Col, Button } from "@nextui-org/react";
 
 export function HomeContent() {
-    <Grid.Container justify="center">
+    return(
+        <Grid.Container justifyContent="center">
         <Col css={{ "width": "100%" }}>
         <Spacer y={1} />
-        <Row justify="center">
-            <img width="150" src={CommDevLogo} alt='Community Development Logo'></img>
-        </Row>
-        <Grid>
+        <Grid xs={12}>
         <Row justify="center">
             <Text h1>Permit Assistant</Text>
         </Row>
@@ -28,12 +25,25 @@ export function HomeContent() {
         </Row>
         <Spacer y={1} />
         <Row justify="center">
-            {/* <Button sm auto as="a" href="https://selfservice.claytoncountyga.gov/energovprod/selfservice/Home#/home">
+            <Button 
+            color="warning" 
+            size="xs" 
+            auto 
+            ghost
+            css={{zIndex: "0"}}
+            as="a" 
+            href="https://selfservice.claytoncountyga.gov/energovprod/selfservice/Home#/home"
+            >
                 Existing Customers with CSS Login
-            </Button> */}
+            </Button>
         </Row>
         </Grid>
         </Col>
     </Grid.Container>
+    )
 };
+
+{/* <Row justify="center">
+<img width="150" src={CommDevLogo} alt='alt text'></img>
+</Row> */}
 

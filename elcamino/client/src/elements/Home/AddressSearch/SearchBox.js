@@ -1,6 +1,6 @@
 import React,{useCallback, useRef, useState} from 'react'
 import Turnstone from 'turnstone'
-import { AddressSearchRedirect } from './AddressSearchRedirect'
+import { AddressSearch } from './AddressSearch'
 import styles from './SearchBox.css'
 
 // const styles = {
@@ -17,31 +17,27 @@ const listbox = {
 }
 
 
-export function AddressSearch() {
+export function SearchBox() {
   // selected result is the name of the database field that the search returned
   const [isInClaytonCounty, setIsInClaytonCounty] = useState('');
   const [zone, setZone] = useState('');
-  const ref = useRef(null);
-  const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'});
-  };
+  const [addrNum, setAddrNum] = useState(null);
+  const [parcelID, setParcelID] = useState('');
+
   const onSelect = useCallback(
     (query, selectedResult) => {
       if (query !== undefined && query !== null) {
-        console.log('query is ---')
-        console.log(query)
-        console.log('search result is ---' + selectedResult);
+        setAddrNum(query.addrnum)
         setIsInClaytonCounty(query.withinname)
-        console.log('isInClaytonCounty is ---' + isInClaytonCounty);
         setZone(query.zone)
-        console.log('zone is ---' + zone)
+        setParcelID(query.parcelid)
       }
     }, 
   )
   
   return  (
     <div>
-      <div className='centerdiv' onClick={handleClick}>
+      <div className='centerdiv'>
         <Turnstone 
         id="autocomplete" 
         matchText={true} 
@@ -51,25 +47,13 @@ export function AddressSearch() {
         onSelect={onSelect} />
       </div>
       <div className='addresssearchredirect'>
-        <AddressSearchRedirect isInClaytonCounty={isInClaytonCounty} zone={zone} />
+        <AddressSearch 
+        addrNum={addrNum}
+        isInClaytonCounty={isInClaytonCounty} 
+        zone={zone} 
+        parcelID={parcelID}
+        />
       </div>
     </div>
     );
  }
-
-// const styles = {
-  // input: 'border p-2 bg-white w-full',
-  // listbox: 'border p-2 bg-white w-full'
-// }
-// 
-// Set up listbox contents.
-// const listbox = {
-  // displayField: 'name',
-  // data: (query) =>
-    // fetch(`/addr?q=${encodeURIComponent(query)}&limit=10`)
-      // .then(res => res.json())
-// }
-// 
-// export function BasicExample() {
-  // return <Turnstone id="autocomplete" listbox={listbox} styles={styles} typeahead={false} />
-// }

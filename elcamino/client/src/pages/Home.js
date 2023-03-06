@@ -1,8 +1,6 @@
-import { AddressSearch } from "../elements/Home/AddressSearch"
-import CommDevLogo  from '../graphics/CommDev.png'
 import { HomeNavbar } from '../elements/Navbar';
 import { Footer } from "../elements/Footer";
-import { Container, Spacer, Grid, Row, Text, Col } from "@nextui-org/react";
+import { Container } from "@nextui-org/react";
 import { HomeContent } from "../elements/Home/HomeContent";
 
 

@@ -3,24 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import { Grid, Card, Row, Text, Button, Spacer } from "@nextui-org/react";
 
 export function AddressSearchRedirect({isInClaytonCounty, zone}) {
-    console.log ('zone is ' + zone)
-    const [displayedString, setDisplayedString] = useState(0);
     const isFirstRender = useRef(true);
     let displayMessage = '';
     const navigate = useNavigate();
     useEffect(() => {
-        console.log('in use effecccccctt')
         if (isFirstRender.current) {
             isFirstRender.current = false;
             
             return; // 👈️ return early if first render
           }
-        // setDisplayedString();
     }, [isInClaytonCounty], [zone]);
-
-        console.log('outside the effect'+displayMessage)
-
-
 
     if(isInClaytonCounty === 'JONESBORO'){
         return (
@@ -178,13 +170,15 @@ export function AddressSearchRedirect({isInClaytonCounty, zone}) {
                     </Card.Header>
                     <Card.Divider />
                     <Card.Body>
-                        <Text h4>Zoning for this address is: {zone}*</Text>
-                        <Text 
-                        p
-                        css={{textDecoration: "underline"}} 
-                        as="a" 
-                        href="https://claytoncountyga.gov">
-                            Clayton County Zoning Ordinance
+                        <Text h5>
+                            Zoning for this address is: <Text 
+                            css={{textDecoration: "underline"}} 
+                            as="a" 
+                            href="https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/plan/apply/60/0/0"
+                            >
+                                {zone}
+                            </Text>
+                            *
                         </Text>
                         <Spacer y={.5} />
                         <Text 

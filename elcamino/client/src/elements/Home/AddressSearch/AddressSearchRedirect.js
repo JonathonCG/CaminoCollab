@@ -18,24 +18,24 @@ export function AddressSearchRedirect({addr, isInClaytonCounty, zone}) {
         return str.toLowerCase().split(' ').map(function(word) {
             return (word.charAt(0).toUpperCase() + word.slice(1));
         }).join(' ');
-      }
+      };
 
 
     if(isInClaytonCounty === ''){
 
         return;
     }
-    if(isInClaytonCounty === 'UNINCORPORATED'){
+    else if(isInClaytonCounty === 'UNINCORPORATED'){
         return (
-            <UnincorpAddr />
-        )
+            <UnincorpAddr addr={addr} zone={zone} />
+        );
     }
     else if(isInClaytonCounty === 'COLLEGE PARK' || 'FOREST PARK' || 'LAKE CITY' || 'LOVEJOY' || 'JONESBORO' || 'RIVERDALE' ) {
         const city = titleCase(isInClaytonCounty)
         return(
             <IncorpAddress city={city} />
-        )
-    }
+        );
+    };
 
     // if(isInClaytonCounty === 'JONESBORO'){
     //     return (

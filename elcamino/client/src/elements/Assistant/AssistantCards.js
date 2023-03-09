@@ -628,6 +628,16 @@ export const AssistantCards = [
     addinfo : 'Permits for constructing/renovating homes and other residential buildings',
     endpage : false,
     requirements : [],
+    bgImg : ''},
+    {questionText : 'Apartment Building',
+    id : 63, 
+    nextPage : 14,
+    endpagetext : '',
+    endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/163/0/0',
+    price : '',
+    addinfo : 'Permit for constructing new apartment buildings',
+    endpage : true,
+    requirements : [0,7,9,10,11,12,14,23],
     bgImg : ''}
     ];
 

@@ -42,6 +42,6 @@ export const AssistantPages = [
     cards : [16,7,8,9,11,13,14,15,10,12],
     name : 'Non-Residential Construction Permits'},
     {id : 14,
-    cards : [25,24,22,19,18,17],
+    cards : [25,24,22,63,19,18,17],
     name : 'Residential Construction Permits'}
 ];

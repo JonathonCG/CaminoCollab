@@ -1,3 +1,4 @@
+// These are the 'cards' shown in the Assistant
 export const AssistantCards = [
     {questionText : 'Non-Residential', 
     id : 0, 
@@ -640,7 +641,5 @@ export const AssistantCards = [
     requirements : [0,7,9,10,11,12,14,23],
     bgImg : ''}
     ];
-
-    //each array is a 'group' of cards displayed on screen at one time, values are the index of the 'Questions' array above.
 
 

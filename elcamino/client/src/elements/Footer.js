@@ -1,9 +1,9 @@
-import { Spacer, Row, Text, Link, Divider, Container } from "@nextui-org/react";
+import { Spacer, Row, Text, Divider, Container } from "@nextui-org/react";
 
 export function Footer() {
     return(
         <Container>
-            <Spacer y={2} />
+            <Spacer y={4} />
             <Divider x={0} height={3} />
             <Spacer y={0.5} />
             <Row justify="center">

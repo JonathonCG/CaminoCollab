@@ -1,7 +1,8 @@
-import React,{useCallback, useRef, useState} from 'react'
+import React, { useState } from 'react'
 import Turnstone from 'turnstone'
 import { AddressSearch } from './AddressSearch'
 import styles from './SearchBox.css'
+import { StyledGridContainer, StyledGridItem } from '@nextui-org/react'
 
 // const styles = {
   // input : 
@@ -19,25 +20,25 @@ const listbox = {
 
 export function SearchBox() {
   // selected result is the name of the database field that the search returned
+  const [addrNum, setAddrNum] = useState(null);
+  const [addr, setAddr] = useState('')
   const [isInClaytonCounty, setIsInClaytonCounty] = useState('');
   const [zone, setZone] = useState('');
-  const [addrNum, setAddrNum] = useState(null);
-  const [parcelID, setParcelID] = useState('');
+  // const [parcelID, setParcelID] = useState('');
 
-  const onSelect = useCallback(
-    (query, selectedResult) => {
+  const onSelect = ((query) => {
       if (query !== undefined && query !== null) {
         setAddrNum(query.addrnum)
+        setAddr(query.fulladdr)
         setIsInClaytonCounty(query.withinname)
         setZone(query.zone)
-        setParcelID(query.parcelid)
+        // setParcelID(query.parcelid)
       }
-    }, 
-  )
+    })
   
   return  (
-    <div>
-      <div className='centerdiv'>
+    <StyledGridContainer justify="center">
+      <StyledGridItem justify="center">
         <Turnstone 
         id="autocomplete" 
         matchText={true} 
@@ -45,15 +46,14 @@ export function SearchBox() {
         typeahead={false} 
         styles={styles} 
         onSelect={onSelect} />
-      </div>
-      <div className='addresssearchredirect'>
+      </StyledGridItem>
+      <StyledGridItem justify="center">
         <AddressSearch 
         addrNum={addrNum}
+        addr={addr}
         isInClaytonCounty={isInClaytonCounty} 
-        zone={zone} 
-        parcelID={parcelID}
-        />
-      </div>
-    </div>
+        zone={zone} />
+      </StyledGridItem>
+    </StyledGridContainer>
     );
  }

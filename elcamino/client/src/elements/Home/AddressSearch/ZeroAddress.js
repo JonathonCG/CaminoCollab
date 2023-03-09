@@ -13,11 +13,11 @@ export function ZeroAddress() {
                 css={{topPadding: "4px"}} 
                 size={12}
                 >
-                    You can find your parcel # with our 
-                    <Text 
+                    You can find your parcel # with our <Text 
                     css={{textDecoration: "underline"}} 
                     as="a" 
                     href="https://cccd-gis.maps.arcgis.com/apps/webappviewer/index.html?id=e04360c69dc34c3fbfad14fcb42f10a5"
+                    target="_blank"
                     >
                         parcel viewer
                     </Text>
@@ -26,7 +26,10 @@ export function ZeroAddress() {
             <Card.Divider />
                 <Card.Footer>
                     <Grid.Container justify="center">
-                        <a href='https://www.claytoncountyga.gov/wp-content/uploads/2022/06/Address-Assignment-Application.pdf'>
+                        <a 
+                        href='https://www.claytoncountyga.gov/wp-content/uploads/2022/06/Address-Assignment-Application.pdf'
+                        target="_blank"
+                        >
                             <Button auto color="warning">
                                 Download Address Assignment Application
                             </Button>

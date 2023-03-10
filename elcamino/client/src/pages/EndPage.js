@@ -7,6 +7,7 @@ import { EndPageNavbar } from '../elements/Navbar';
 import { ContinueButton } from '../elements/EndPage/ContinueButton'
 import { prereqs } from "../elements/EndPage/prereqs";
 import { Footer } from "../elements/Footer";
+import { PrereqTips } from "../elements/EndPage/PrereqTips";
 
 export function EndPage() {
   document.title = "Permit Requirements"
@@ -45,7 +46,8 @@ export function EndPage() {
     }
   }, [selected])
 
-  function cardVariant() { /* Funtion that changes the text color next to the CheckBox */
+  // Funtion that changes the text color next to the CheckBox
+  function cardVariant() { 
   if(selected){
     return "bordered"
   }
@@ -76,12 +78,11 @@ export function EndPage() {
               > 
               {card.requirements.map((reqs) => ( //Mapping requirements to Checkboxes
                 <Checkbox lineThrough value={prereqs[reqs].id}>
-                  {prereqs[reqs].name}
+                  {prereqs[reqs].name} <PrereqTips tip={prereqs[reqs].tip} />
                 </Checkbox>
               ))}
             </Checkbox.Group>
           </Card>
-
           <Spacer y={1} />
           {/* <CheckboxCard /> */}
           <Card isHoverable variant={cardVariant()} borderWeight="bold" css={{p: "10px"}}>
@@ -95,6 +96,11 @@ export function EndPage() {
         <Grid css={{p: "10px", w: "100%"}}>
             <Row justify="center">
               <ContinueButton selected={selected} cardlink={card.endpagelink} />
+            </Row>
+            <Row justify="center">
+              <Text color="#6e6e6e" p>
+                ** You will be required to login/register to our Customer Self-Service on the next page
+              </Text>
             </Row>
             <Spacer y={2} />
             <Row justify="center">

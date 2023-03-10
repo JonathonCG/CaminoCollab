@@ -47,7 +47,7 @@ export const prereqs = [
     {id: 5, name: 'Energy Code Compliance Certificate', 
         tip: 
             <Container css={{padding: "5px"}}>
-                <Text color="white" css={{textAlign: "center"}}>Authorized Agent Form</Text>
+                <Text color="white" css={{textAlign: "center"}}>Energy Code Compliance Certificate</Text>
                 <Button color="warning" size="sm" ghost as="a" css={{sideMargin: "20px"}}
                 href="https://www.dca.ga.gov/sites/default/files/ga_energycodecompliancecertificate.pdf" target="_blank"
                 >
@@ -55,7 +55,19 @@ export const prereqs = [
                 </Button>
             </Container>
     },
-    {id: 6, name: 'Sewer Bond'},
+    {id: 6, name: 'Sewer Bond',
+        tip:
+            <Container css={{padding: "5px"}}>
+                <Text color="white" css={{textAlign: "center"}}>Clayton County Sewer Bond</Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a" css={{sideMargin: "20px"}}
+                    href="https://www.claytoncountyga.gov/download/91/building-permits/65366/sewer-approval.pdf" target="_blank"
+                    >
+                        Go to Form
+                    </Button>
+                </Row>
+            </Container>
+    },
     {id: 7, name: 'Floor Plan (must be to scale)', tip: ''},
     {id: 8, name: 'Zoning Variance (If Applicable)', 
         tip: 
@@ -151,7 +163,19 @@ export const prereqs = [
                 </Button>
             </Container>
     },
-    {id: 20, name: 'Refund Request Letter', tip: ''},
+    {id: 20, name: 'Refund Request Letter', 
+        tip:
+            <Container css={{padding: "5px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Cash Bond Refund Request Letter
+                </Text>
+                <Button color="warning" size="sm" ghost as="a" css={{sideMargin: "20px"}}
+                href="https://www.claytoncountyga.gov/download/91/building-permits/29425/cash-bond-refund-request.pdf" target="_blank"
+                >
+                    Go to Letter
+                </Button>
+            </Container>
+    },
     {id: 21, name: 'Cash Bond Required', tip: ''},
     {id: 22, name: 'Event Route', tip: ''},
     {id: 23, name: 'Elevations w/ Finish Materials', 
@@ -186,7 +210,19 @@ export const prereqs = [
                 </Button>
             </Container>
     },
-    {id: 26, name: 'GDOT / County T&D Permit', tip: ''},
+    {id: 26, name: 'GDOT / County T&D Permit', 
+        tip: 
+            <Container css={{padding: "5px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    More information at:
+                </Text>
+                <Button color="warning" size="sm" ghost as="a" css={{sideMargin: "20px"}}
+                href="https://www.claytoncountyga.gov/government/transportation-and-development/" target="_blank"
+                >
+                    Clayton Transportation and Development Website
+                </Button>
+            </Container>
+    },
     {id: 27, name: 'Proposed Floor Plan (must be to scale)', tip: ''},
     {id: 28, name: 'Existing Floor Plan (must be to scale)', tip: ''},
     {id: 29, name: 'Environmental Health Plan', // Commercial

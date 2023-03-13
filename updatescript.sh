@@ -7,7 +7,7 @@ docker compose down
 
 echo "** Removing caminocollab-client Image **"
 docker rmi caminocollab-client
-dicker rmi caminocollab-server
+docker rmi caminocollab-server
 
 echo "** Pulling Changes from Git **"
 git pull

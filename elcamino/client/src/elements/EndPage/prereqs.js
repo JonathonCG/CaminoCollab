@@ -234,11 +234,38 @@ export const prereqs = [
                 <Text color="white" css={{textAlign: "center"}}>
                     More information at:
                 </Text>
-                <Button color="warning" size="sm" ghost as="a" css={{sideMargin: "20px"}}
-                href="https://www.claytoncountypublichealth.org/" target="_blank"
-                >
-                    Clayton Public Health Website
-                </Button>
+                <Row justify="center">
+                    <Button color="warning" size="sm" ghost as="a" css={{width: "50%"}}
+                    href="https://www.claytoncountypublichealth.org/" target="_blank"
+                    >
+                        Clayton Public Health Website
+                    </Button>
+                </Row>
             </Container>
     },
+    {id: 30, name: 'Two (2) hard copies of the construction plans', // Commercial
+        tip:
+            <Container css={{padding: "5px"}}>
+                <Text color="white">
+                Two (2) hard copies of the construction plans including mechanical, electrical and plumbing are to be delivered in office for review & stamping. 
+                </Text>
+            </Container>
+    },
+    {id: 31, name: 'Water Authority Approval Letter', // Commercial
+    tip:
+        <Container css={{padding: "5px"}}>
+            <Text color="white" css={{textAlign: "center"}}>
+                Approved letter for Environmental Compliance Review for Grease Trap and/or Sand Trap from the Water Authority is required             </Text>
+            <Text color="white" css={{textAlign: "center"}}>
+                More information at:
+            </Text>
+            <Row justify="center">
+                <Button ghost size="sm" color="warning" as="a" css={{width: "50%"}}
+                href="https://www.ccwa.us/" target="_blank"
+                >
+                    CCWA Website
+                </Button>
+            </Row>
+        </Container>
+},
 ];

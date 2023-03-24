@@ -3,7 +3,7 @@ import { Button, Container, Row, Text } from "@nextui-org/react";
 // I know this looks like a lot, but the jsx you see just populates the hoverable '?' tooltips on the EndPage
 
 export const prereqs = [
-    {id: 0, name: 'Site Plan (must be to scale)',
+    {id: 0, name: 'Site Plan (must be to scale)', // Residential
         tip: 
             <Container css={{padding: "3px"}}>
             <Text size={14} color="white" h5>
@@ -25,7 +25,7 @@ export const prereqs = [
                 <Text size={12} color="white" as="li">Show location, size, species of all existing trees 6” and greater, identify all specimen trees</Text>
                 <Text size={12} color="white" as="li">Show tree protection fencing and indicate preserved and removed trees</Text>
                 <Text size={12} color="white" as="li">Show entire critical root zones of all trees included in preservation calculation</Text>
-                <Text size={12} color="white" as="li">Show required landscaping</Text>
+                <Text size={12} color="white" as="li">Show required front yard trees</Text>
             </Container>
     },
     {id: 1, name: 'Survey', tip: ''},
@@ -179,12 +179,12 @@ export const prereqs = [
     {id: 21, name: 'Cash Bond Required', tip: ''},
     {id: 22, name: 'Event Route', tip: ''},
     {id: 23, name: 'Elevations w/ Finish Materials', 
-        tip: 
-            <Container css={{padding: "3px"}}>
-                <Text color="white">
-                    When a new dwelling lot is not part of a recorded subdivision plat, an original stamped survey is needed stating that no portion of the property is located within a flood plain
-                </Text>
-            </Container>
+        tip: ''
+            // <Container css={{padding: "3px"}}>
+            //     <Text color="white">
+            //         When a new dwelling lot is not part of a recorded subdivision plat, an original stamped survey is needed stating that no portion of the property is located within a flood plain
+            //     </Text>
+            // </Container>
     },
     {id: 24, name: 'Police Approval', 
         tip: 
@@ -267,5 +267,29 @@ export const prereqs = [
                 </Button>
             </Row>
         </Container>
-},
+    },
+    {id: 32, name: 'Site Plan (must be to scale)', // Commercial
+    tip: 
+        <Container css={{padding: "3px"}}>
+        <Text size={14} color="white" h5>
+            Site Plan is required for all commercial construction 
+        </Text>
+        <Text size={14} color="white">
+            The following list will be required for all commercial site plans: 
+        </Text>
+            <Text size={12} color="white" as="li">Show graphic scale and north arrow and reference applicable subdivision final plat Book/Page</Text>
+            <Text size={12} color="white" as="li">Submit paper & PDF file of site plan with boundary line survey sealed by a design professional</Text>
+            <Text size={12} color="white" as="li">Show building address, lot number, S/D name, phase/unit number, land lot/district/parcel</Text>
+            <Text size={12} color="white" as="li">Show lot size, impervious area, driveway location, proposed structure foot print and square feet</Text>
+            <Text size={12} color="white" as="li">Delineate 75-feet undisturbed buffers of state waters from wrested point of vegetation</Text>
+            <Text size={12} color="white" as="li">Reference all zoning variances and Conditions obtained from Clayton County</Text>
+            <Text size={12} color="white" as="li">Reference floor plan styles, elevations and percentages of exterior materials types used</Text>
+            <Text size={12} color="white" as="li">Show adjoining structures with zoning and ownership information</Text>
+            <Text size={12} color="white" as="li">Show setback lines, disturbed/undisturbed buffers, easements septic field and reserves</Text>
+            <Text size={12} color="white" as="li">Show location, size, species of all existing trees 6” and greater, identify all specimen trees</Text>
+            <Text size={12} color="white" as="li">Show tree protection fencing and indicate preserved and removed trees</Text>
+            <Text size={12} color="white" as="li">Show entire critical root zones of all trees included in preservation calculation</Text>
+            <Text size={12} color="white" as="li">Show required landscaping</Text>
+        </Container>
+    }
 ];

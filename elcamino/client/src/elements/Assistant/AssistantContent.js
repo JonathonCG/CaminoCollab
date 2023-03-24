@@ -139,7 +139,7 @@ export function AssistantContent() {
 
                                     <Col>
                                         <Text h3>{AssistantCards[cardList].questionText}</Text>
-                                        <Text h5>{AssistantCards[cardList].addinfo}</Text>
+                                        <Text p>{AssistantCards[cardList].addinfo}</Text>
                                     </Col>
                                 </Row>
                             </Card.Body>

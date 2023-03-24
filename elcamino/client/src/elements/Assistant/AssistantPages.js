@@ -16,7 +16,7 @@ export const AssistantPages = [
     name : 'Residential Demolition Permits'},
     {id : 5,
     cards : [30,31,32,33,36],
-    name : 'Non-Residential Electical Permits'},
+    name : 'Non-Residential Electrical Permits'},
     {id : 6,
     cards : [35,32,33,36],
     name : 'Residential Electrical Permits'},
@@ -39,9 +39,9 @@ export const AssistantPages = [
     cards : [20,21],
     name : 'Permits for Transporting Homes'},
     {id : 13,
-    cards : [16,7,8,9,11,13,14,15,10,12],
-    name : 'Non-Residential Construction Permits'},
+    cards : [16,13,11,9,7,8,14,15,10,12],
+    name : 'Non-Residential Building Permits'},
     {id : 14,
     cards : [25,24,22,63,19,18,17],
-    name : 'Residential Construction Permits'}
+    name : 'Residential Building Permits'}
 ];

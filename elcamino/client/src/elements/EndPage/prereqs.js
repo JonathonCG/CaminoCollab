@@ -43,7 +43,7 @@ export const prereqs = [
                 </Button>
             </Container>
     },
-    {id: 4, name: 'Contractor Affidavits', tip: ''},
+    {id: 4, name: 'Sub-Contractor Affidavits', tip: ''},
     {id: 5, name: 'Energy Code Compliance Certificate', 
         tip: 
             <Container css={{padding: "3px"}}>

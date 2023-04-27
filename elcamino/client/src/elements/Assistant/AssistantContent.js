@@ -35,23 +35,21 @@ export function AssistantContent() {
                 Back
             </Button> 
         )
-    }
+    };
 
-    // Function for determining <Card.Header>; either 'Permit' or 'Permit Category'
-    function CardHeader({endpage}) {
-        if(endpage){
-            return (
-                <Card.Header css={{}}>
-                    <Text weight="bold" color="secondary">Permit</Text>
-                </Card.Header>
+    function ReturnToAddressButton() {
+        if(cardPage === 0){
+            return(
+                <Row justify="center">
+                    <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/')}}>
+                        Return to Address Verification
+                    </Button>
+                </Row>
             )
-        }
-        return (
-            <Card.Header>
-                <Text weight="bold" color="primary">Permit Category</Text>
-            </Card.Header>
-        )
-    }
+        } else {
+            return
+        };
+    };
 
     // Function for displaying start page help, might need to be broken out into dedicated file
     function StartHelp() {
@@ -67,9 +65,9 @@ export function AssistantContent() {
                 </Row>
                 </>
             )
-        }
+        };
         return
-    }
+    };
 
     // Function for displaying page indicator, might need to be broken out into dedicated file
     function PageIndicator() {
@@ -83,17 +81,29 @@ export function AssistantContent() {
                 </Row>
                 </>
             )
-        }
+        };
         return
-    }
+    };
 
     // Function for giving non-endpage AssistantCards borders
     function cardVariant(endpage) {
         if(endpage === false){
             return "bordered"
-        }
+        };
         return
-    }
+    };
+
+    // Function for determining header color based on categoryText
+    function headerColor(category) {
+        const color = (category === 'Permit Category') ? 'primary' : 'secondary';
+        return color
+    };
+    
+    // Function for determining addinfo color based on categoryText
+    function addinfoColor(category) {
+        const color = (category === 'Plans Review') ? 'error' : 'black';
+        return color
+    };
 
     return (
         <Container>
@@ -118,28 +128,33 @@ export function AssistantContent() {
                         isHoverable
                         variant={cardVariant(AssistantCards[cardList].endpage)}
                         borderWeight="bold"
-                        onPress={()=>{ //onClick function that changes the 'cardPage' state to the ID of the question displayed.
+                        onPress={()=>{ // onClick function that changes the 'cardPage' state to the ID of the question displayed.
                             const paramID = '/nextsteps/' + AssistantCards[cardList].id;
                             console.log(AssistantCards[cardList].nextPage);
                             if(AssistantCards[cardList].endpage){
                                 return navigate(paramID);
                             }
                             else{
-                                setPrevCardPage((cardPage)); //set prevCardPage with cardPage
+                                setPrevCardPage((cardPage)); // set prevCardPage with cardPage
                                 return (
-                                    setCardPage((AssistantCards[cardList].nextPage)) //change CardPage based on 'nextPage' from AssistantCards
+                                    setCardPage((AssistantCards[cardList].nextPage)) // change CardPage based on 'nextPage' from AssistantCards
                                 )
                                 console.log(cardPage);
                                 console.log('prev: ' + prevCardPage);
                             }
                             }}>
-                            <CardHeader endpage={AssistantCards[cardList].endpage} />
+                            <Card.Header>
+                                <Text weight="bold" color={headerColor(AssistantCards[cardList].categoryText)}>
+                                    {AssistantCards[cardList].categoryText}
+                                </Text>
+                            </Card.Header>
                             <Card.Body>
                                 <Row align="center">
-
                                     <Col>
                                         <Text h3>{AssistantCards[cardList].questionText}</Text>
-                                        <Text p>{AssistantCards[cardList].addinfo}</Text>
+                                        <Text p color={addinfoColor(AssistantCards[cardList].categoryText)}>
+                                            {AssistantCards[cardList].addinfo}
+                                        </Text>
                                     </Col>
                                 </Row>
                             </Card.Body>
@@ -150,6 +165,7 @@ export function AssistantContent() {
             <Spacer y={1} />
             <Divider />
             <Spacer y={1} />
+            <ReturnToAddressButton />
             <PageIndicator />
         </Container>
          );  

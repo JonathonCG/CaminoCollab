@@ -16,7 +16,7 @@ export const theme = createTheme({
         secondary: '#702f8a',
         success: '#6ba539',
         warning: '#ffb549',
-        error: '#cb333b',
+        error: '#91040b',
         selection: '#2774ae',
   
         gradient: 'linear-gradient(211deg, #ffb549 -3%, #2774AE 70.46%)',

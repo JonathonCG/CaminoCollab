@@ -11,10 +11,11 @@ export function HomeContent() {
                         <Text h1>Permit Assistant</Text>
                     </Row>
                     <Row justify="center">
-                        <Text h4>Enter the address of where you would like to file a permit</Text>
+                        <Text h4>The Permit assistant is here to help you file a permit in unincorporated Clayton County</Text>
                     </Row>
+                    <Spacer y={2} />
                     <Row justify="center">
-                        <Text h5>We'll verify that the address is in Unincorporated Clayton County</Text>
+                        <Text h5>Type an address below to verify that it is in Unincorporated Clayton County</Text>
                     </Row>
                     <Row justify="center">
                         <Text p>Then you'll be able to find the right permit, along with the required documents you'll need while filing</Text>
@@ -27,8 +28,9 @@ export function HomeContent() {
                         <Divider />
                         <Spacer y={2} />
                         <Row justify="center">
-                            <Text h5>Already know how to navigate our Customer Self Service?</Text>
+                            <Text p>If you already know how to navigate our Customer Self Service Portal, click below</Text>
                         </Row>
+                        <Spacer y={0.5} />
                         <Row justify="center">
                             <Button 
                             color="warning" 

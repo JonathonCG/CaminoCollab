@@ -43,7 +43,17 @@ export const prereqs = [
                 </Button>
             </Container>
     },
-    {id: 4, name: 'Sub-Contractor Affidavits', tip: ''},
+    {id: 4, name: 'Subcontractor Affidavits', 
+    tip:
+        <Container css={{padding: "5px"}}>
+            <Text color="white" css={{textAlign: "center"}}>State license, business license and ID of the subcontractor are required</Text>
+            <Button color="warning" size="sm" ghost as="a"
+            href="https://www.claytoncountyga.gov/download/91/building-permits/29684/subcontractor-affidavit.pdf" target="_blank"
+            >
+                Subcontractor Affidavit
+            </Button>
+        </Container>
+    },
     {id: 5, name: 'Energy Code Compliance Certificate', 
         tip: 
             <Container css={{padding: "3px"}}>
@@ -287,13 +297,13 @@ export const prereqs = [
         <Text size={14} color="white">
             The following list will be required for all commercial site plans: 
         </Text>
-            <Text size={12} color="white" as="li">Show graphic scale and north arrow and reference applicable subdivision final plat Book/Page</Text>
-            <Text size={12} color="white" as="li">Submit paper & PDF file of site plan with boundary line survey sealed by a design professional</Text>
+            <Text size={12} color="white" as="li">Show graphic scale and north arrow</Text>
+            <Text size={12} color="white" as="li">Submit hardcopy & digital (PDF) of site plan with boundary line survey sealed by a design professional</Text>
             <Text size={12} color="white" as="li">Show building address, lot number, S/D name, phase/unit number, land lot/district/parcel</Text>
             <Text size={12} color="white" as="li">Show lot size, impervious area, driveway location, proposed structure foot print and square feet</Text>
             <Text size={12} color="white" as="li">Delineate 75-feet undisturbed buffers of state waters from wrested point of vegetation</Text>
             <Text size={12} color="white" as="li">Reference all zoning variances and Conditions obtained from Clayton County</Text>
-            <Text size={12} color="white" as="li">Reference floor plan styles, elevations and percentages of exterior materials types used</Text>
+            <Text size={12} color="white" as="li">Reference elevations and percentages of exterior materials types used. (If applicable)</Text>
             <Text size={12} color="white" as="li">Show adjoining structures with zoning and ownership information</Text>
             <Text size={12} color="white" as="li">Show setback lines, disturbed/undisturbed buffers, easements septic field and reserves</Text>
             <Text size={12} color="white" as="li">Show location, size, species of all existing trees 6” and greater, identify all specimen trees</Text>
@@ -356,5 +366,13 @@ export const prereqs = [
                 Special Event Application
             </Button>
         </Container>
-    }
+    },
+    {id: 42, name: 'Elevations', 
+    tip:
+        <Container css={{padding: "3px"}}>
+            <Text color="white">
+                Sign Dimensions required <br /> If wall sign, include a diagram of placement of sign on building façade
+            </Text>
+        </Container>
+},
 ];

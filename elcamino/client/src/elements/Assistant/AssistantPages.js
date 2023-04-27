@@ -3,7 +3,7 @@ export const AssistantPages = [
     cards : [0,1,55],
     name : 'Start'},
     {id : 1,
-    cards : [61,2,3,4,5,6],
+    cards : [61,2,3,4,5,6,64],
     name : 'Non-Residential Permits'},
     {id : 2,
     cards : [62,56,57,58,59,60],

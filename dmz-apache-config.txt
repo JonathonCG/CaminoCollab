@@ -1,0 +1,22 @@
+<VirtualHost *:443>
+    ServerName permitassistant.claytoncountyga.gov
+    SSLEngine On
+    SSLProtocol TLSv1.2
+    SSLOptions +FakeBasicAuth +ExportCertData +StrictRequire
+    SSLHonorCipherOrder On
+    #SSLCipherSuite kEDH:HIGH:!MD5:!RC4:!3DES:!AES128:!CAMELLIA128:!MEDIUM:!LOW:!EXP:!aNULL:!eNULL
+    #SSLCipherSuite AES128-SHA:AES256+EECDH:AES256+EDH:HIGH:!aNULL:!MD5
+    SSLCipherSuite HIGH:!aNULL:!MD5
+    SSLCompression Off
+    SSLCertificateFile      /etc/pki/tls/certs/CLAYTONCOUNTYGA.GOV/WILDCARD.crt
+    SSLCertificateChainFile /etc/pki/tls/certs/CLAYTONCOUNTYGA.GOV/GODADDY-CHAIN.crt
+    SSLCertificateKeyFile   /etc/pki/tls/private/ccga.key
+
+    ProxyPreserveHost On
+    ProxyPass "/" "http://localhost:3000"
+    ProxyPassReverse "/" "http://localhost:3000"
+
+    ProxyPreserveHost On
+    ProxyPass "/addr" "http://localhost:3001/addr"
+
+</VirtualHost>

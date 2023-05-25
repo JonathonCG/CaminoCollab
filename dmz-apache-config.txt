@@ -19,5 +19,4 @@
     ProxyPreserveHost On
     ProxyPass "/addr" "http://localhost:3001/addr"
     ProxyPassReverse "/addr" "http://localhost:3001/addr"
-
 </VirtualHost>

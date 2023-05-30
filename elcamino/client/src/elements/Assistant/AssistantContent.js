@@ -42,7 +42,7 @@ export function AssistantContent() {
             return(
                 <Row justify="center">
                     <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/')}}>
-                        Return to Address Verification
+                        Return to Address Lookup
                     </Button>
                 </Row>
             )

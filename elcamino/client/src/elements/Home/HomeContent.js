@@ -39,7 +39,7 @@ export function HomeContent() {
                             ghost
                             css={{zIndex: "0"}}
                             as="a" 
-                            href="https://selfservice.claytoncountyga.gov/energovprod/selfservice/Home#/home"
+                            href="https://selfservice.claytoncountyga.gov/energovprod/selfservice/#/home"
                             >
                                 Existing Customers with CSS Login
                             </Button>

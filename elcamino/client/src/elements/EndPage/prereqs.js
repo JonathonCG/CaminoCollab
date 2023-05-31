@@ -162,8 +162,32 @@ export const prereqs = [
     },
     {id: 15, name: 'HVAC Letter', tip: ''},
     {id: 16, name: 'Engineering Letter (if applicable)', tip: ''},
-    {id: 17, name: 'Mobile Home Registration', tip: ''},
-    {id: 18, name: 'Mobile Home Tax Receipt', tip: ''},
+    {id: 17, name: 'Mobile Home Registration', 
+        tip: 
+            <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>More information at:</Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://www.claytoncountyga.gov/government/tax-commissioner" target="_blank"
+                    >
+                        Clayton Tax Commissioner Website
+                    </Button>
+                </Row>
+            </Container>
+    },
+    {id: 18, name: 'Mobile Home Tax Receipt', 
+        tip: 
+            <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>More information at:</Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://www.claytoncountyga.gov/government/tax-commissioner" target="_blank"
+                    >
+                        Clayton Tax Commissioner Website
+                    </Button>
+                </Row>
+            </Container>
+    },
     {id: 19, name: 'Property Tax Verification', 
         tip: 
             <Container cs                          zs={{padding: "5px"}}>

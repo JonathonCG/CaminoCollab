@@ -1,4 +1,4 @@
-import { AssistantCards } from "../Assistant/AssistantCards"
+import { AssistantCards } from "../Assistants/AssistantCards"
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";

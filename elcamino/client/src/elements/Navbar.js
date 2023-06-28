@@ -13,8 +13,8 @@ export function HomeNavbar() {
             </Navbar.Brand>
             <Navbar.Content activeColor="warning" hideIn="sm" variant="underline-rounded">
                 <Navbar.Link isActive href="/">Address Lookup</Navbar.Link>
-                <Navbar.Link href="/Assistant">Permit Assistant</Navbar.Link>
-                <Navbar.Item>Permit Requirements</Navbar.Item>
+                <Navbar.Item>Assistant</Navbar.Item>
+                <Navbar.Item>Requirements</Navbar.Item>
             </Navbar.Content>
             <Navbar.Content showIn="sm">
                 <Navbar.Toggle />
@@ -24,10 +24,10 @@ export function HomeNavbar() {
                     <Link color="warning" css={{minWidth: "100%"}} href="/">Address Lookup</Link>
                 </Navbar.CollapseItem>
                 <Navbar.CollapseItem>
-                    <Link color="inherit" href="/Assistant">Permit Assistant</Link>
+                    <Text color="inherit">Assistant</Text>
                 </Navbar.CollapseItem>
                 <Navbar.CollapseItem>
-                    <Text color="inherit">Permit Requirements</Text>
+                    <Text color="inherit">Requirements</Text>
                 </Navbar.CollapseItem>
             </Navbar.Collapse>
         </Navbar>
@@ -44,8 +44,8 @@ export function AssistantNavbar() {
             </Navbar.Brand>
             <Navbar.Content activeColor="warning" hideIn="sm" variant="underline-rounded">
                 <Navbar.Link href="/">Address Lookup</Navbar.Link>
-                <Navbar.Link isActive href="/Assistant">Permit Assistant</Navbar.Link>
-                <Navbar.Item>Permit Requirements</Navbar.Item>
+                <Navbar.Item isActive>Assistant</Navbar.Item>
+                <Navbar.Item>Requirements</Navbar.Item>
             </Navbar.Content>
             <Navbar.Content showIn="sm">
                 <Navbar.Toggle />
@@ -55,10 +55,10 @@ export function AssistantNavbar() {
                     <Link color="inherit" css={{minWidth: "100%"}} href="/">Address Lookup</Link>
                 </Navbar.CollapseItem>
                 <Navbar.CollapseItem>
-                    <Link color="warning" href="/Assistant">Permit Assistant</Link>
+                    <Text color="warning">Assistant</Text>
                 </Navbar.CollapseItem>
                 <Navbar.CollapseItem>
-                    <Text p>Permit Requirements</Text>
+                    <Text p>Requirements</Text>
                 </Navbar.CollapseItem>
             </Navbar.Collapse>
         </Navbar>
@@ -75,8 +75,8 @@ export function EndPageNavbar() {
             </Navbar.Brand>
             <Navbar.Content activeColor="warning" hideIn="sm" variant="underline-rounded">
                 <Navbar.Link href="/">Address Lookup</Navbar.Link>
-                <Navbar.Link href="/Assistant">Permit Assistant</Navbar.Link>
-                <Navbar.Item isActive>Permit Requirements</Navbar.Item>
+                <Navbar.Item>Assistant</Navbar.Item>
+                <Navbar.Item isActive>Requirements</Navbar.Item>
             </Navbar.Content>
             <Navbar.Content showIn="sm">
                 <Navbar.Toggle />
@@ -86,12 +86,13 @@ export function EndPageNavbar() {
                     <Link color="inherit" css={{minWidth: "100%"}} href="/">Address Lookup</Link>
                 </Navbar.CollapseItem>
                 <Navbar.CollapseItem>
-                    <Link color="inherit" href="/Assistant">Permit Assistant</Link>
+                    <Text color="inherit">Assistant</Text>
                 </Navbar.CollapseItem>
                 <Navbar.CollapseItem>
-                    <Text color="warning">Permit Requirements</Text>
+                    <Text color="warning">Requirements</Text>
                 </Navbar.CollapseItem>
             </Navbar.Collapse>
         </Navbar>
     )
 };
+<Text color="inherit">Assistant</Text>

@@ -39,8 +39,11 @@ export function UnincorpAddr({zone, addr}) {
                     <Card.Divider />
                     <Card.Footer>
                         <Grid.Container justify="center">
-                            <Button css={{width: "100%", margin: "0% 15%"}} color="primary" onPress={() => {return navigate('/Assistant')}}>
+                            <Button css={{width: "50%", margin: "0% 15%"}} color="primary" onPress={() => {return navigate('/PermitAssistant')}}>
                                 Continue to the Permit Assistant
+                            </Button>
+                            <Button css={{width: "50%", margin: "1% 15%"}} color="primary" onPress={() => {return navigate('/LicenseAssistant')}}>
+                                Continue to the License Assistant
                             </Button>
                             <Button 
                             css={{width: "100%", margin: "3% 25% 0%"}} 

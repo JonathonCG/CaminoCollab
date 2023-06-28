@@ -61,7 +61,7 @@ export function AssistantContent() {
                     <Text h5>Choose between 'Residential' and 'Non-Residential' permits</Text>
                 </Row>
                 <Row justify='center'>
-                    <Text p>Or choose 'Special Event' if you are applying to host a Special Event.</Text>
+                    <Text p>Or choose 'Special Event' if you'd like to apply for a Special Event permit</Text>
                 </Row>
                 </>
             )
@@ -101,7 +101,7 @@ export function AssistantContent() {
     
     // Function for determining addinfo color based on categoryText
     function addinfoColor(category) {
-        const color = (category === 'Plans Review') ? 'error' : 'black';
+        const color = (category === 'Plans Review') ? 'error' : 'black'; // if category = plans, make text red (error color), if not, make it black
         return color
     };
 
@@ -109,10 +109,10 @@ export function AssistantContent() {
         <Container>
             <Spacer y={1} />
             <Row justify='center'>
-                <Text h1>Permit Assistant</Text>
+                <Text h1>Permits Assistant</Text>
             </Row>
             <Row justify='center'>
-                <Text h4>Navigate via the cards below based on your permitting needs</Text>
+                <Text h4>Navigate via the cards below based on your needs</Text>
             </Row>
             <StartHelp page={cardPage} />
             <PageIndicator />
@@ -139,7 +139,7 @@ export function AssistantContent() {
                                 return (
                                     setCardPage((AssistantCards[cardList].nextPage)) // change CardPage based on 'nextPage' from AssistantCards
                                 )
-                                console.log(cardPage);
+                                console.log(cardPage);                                                  
                                 console.log('prev: ' + prevCardPage);
                             }
                             }}>

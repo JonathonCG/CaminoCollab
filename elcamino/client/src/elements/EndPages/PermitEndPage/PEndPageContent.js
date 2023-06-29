@@ -1,19 +1,19 @@
-import { AssistantCards } from "../Assistants/AssistantCards"
+import { PermitCards } from '../../Assistants/PermitAssistant/PermitCards';
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { Spacer, Grid, Card, Row, Text, Button, Checkbox, Divider } from "@nextui-org/react";
-import { ContinueButton } from './ContinueButton'
-import { prereqs } from "./prereqs";
-import { PrereqTips } from "./PrereqTips";
+import { ContinueButton } from '../ContinueButton'
+import { permitPrereqs } from "./permitPrereqs";
+import { PrereqTips } from "./PermitPrereqTips";
 
 
-export function EndPageContent() {
+export function PEndPageContent() {
     const { id } = useParams();
     const navigate = useNavigate()
     const [selected, setSelected] = useState(false); /**State setting for the checkbox */
     const [groupSelected, setGroupSelected] = useState([])
-    const card = AssistantCards[id]
+    const card = PermitCards[id]
     const cardReqs = card.requirements
     const cardCategoryText = card.categoryText
 
@@ -72,8 +72,8 @@ export function EndPageContent() {
               onChange={setGroupSelected}
               > 
               {card.requirements.map((reqs) => ( //Mapping requirements to Checkboxes
-                <Checkbox lineThrough value={prereqs[reqs].id}>
-                  {prereqs[reqs].name} <PrereqTips tip={prereqs[reqs].tip} />
+                <Checkbox lineThrough value={permitPrereqs[reqs].id}>
+                  {permitPrereqs[reqs].name} <PrereqTips tip={permitPrereqs[reqs].tip} />
                 </Checkbox>
               ))}
             </Checkbox.Group>
@@ -128,8 +128,8 @@ export function EndPageContent() {
                 onChange={setGroupSelected}
                 > 
                 {card.requirements.map((reqs) => ( //Mapping requirements to Checkboxes
-                  <Checkbox lineThrough value={prereqs[reqs].id}>
-                    {prereqs[reqs].name} <PrereqTips tip={prereqs[reqs].tip} />
+                  <Checkbox lineThrough value={permitPrereqs[reqs].id}>
+                    {permitPrereqs[reqs].name} <PrereqTips tip={permitPrereqs[reqs].tip} />
                   </Checkbox>
                 ))}
               </Checkbox.Group>

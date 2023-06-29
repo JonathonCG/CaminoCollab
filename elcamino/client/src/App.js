@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { Assistant } from "./pages/Assistant";
 import { PermitAssistant } from "./pages/PermitAssistant";
 import { LicenseAssistant } from "./pages/LicenseAssistant";
-import { EndPage } from './pages/EndPage';
+import { LicenseEndPage } from './pages/LicenseEndPage';
+import { PermitEndPage } from './pages/PermitEndPage';
 import ScrollToTop from './elements/Scrolltotop';
 
 function App() {
@@ -11,10 +11,10 @@ function App() {
     <ScrollToTop>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/Assistant" element={<Assistant />}/>
         <Route path="/PermitAssistant" element={<PermitAssistant />}/>
         <Route path="/LicenseAssistant" element={<LicenseAssistant />}/>
-        <Route path="/nextsteps/:id" element={<EndPage />}/>
+        <Route path="/LicenseRequirements/:id" element={<LicenseEndPage />}/>
+        <Route path="/PermitRequirements/:id" element={<PermitEndPage />}/>
       </Routes>    
     </ScrollToTop>
   )

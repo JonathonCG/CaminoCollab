@@ -129,7 +129,7 @@ export function PermitContent() {
                         variant={cardVariant(PermitCards[cardList].endpage)}
                         borderWeight="bold"
                         onPress={()=>{ // onClick function that changes the 'cardPage' state to the ID of the question displayed.
-                            const paramID = '/nextsteps/' + PermitCards[cardList].id;
+                            const paramID = '/PermitRequirements/' + PermitCards[cardList].id;
                             console.log(PermitCards[cardList].nextPage);
                             if(PermitCards[cardList].endpage){
                                 return navigate(paramID);

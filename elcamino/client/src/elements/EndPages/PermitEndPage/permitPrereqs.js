@@ -2,7 +2,7 @@ import { Button, Container, Row, Spacer, Text } from "@nextui-org/react";
 
 // I know this looks like a lot, but the jsx you see just populates the hoverable '?' tooltips on the EndPage
 
-export const prereqs = [
+export const permitPrereqs = [
     {id: 0, name: 'Site Plan (must be to scale)', // Residential
         tip: 
             <Container css={{padding: "3px"}}>

@@ -129,7 +129,7 @@ export function LicenseContent() {
                         variant={cardVariant(LicenseCards[cardList].endpage)}
                         borderWeight="bold"
                         onPress={()=>{ // onClick function that changes the 'cardPage' state to the ID of the question displayed.
-                            const paramID = '/nextsteps/' + LicenseCards[cardList].id;
+                            const paramID = '/LicenseRequirements/' + LicenseCards[cardList].id;
                             console.log(LicenseCards[cardList].nextPage);
                             if(LicenseCards[cardList].endpage){
                                 return navigate(paramID);

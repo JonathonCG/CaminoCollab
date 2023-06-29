@@ -39,7 +39,7 @@ export function UnincorpAddr({zone, addr}) {
                     <Card.Divider />
                     <Card.Footer>
                         <Grid.Container justify="center">
-                            <Button css={{width: "50%", margin: "0% 15%"}} color="primary" onPress={() => {return navigate('/PermitAssistant')}}>
+                            <Button css={{width: "50%", margin: "0% 15%", padding: "1%"}} color="primary" onPress={() => {return navigate('/PermitAssistant')}}>
                                 Continue to the Permit Assistant
                             </Button>
                             <Button css={{width: "50%", margin: "1% 15% 0% 15%"}} color="primary" onPress={() => {return navigate('/LicenseAssistant')}}>
@@ -51,7 +51,7 @@ export function UnincorpAddr({zone, addr}) {
                             as="a" href={`https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/search?m=1&fm=1&ps=10&pn=1&em=true&st=${encodeURIComponent(addr)}`}
                             target="_blank"
                             >
-                                Check for existing permits and licenses here
+                                Existing permits and licenses at this address
                             </Button>
                         </Grid.Container>
                     </Card.Footer>

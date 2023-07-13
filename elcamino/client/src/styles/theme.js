@@ -18,6 +18,7 @@ export const theme = createTheme({
         warning: '#ffb549',
         error: '#91040b',
         selection: '#2774ae',
+        grey: '#8d8f8e',
   
         gradient: 'linear-gradient(211deg, #ffb549 -3%, #2774AE 70.46%)',
       },

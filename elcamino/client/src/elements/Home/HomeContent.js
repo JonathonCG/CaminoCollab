@@ -1,5 +1,6 @@
 import { SearchBox } from "./AddressSearch/SearchBox"
 import { Container, Spacer, Grid, Row, Text, Col, Button, Divider } from "@nextui-org/react";
+import { HelpMenu } from "./HelpMenu";
 
 export function HomeContent() {
     return(
@@ -22,6 +23,10 @@ export function HomeContent() {
                     </Row>
                     <Row justify="center">
                         <SearchBox />
+                    </Row>
+                    <Spacer y={2} />
+                    <Row justify="center">
+                        <HelpMenu />
                     </Row>
                     <Container>
                         <Spacer y={2} />

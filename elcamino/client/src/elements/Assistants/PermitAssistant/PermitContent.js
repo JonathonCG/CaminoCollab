@@ -37,12 +37,12 @@ export function PermitContent() {
         )
     };
 
-    function ReturnToAddressButton() {
+    function ReturnToAssistantButton() {
         if(cardPage === 0){
             return(
                 <Row justify="center">
-                    <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/')}}>
-                        Return to Address Lookup
+                    <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/Assistant')}}>
+                        Return to Assistant Selection
                     </Button>
                 </Row>
             )
@@ -139,8 +139,6 @@ export function PermitContent() {
                                 return (
                                     setCardPage((PermitCards[cardList].nextPage)) // change CardPage based on 'nextPage' from PermitCards
                                 )
-                                console.log(cardPage);                                                  
-                                console.log('prev: ' + prevCardPage);
                             }
                             }}>
                             <Card.Header>
@@ -165,7 +163,7 @@ export function PermitContent() {
             <Spacer y={1} />
             <Divider />
             <Spacer y={1} />
-            <ReturnToAddressButton />
+            <ReturnToAssistantButton />
             <PageIndicator />
         </Container>
          );  

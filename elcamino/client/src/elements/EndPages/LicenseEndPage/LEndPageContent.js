@@ -97,7 +97,7 @@ export function LEndPageContent() {
             </Row>
             <Spacer y={2} />
             <Row justify="center">
-              <Button auto size="sm" onPress={() => {return navigate('/assistant')}}>
+              <Button auto size="sm" onPress={() => {return navigate('/LicenseAssistant')}}>
               Go back
               </Button>
             </Row>

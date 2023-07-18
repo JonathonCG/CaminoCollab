@@ -8,17 +8,17 @@ export function HomeContent() {
                 <Spacer y={1} />
                 <Grid xs={12}>
                     <Row justify="center">
-                        <Text h1>Permit and License Assistant</Text>
+                        <Text h1>Community Development Assistant</Text>
                     </Row>
                     <Row justify="center">
-                        <Text h4>This web app can help you file for a permit or license in Unincorporated Clayton County</Text>
+                        <Text h4>This web app can help you file for a permit, license, or zoning request in Unincorporated Clayton County</Text>
                     </Row>
                     <Spacer y={1} />
                     <Row justify="center">
                         <Text h5>Type an address below to verify that it is in Unincorporated Clayton County</Text>
                     </Row>
                     <Row justify="center">
-                        <Text p>Then you'll be able to find the right permit or license, along with the required documents you'll need while filing</Text>
+                        <Text p>Then you can navigate the assistant to find what you need along with the required documents you'll need while filing</Text>
                     </Row>
                     <Row justify="center">
                         <SearchBox />

@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { Assistant } from "./pages/Assistant"
 import { PermitAssistant } from "./pages/PermitAssistant";
 import { LicenseAssistant } from "./pages/LicenseAssistant";
 import { ZoningAssistant } from "./pages/ZoningAssistant";
@@ -13,6 +14,7 @@ function App() {
     <ScrollToTop>
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/Assistant" element={<Assistant />}/>
         <Route path="/PermitAssistant" element={<PermitAssistant />}/>
         <Route path="/LicenseAssistant" element={<LicenseAssistant />}/>
         <Route path="/ZoningAssistant" element={<ZoningAssistant />}/>

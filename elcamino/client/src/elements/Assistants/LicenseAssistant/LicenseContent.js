@@ -16,7 +16,7 @@ export function LicenseContent() {
     
     const handlePress = () => { /**this function scroll the window back to the top of the page, is called on the "go back button" */
         window.scrollTo(0,0);
-      };
+    };
 
     const goBack = () => { /**this function changes the state setter back to 0, which is the 'first' page for the /License page with the LicenseCards on it. */
         if(cardPage === 1 || 2){
@@ -37,12 +37,12 @@ export function LicenseContent() {
         )
     };
 
-    function ReturnToAddressButton() {
+    function ReturnToAssistantButton() {
         if(cardPage === 0){
             return(
                 <Row justify="center">
-                    <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/')}}>
-                        Return to Address Lookup
+                    <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/Assistant')}}>
+                        Return to Assistant Selection
                     </Button>
                 </Row>
             )
@@ -58,10 +58,10 @@ export function LicenseContent() {
                 <>
                 <Spacer y={1} />
                 <Row justify='center'>
-                    <Text h5>Choose between 'Residential' and 'Non-Residential' permits</Text>
+                    <Text h5>Choose between 'Commercial' and 'Home' licenses </Text>
                 </Row>
                 <Row justify='center'>
-                    <Text p>Or choose 'Special Event' if you'd like to apply for a Special Event permit</Text>
+                    <Text p>Or choose 'Alcohol' if you'd like to apply to serve alcohol</Text>
                 </Row>
                 </>
             )
@@ -77,7 +77,9 @@ export function LicenseContent() {
                 <Spacer y={1} />
                 <Row width="60%" align="baseline" justify="space-between">
                     <BackButton />
-                    <Text h5 weight="bold" css={{p: "0px 20px"}}>{LicensePages[cardPage].name}</Text>
+                    <Text h5 weight="bold" css={{p: "0px 20px"}}>
+                        {LicensePages[cardPage].name}
+                    </Text>
                 </Row>
                 </>
             )
@@ -86,23 +88,24 @@ export function LicenseContent() {
     };
 
     // Function for giving non-endpage LicenseCards borders
-    function cardVariant(endpage) {
-        if(endpage === false){
-            return "bordered"
+    function cardVariant(endpage, category) {
+        if(category === 'Information') {
+            return 'bordered'
+        } else if(endpage === false) {
+            return 'bordered'
         };
         return
     };
 
     // Function for determining header color based on categoryText
     function headerColor(category) {
-        const color = (category === 'Permit Category') ? 'primary' : 'secondary';
-        return color
-    };
-    
-    // Function for determining addinfo color based on categoryText
-    function addinfoColor(category) {
-        const color = (category === 'Plans Review') ? 'error' : 'black'; // if category = plans, make text red (error color), if not, make it black
-        return color
+        if(category === 'License Category') {
+            return "primary"
+        } else if(category === 'Information') {
+            return "primary"
+        } else {
+            return "secondary"
+        };
     };
 
     return (
@@ -121,29 +124,34 @@ export function LicenseContent() {
             <Spacer y={1} />
             <Grid.Container gap={2} justify="center">
                 {LicensePages[cardPage].cards.map((cardList) => ( //Maps the LicensePages array
-                    //Key to keep items organized per React rules
+                    // Key to keep items organized per React rules
                     <Grid xs={12} sm={6} md={5} lg={4} xl={4} justify="center" key={LicenseCards[cardList].id}> 
                         <Card 
                         isPressable
                         isHoverable
-                        variant={cardVariant(LicenseCards[cardList].endpage)}
+                        variant={cardVariant(LicenseCards[cardList].endpage, LicenseCards[cardList].categoryText)}
                         borderWeight="bold"
                         onPress={()=>{ // onClick function that changes the 'cardPage' state to the ID of the question displayed.
                             const paramID = '/LicenseRequirements/' + LicenseCards[cardList].id;
-                            console.log(LicenseCards[cardList].nextPage);
-                            if(LicenseCards[cardList].endpage){
+                            if(LicenseCards[cardList].categoryText == 'Information') {
+                                return (
+                                    window.open(
+                                        LicenseCards[cardList].endpagelink, 
+                                        "_blank", 
+                                        "noreferrer"
+                                    )
+                                )
+                            } else if(LicenseCards[cardList].endpage) {
                                 return navigate(paramID);
-                            }
-                            else{
+                            } else {
                                 setPrevCardPage((cardPage)); // set prevCardPage with cardPage
                                 return (
                                     setCardPage((LicenseCards[cardList].nextPage)) // change CardPage based on 'nextPage' from LicenseCards
                                 )
-                                console.log(cardPage);                                                  
-                                console.log('prev: ' + prevCardPage);
                             }
-                            }}>
-                            <Card.Header>
+                            }}
+                        >
+                            <Card.Header css={{paddingBottom: "0px"}}>
                                 <Text weight="bold" color={headerColor(LicenseCards[cardList].categoryText)}>
                                     {LicenseCards[cardList].categoryText}
                                 </Text>
@@ -152,9 +160,7 @@ export function LicenseContent() {
                                 <Row align="center">
                                     <Col>
                                         <Text h3>{LicenseCards[cardList].questionText}</Text>
-                                        <Text p color={addinfoColor(LicenseCards[cardList].categoryText)}>
-                                            {LicenseCards[cardList].addinfo}
-                                        </Text>
+                                        <Text p>{LicenseCards[cardList].addinfo}</Text>
                                     </Col>
                                 </Row>
                             </Card.Body>
@@ -165,8 +171,8 @@ export function LicenseContent() {
             <Spacer y={1} />
             <Divider />
             <Spacer y={1} />
-            <ReturnToAddressButton />
+            <ReturnToAssistantButton />
             <PageIndicator />
         </Container>
-         );  
+    );  
 }

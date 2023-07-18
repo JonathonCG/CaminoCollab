@@ -1,6 +1,6 @@
 import { Badge, Tooltip } from "@nextui-org/react";
 
-export function LicensePrereqTips({tip}) {
+export function ZoningPrereqTips({tip}) {
 
     if(tip){
         return(

@@ -14,4 +14,9 @@ export const LicensePages = [
         cards: [10,11,12,13],
         name: 'Home Business'
     },
+    {
+        id: 3,
+        cards: [14,15],
+        name: 'Short-Term Rental'
+    }
 ];

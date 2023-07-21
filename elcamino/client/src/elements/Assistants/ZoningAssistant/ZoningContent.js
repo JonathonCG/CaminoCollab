@@ -58,10 +58,10 @@ export function ZoningContent() {
                 <>
                 <Spacer y={1} />
                 <Row justify='center'>
-                    <Text h5>Choose between 'Residential' and 'Non-Residential' permits</Text>
+                    <Text h5>Choose a 'Request' or 'Request Category' to continue</Text>
                 </Row>
                 <Row justify='center'>
-                    <Text p>Or choose 'Special Event' if you'd like to apply for a Special Event permit</Text>
+                    <Text p></Text>
                 </Row>
                 </>
             )
@@ -95,7 +95,7 @@ export function ZoningContent() {
 
     // Function for determining header color based on categoryText
     function headerColor(category) {
-        const color = (category === 'Permit Category') ? 'primary' : 'secondary';
+        const color = (category === 'Request Category') ? 'primary' : 'secondary';
         return color
     };
     
@@ -112,7 +112,7 @@ export function ZoningContent() {
                 <Text h1>Zoning Assistant</Text>
             </Row>
             <Row justify='center'>
-                <Text h4>Navigate via the cards below based on your licensing needs</Text>
+                <Text h4>Navigate via the cards below based on your zoning needs</Text>
             </Row>
             <StartHelp page={cardPage} />
             <PageIndicator />
@@ -141,7 +141,7 @@ export function ZoningContent() {
                                 )
                             }
                             }}>
-                            <Card.Header>
+                            <Card.Header css={{paddingBottom: "0px"}}>
                                 <Text weight="bold" color={headerColor(ZoningCards[cardList].categoryText)}>
                                     {ZoningCards[cardList].categoryText}
                                 </Text>

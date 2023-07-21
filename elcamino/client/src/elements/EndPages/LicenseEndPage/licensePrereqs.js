@@ -264,7 +264,7 @@ export const licensePrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>Contact Zoning to determine if the location allows the business type</Text>
-                <Text color="white" css={{textAlign: "center"}}>(770) 473-5401</Text>
+                <Text color="white" css={{textAlign: "center"}}>(770) 477-3569</Text>
             </Container>
     },
     {   // Home Type 2 specific
@@ -352,7 +352,7 @@ export const licensePrereqs = [
     },
     {
         id: 25, 
-        name: 'Copy of Property Deed', 
+        name: 'Property Deed', 
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>You can request a copy of your deed from the Georgia Superior Court Clerks' Cooperative Authority</Text>

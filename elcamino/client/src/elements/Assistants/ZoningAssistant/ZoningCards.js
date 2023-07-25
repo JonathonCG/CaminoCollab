@@ -61,7 +61,7 @@ export const ZoningCards = [
     id: 6, 
     nextPage: 4,
     endpagelink: '',
-    addinfo: 'Requests to appeal Zoning Decisions and requests for Variance.',
+    addinfo: 'Requests for Variance and to appeal Zoning Decisions.',
     endpage: false,
     requirements: [],
     },

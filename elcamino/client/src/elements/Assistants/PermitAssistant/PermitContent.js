@@ -141,7 +141,7 @@ export function PermitContent() {
                                 )
                             }
                             }}>
-                            <Card.Header>
+                            <Card.Header css={{paddingBottom: "0px"}}>
                                 <Text weight="bold" color={headerColor(PermitCards[cardList].categoryText)}>
                                     {PermitCards[cardList].categoryText}
                                 </Text>

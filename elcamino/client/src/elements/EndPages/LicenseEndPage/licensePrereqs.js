@@ -82,7 +82,7 @@ export const licensePrereqs = [
         name: 'Identification', 
         tip: 
             <Container css={{padding: "3px"}}>
-                <Text color="white">
+                <Text color="white" css={{textAlign: "center"}}>
                     At this time, only the following state-issued identification is accepted:
                 </Text>
                 <Text size={12} color="white" as="li">Driver's license or ID from all 50 states, the District of Columbia (DC), and other US territories (Guam, US Virgin Islands, American Samoa, Mariana Islands and Puerto Rico)</Text>
@@ -113,7 +113,20 @@ export const licensePrereqs = [
         name: 'Background Check Consent Form (if required)', 
         tip: 
             <Container css={{padding: "3px"}}>
-                <Text color="white" css={{textAlign: "center"}}>You may be required to have a background check performed.</Text>
+                <Text color="white" css={{textAlign: "center"}}>You may be required to have a background check performed if your business in in one of the following categories:</Text>
+                <Text size={12} color="white" as="li">Alcohol Sales/Consumption Establishments</Text>
+                <Text size={12} color="white" as="li">Security Guard Agencies</Text>
+                <Text size={12} color="white" as="li">Firearms Dealer</Text>
+                <Text size={12} color="white" as="li">Fortune Teller</Text>
+                <Text size={12} color="white" as="li">Wrecker/Towing Service</Text>
+                <Text size={12} color="white" as="li">Passenger Transportation</Text>
+                <Text size={12} color="white" as="li">Pawn Shops & Precious Metals Dealers</Text>
+                <Text size={12} color="white" as="li">Locksmith</Text>
+                <Text size={12} color="white" as="li">Ice Cream Vendors</Text>
+                <Text size={12} color="white" as="li">Alarm/Security System Installers</Text>
+                <Text size={12} color="white" as="li">Private Detective Agancies</Text>
+                <Text size={12} color="white" as="li">Polygraph Examiners</Text>
+                <Text size={12} color="white" as="li">Massage Establishments</Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
                     href="https://www.claytoncountyga.gov/download/99/business-and-alcohol-license-forms/29669/consent-to-background-check-form.pdf" target="_blank"
@@ -161,11 +174,13 @@ export const licensePrereqs = [
             <Container css={{padding: "5px"}}>
                 <Text color="white" css={{textAlign: "center"}}>Georgia Secretary of State Board of Cosmetology and Barbers</Text>
                 <Row justify="center">
-                    <Button color="warning" size="sm" ghost as="a"
+                    <Button color="warning" size="sm" ghost as="a" css={{marginBottom: "5px"}}
                     href="https://sos.ga.gov/how-to-guide/how-guide-master-cosmetologist-cosmetology-instructor" target="_blank"
                     >
                         Master Cosmetologist License How-To
                     </Button>
+                </Row>
+                <Row justify="center">
                     <Button color="warning" size="sm" ghost as="a"
                     href="https://sos.ga.gov/how-to-guide/how-guide-master-barber-barber-ii-barber-instructor" target="_blank"
                     >

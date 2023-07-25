@@ -27,13 +27,13 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    You may be required to have a background check performed.
+                    You need to have a Pre-Application meeting before you can submit your Application
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="/ZoningRequirements/9" target="_blank" //TODO: make sure this works
+                    href="/ZoningRequirements/0" target="_blank" //TODO: make sure this works
                     >
-                        Download Form
+                        Pre-Application Meeting Requirements
                     </Button>
                 </Row>
             </Container>
@@ -54,7 +54,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Row justify="center">
-                    <Button ghost size="sm" color="warning" as="a"
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
                     href="https://www.claytoncountyga.gov/download/98/forms/29618/property-owner-authorization-form.pdf" target="_blank"
                     >
                         Download Property Owner Authorization Form
@@ -161,14 +161,14 @@ export const zoningPrereqs = [
                     Read Appendix A, Section 13.16, A3 for details:
                 </Text>
                 <Row justify="center">
-                    <Button ghost size="sm" color="warning" as="a"
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
                     href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART13PRPEFE_S13.16COUSPRCU" target="_blank"
                     >
                         Link to relevant Ordinance
                     </Button>
                 </Row>
                 <Row justify="center">
-                    <Button ghost size="sm" color="warning" as="a"
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
                     href="https://www.claytoncountypublichealth.org/" target="_blank"
                     >
                         Link to CCPH Website
@@ -261,7 +261,6 @@ export const zoningPrereqs = [
                 <Text color="white" css={{textAlign: "center"}}>
                     Read Appendix A, Section 7.11, A1 and A2 for details:
                 </Text>
-
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
                     href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.11DEDEPLFIRE" target="_blank"
@@ -700,14 +699,14 @@ export const zoningPrereqs = [
                     Read Appendix A, Section 7.10, A3 for details:
                 </Text>
                 <Row justify="center">
-                    <Button ghost size="sm" color="warning" as="a"
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
                     href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.10CODEPLFIRE" target="_blank"
                     >
                         Link to relevant Ordinance
                     </Button>
                 </Row>
                 <Row justify="center">
-                    <Button ghost size="sm" color="warning" as="a"
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
                     href="https://www.claytoncountypublichealth.org/" target="_blank"
                     >
                         Link to CCPH Website

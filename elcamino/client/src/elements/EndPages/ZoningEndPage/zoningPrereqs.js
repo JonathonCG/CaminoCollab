@@ -76,9 +76,9 @@ export const zoningPrereqs = [
             <Container css={{padding: "3px"}}>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="#" target="_blank"
+                    href="https://www.claytoncountyga.gov/download/98/forms/29617/campaign-disclosure-form.pdf" target="_blank"
                     >
-                        TODO: add link
+                        Download Form
                     </Button>
                 </Row>
             </Container>

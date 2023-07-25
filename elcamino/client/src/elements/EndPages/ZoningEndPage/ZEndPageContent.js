@@ -58,7 +58,7 @@ export function ZEndPageContent() {
           <Card css={{p: "10px"}}>
             <Text h3>{card.questionText} Zoning</Text>
             <Text h5>
-              Below are the requirements you will need <em>before</em> applying for your zoning. You will need to present these during the licensing process.
+              Below are the requirements you will need <em>before</em> applying for your zoning request. You will need to present these during the Zoning process.
             </Text>
             <Divider />
             <Spacer y={0.5} />

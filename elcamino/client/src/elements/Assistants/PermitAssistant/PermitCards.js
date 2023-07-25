@@ -309,7 +309,7 @@ export const PermitCards = [
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/70/0/0',
     addinfo : '',
     endpage : true,
-    requirements : [],
+    requirements : [14],
     },
     {questionText : '',
     categoryText : '',

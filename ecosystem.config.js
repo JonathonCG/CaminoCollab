@@ -2,7 +2,7 @@ module.exports = {
     apps : [{
         name: "assistant",
         script: "serve ./elcamino/client/build",
-        args: '-s',
+        args: '--spa',
         watch: true,
         env: {
             PM2_SERVE_PATH: '.',

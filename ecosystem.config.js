@@ -1,14 +1,13 @@
 module.exports = {
     apps : [{
         name: "assistant",
-        script: "serve",
+        script: "serve build",
         cwd: './elcamino/client',
         watch: true,
         env: {
-            PM2_SERVE_PATH: 'build',
+            PM2_SERVE_PATH: '.',
             PM2_SERVE_PORT: 3000,
             PM2_SERVE_SPA: 'true',
-            PM2_SERVE_HOMEPAGE: 'build/index.html'
         }
       }, {
         name: "api",

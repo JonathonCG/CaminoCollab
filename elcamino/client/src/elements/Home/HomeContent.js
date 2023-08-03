@@ -9,7 +9,7 @@ export function HomeContent() {
                 <Spacer y={1} />
                 <Grid xs={12}>
                     <Row justify="center">
-                        <Text h1>Assistant</Text>
+                        <Text h1>Permit Assistant</Text>
                     </Row>
                     <Row justify="center">
                         <Text h4>The Permit assistant is here to help you file a permit in unincorporated Clayton County</Text>

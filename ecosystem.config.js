@@ -7,11 +7,12 @@ module.exports = {
         env: {
             PM2_SERVE_PATH: '.',
             PM2_SERVE_PORT: 3000,
-            PM2_SERVE_SPA: 'true'
+            PM2_SERVE_SPA: 'true',
+            PM2_SERVE_HOMEPAGE: './index.html'
         }
       }, {
         name: "api",
-        script: "./elcamino/server/index.js",
+        script: "./index.js",
         cwd: "./elcamino/server",
         watch: true,
         env: {

@@ -5,7 +5,7 @@ import { HomeContent } from "../elements/Home/HomeContent";
 
 
 export function Home() {
-  document.title = "Permit Assistant"
+  document.title = "Assistant"
 
   return (
     <>

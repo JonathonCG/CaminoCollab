@@ -47,7 +47,7 @@ export function AssistantContent() {
             <>
             <Spacer y={1} />
             <Row justify='center'>
-                <Text h5>Would you like to file for a permit, license, or zoning change?</Text>
+                <Text h5>Would you like to file for a permit, license, or zoning request?</Text>
             </Row>
             </>
         )

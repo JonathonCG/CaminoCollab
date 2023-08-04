@@ -4,7 +4,7 @@ import { LEndPageContent } from '../elements/EndPages/LicenseEndPage/LEndPageCon
 import { Footer } from "../elements/Footer";
 
 export function LicenseEndPage() {
-document.title = "Permit Requirements"
+document.title = "License Requirements"
 
 return (
   <>

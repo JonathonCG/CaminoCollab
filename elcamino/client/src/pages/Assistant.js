@@ -4,7 +4,7 @@ import { AssistantContent } from "../elements/Assistants/AssistantContent";
 import { Footer } from '../elements/Footer';
 
 export function Assistant() {
-    document.title = "Permit Assistant"
+    document.title = "Assistant"
 
     return (
         <>

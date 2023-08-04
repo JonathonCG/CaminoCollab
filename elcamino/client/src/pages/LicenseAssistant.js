@@ -4,7 +4,7 @@ import { LicenseContent } from "../elements/Assistants/LicenseAssistant/LicenseC
 import { Footer } from '../elements/Footer';
 
 export function LicenseAssistant() {
-    document.title = "Permit Assistant"
+    document.title = "License Assistant"
 
     return (
         <>

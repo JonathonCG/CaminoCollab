@@ -4,7 +4,7 @@ import { ZEndPageContent } from '../elements/EndPages/ZoningEndPage/ZEndPageCont
 import { Footer } from "../elements/Footer";
 
 export function ZoningEndPage() {
-document.title = "Permit Requirements"
+document.title = "Request Requirements"
 
 return (
   <>

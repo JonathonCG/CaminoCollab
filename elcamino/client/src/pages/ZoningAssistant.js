@@ -4,7 +4,7 @@ import { ZoningContent } from "../elements/Assistants/ZoningAssistant/ZoningCont
 import { Footer } from '../elements/Footer';
 
 export function ZoningAssistant() {
-    document.title = "Permit Assistant"
+    document.title = "Zoning Assistant"
 
     return (
         <>

@@ -50,58 +50,58 @@ export function ZEndPageContent() {
     };
     
     return(
-        <Grid.Container justify="center">
-        <Grid  css={{p: "20px"}}>
-          <Row justify="center">
-            <Text h1>Zoning Requirements</Text>
-          </Row>
-          <Card css={{p: "10px"}}>
-            <Text h3>{card.questionText} Zoning</Text>
-            <Text h5>
-              Below are the requirements you will need <em>before</em> applying for your zoning request. You will need to present these during the Zoning process.
-            </Text>
-            <Divider />
-            <Spacer y={0.5} />
-            <Checkbox.Group
-              label="Zoning Requirements Checklist"
-              color="primary"
-              size="sm"
-              value={groupSelected}
-              onChange={setGroupSelected}
-              > 
-              {card.requirements.map((reqs) => ( //Mapping requirements to Checkboxes
-                <Checkbox lineThrough value={zoningPrereqs[reqs].id}>
-                  {zoningPrereqs[reqs].name} <ZoningPrereqTips tip={zoningPrereqs[reqs].tip} />
-                </Checkbox>
-              ))}
-            </Checkbox.Group>
-          </Card>
-          <Spacer y={1} />
-          {/* <CheckboxCard /> */}
-          <Card isHoverable variant={cardVariant()} borderWeight="bold" css={{p: "10px"}}>
-            <Row justify="center">
-              <Checkbox isSelected={selected} onChange={setSelected} color="warning">
-                I have read the requirements and acknowledge that I have completed/acquired them prior to my application
+      <Grid.Container justify="center">
+      <Grid  css={{p: "20px"}}>
+        <Row justify="center">
+          <Text h1>Zoning Requirements</Text>
+        </Row>
+        <Card css={{p: "10px"}}>
+          <Text h3>{card.questionText} Zoning</Text>
+          <Text h5>
+            Below are the requirements you will need <em>before</em> applying for your zoning request. You will need to present these during the Zoning process.
+          </Text>
+          <Divider />
+          <Spacer y={0.5} />
+          <Checkbox.Group
+            label="Zoning Requirements Checklist"
+            color="primary"
+            size="sm"
+            value={groupSelected}
+            onChange={setGroupSelected}
+            > 
+            {card.requirements.map((reqs) => ( //Mapping requirements to Checkboxes
+              <Checkbox lineThrough value={zoningPrereqs[reqs].id}>
+                {zoningPrereqs[reqs].name} <ZoningPrereqTips tip={zoningPrereqs[reqs].tip} />
               </Checkbox>
-            </Row>
-          </Card>
-        </Grid>
-        <Grid css={{p: "10px", w: "100%"}}>
-            <Row justify="center">
-              <ContinueButton category={cardCategoryText} selected={selected} cardlink={card.endpagelink} />
-            </Row>
-            <Row justify="center">
-              <Text color="#6e6e6e" p>
-                ** You will be required to login/register to our Customer Self-Service on the next page
-              </Text>
-            </Row>
-            <Spacer y={2} />
-            <Row justify="center">
-              <Button auto size="sm" onPress={() => {return navigate('/ZoningAssistant')}}>
-              Go back
-              </Button>
-            </Row>
-        </Grid>
-      </Grid.Container>
-    )
+            ))}
+          </Checkbox.Group>
+        </Card>
+        <Spacer y={1} />
+        {/* <CheckboxCard /> */}
+        <Card isHoverable variant={cardVariant()} borderWeight="bold" css={{p: "10px"}}>
+          <Row justify="center">
+            <Checkbox isSelected={selected} onChange={setSelected} color="warning">
+              I have read the requirements and acknowledge that I have completed/acquired them prior to my application
+            </Checkbox>
+          </Row>
+        </Card>
+      </Grid>
+      <Grid css={{p: "10px", w: "100%"}}>
+          <Row justify="center">
+            <ContinueButton category={cardCategoryText} selected={selected} cardlink={card.endpagelink} />
+          </Row>
+          <Row justify="center">
+            <Text color="error" p>
+              ** You will be required to login/register to our Customer Self-Service on the next page
+            </Text>
+          </Row>
+          <Spacer y={2} />
+          <Row justify="center">
+            <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/Assistant')}}>
+              Restart Assistant
+            </Button>
+          </Row>
+      </Grid>
+    </Grid.Container>
+  )
 };

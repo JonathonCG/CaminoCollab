@@ -75,7 +75,12 @@ export const licensePrereqs = [
     {
         id: 5, 
         name: 'Tax Commissioner’s Approval  ', 
-        tip: ''
+        tip: 
+            <Container css={{padding: "3px"}}>
+            <Text color="white" css={{textAlign: "center"}}>
+                Verification of current Property Tax payment
+            </Text>
+            </Container>
     },
     {
         id: 6, 
@@ -110,7 +115,7 @@ export const licensePrereqs = [
     },
     {
         id: 8, 
-        name: 'Background Check Consent Form (if required)', 
+        name: 'Background Check Consent Form', 
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>You may be required to have a background check performed if your business in in one of the following categories:</Text>
@@ -456,17 +461,7 @@ export const licensePrereqs = [
     {
         id: 31, 
         name: 'Location Survey to meet the requirements of county code', 
-        tip: 
-            <Container css={{padding: "3px"}}>
-                <Text color="white" css={{textAlign: "center"}}>This isn't required if the business is changing ownership</Text>
-                <Row justify="center">
-                    <Button ghost size="sm" color="warning" as="a"
-                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH6ALBE_ARTIINGE_S6-7BULO" target="_blank"
-                    >
-                        Link to the Relevant Ordinance
-                    </Button>
-                </Row>
-            </Container>
+        tip: ''
     },
     {
         id: 32, 

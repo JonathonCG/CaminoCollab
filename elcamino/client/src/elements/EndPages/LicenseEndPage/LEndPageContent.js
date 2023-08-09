@@ -91,14 +91,14 @@ export function LEndPageContent() {
               <ContinueButton category={cardCategoryText} selected={selected} cardlink={card.endpagelink} />
             </Row>
             <Row justify="center">
-              <Text color="#6e6e6e" p>
+              <Text color="error" p>
                 ** You will be required to login/register to our Customer Self-Service on the next page
               </Text>
             </Row>
             <Spacer y={2} />
             <Row justify="center">
-              <Button auto size="sm" onPress={() => {return navigate('/LicenseAssistant')}}>
-              Go back
+              <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/Assistant')}}>
+                Restart Assistant
               </Button>
             </Row>
         </Grid>

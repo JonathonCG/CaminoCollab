@@ -53,17 +53,17 @@ export function ZEndPageContent() {
       <Grid.Container justify="center">
       <Grid  css={{p: "20px"}}>
         <Row justify="center">
-          <Text h1>Zoning Requirements</Text>
+          <Text h1>Planning and Zoning Requirements</Text>
         </Row>
         <Card css={{p: "10px"}}>
-          <Text h3>{card.questionText} Zoning</Text>
+          <Text h3>{card.questionText} Request</Text>
           <Text h5>
             Below are the requirements you will need <em>before</em> applying for your zoning request. You will need to present these during the Zoning process.
           </Text>
           <Divider />
           <Spacer y={0.5} />
           <Checkbox.Group
-            label="Zoning Requirements Checklist"
+            label="Requirements Checklist"
             color="primary"
             size="sm"
             value={groupSelected}

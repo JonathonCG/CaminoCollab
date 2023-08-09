@@ -109,10 +109,10 @@ export function ZoningContent() {
         <Container>
             <Spacer y={1} />
             <Row justify='center'>
-                <Text h1>Zoning Assistant</Text>
+                <Text h1>Planning and Zoning Assistant</Text>
             </Row>
             <Row justify='center'>
-                <Text h4>Navigate via the cards below based on your zoning needs</Text>
+                <Text h4>Navigate via the cards below based on your planning and zoning needs</Text>
             </Row>
             <StartHelp page={cardPage} />
             <PageIndicator />

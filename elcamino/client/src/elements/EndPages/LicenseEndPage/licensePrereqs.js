@@ -106,11 +106,27 @@ export const licensePrereqs = [
         name: 'State Licenses (if required)', 
         tip: 
             <Container css={{padding: "3px"}}>
-                <Button color="warning" size="sm" ghost as="a"
-                href="https://secure.sos.state.ga.us/mylicense/Login.aspx?process=app" target="_blank"
-                >
-                    Secretary of State's Professional Licensing
-                </Button>
+                <Row justify="center">
+                    <Button color="warning" size="sm" ghost as="a" css={{marginBottom: "5px"}}
+                    href="https://secure.sos.state.ga.us/mylicense/Login.aspx?process=app" target="_blank"
+                    >
+                        Secretary of State's Professional Licensing
+                    </Button>
+                </Row>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
+                    href="https://www.claytoncountypublichealth.org/" target="_blank"
+                    >
+                        Department of Community Health
+                    </Button>
+                </Row>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://www.ccwa.us/" target="_blank"
+                    >
+                        Department of Revenue
+                    </Button>
+                </Row>
             </Container>
     },
     {
@@ -118,7 +134,7 @@ export const licensePrereqs = [
         name: 'Background Check Consent Form', 
         tip: 
             <Container css={{padding: "3px"}}>
-                <Text color="white" css={{textAlign: "center"}}>You may be required to have a background check performed if your business in in one of the following categories:</Text>
+                <Text color="white" css={{textAlign: "center"}}>You may be required to have a background check performed if your business is in one of the following categories:</Text>
                 <Text size={12} color="white" as="li">Alcohol Sales/Consumption Establishments</Text>
                 <Text size={12} color="white" as="li">Security Guard Agencies</Text>
                 <Text size={12} color="white" as="li">Firearms Dealer</Text>
@@ -199,6 +215,9 @@ export const licensePrereqs = [
         name: 'Food Sales License', 
         tip: 
             <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    This is not required for convenience stores.
+                </Text>
                 <Row justify="center">
                     <Button color="warning" size="sm" ghost as="a"
                     href="https://agr.georgia.gov/licensing" target="_blank"
@@ -217,7 +236,7 @@ export const licensePrereqs = [
                     <Button color="warning" size="sm" ghost as="a"
                     href="#" target="_blank"
                     >
-                        TODO: Make Form. This is an empty link.
+                        Grocery Requirements Form
                     </Button>
                 </Row>
             </Container>
@@ -241,10 +260,17 @@ export const licensePrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Row justify="center">
-                    <Button ghost size="sm" color="warning" as="a"
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
                     href="https://sos.ga.gov/licensing-division-georgia-secretary-states-office" target="_blank"
                     >
                         Secretary of State Licensing
+                    </Button>
+                </Row>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://medicalboard.georgia.gov/" target="_blank"
+                    >
+                        Georgia Composite Medical Board
                     </Button>
                 </Row>
             </Container>
@@ -283,7 +309,7 @@ export const licensePrereqs = [
         name: 'Zoning Approval', // Residential
         tip: 
             <Container css={{padding: "3px"}}>
-                <Text color="white" css={{textAlign: "center"}}>Contact Zoning to determine if the location allows the business type</Text>
+                <Text color="white" css={{textAlign: "center"}}>Contact Business Licensing to determine if the location allows the business type</Text>
                 <Text color="white" css={{textAlign: "center"}}>(770) 477-3569</Text>
             </Container>
     },
@@ -306,7 +332,7 @@ export const licensePrereqs = [
         name: "Board of Commissioners' Approval",
         tip:
             <Container css={{padding: "3px"}}>
-                <Text color="white" css={{textAlign: "center"}}>TODO: add more info here</Text>
+                <Text color="white" css={{textAlign: "center"}}>Contact Zoning if Board of Commissioners approval cannot be confirmed</Text>
             </Container>
     },
     {
@@ -335,7 +361,7 @@ export const licensePrereqs = [
             <Container css={{padding: "3px"}}>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://www.claytoncountypublichealth.org/environmental-health/tourist-accommodations/" target="_blank"
+                    href="https://www.claytoncountyga.gov/download/99/business-and-alcohol-license-forms/70355/property-owners-authorization-form.pdf" target="_blank"
                     >
                         Download Form
                     </Button>
@@ -349,9 +375,9 @@ export const licensePrereqs = [
             <Container css={{padding: "3px"}}>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="#" target="_blank"
+                    href="https://www.claytoncountyga.gov/download/99/business-and-alcohol-license-forms/70356/home-occupation-aknowledgement-form.pdf" target="_blank"
                     >
-                        TODO: add link
+                        Download Form
                     </Button>
                 </Row>
             </Container>
@@ -392,7 +418,7 @@ export const licensePrereqs = [
             <Container css={{padding: "3px"}}>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH62OFMIPR_ARTIGE" target="_blank"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH62OFMIPR_ARTIGE_S62-3.2PRNO" target="_blank"
                     >
                         Clayton County Noise Ordinance
                     </Button>

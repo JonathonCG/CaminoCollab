@@ -27,7 +27,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    You need to have a Pre-Application meeting before you can submit your Application
+                Most Zoning requests and processes require an initial meeting with county zoning staff to better understand your zoning request and determine the best course of action.
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -88,6 +88,9 @@ export const zoningPrereqs = [
         name: 'Property Deed', 
         tip: 
             <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                This is required if county records do not reflect the applicant as current owner
+                </Text>
                 <Text color="white" css={{textAlign: "center"}}>You can request a copy of your deed from the Georgia Superior Court Clerks' Cooperative Authority</Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -100,7 +103,7 @@ export const zoningPrereqs = [
     },
     {
         id: 7, 
-        name: 'Location Map', 
+        name: 'Location/Vicinity Map', 
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
@@ -234,7 +237,16 @@ export const zoningPrereqs = [
     {
         id: 14, 
         name: 'Preliminary Plat', 
-        tip: ''
+        tip: 
+            <Container css={{padding: "3px"}}>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="/ZoningRequirements/16" target="_blank"
+                    >
+                        Preliminary Plat Request Requirements
+                    </Button>
+                </Row>
+            </Container>
     },
     {
         id: 15, 
@@ -255,15 +267,15 @@ export const zoningPrereqs = [
     },
     {
         id: 16, 
-        name: 'Location Map', 
+        name: 'Location/Vicinity Map', 
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 7.11, A1 and A2 for details:
+                    Read Appendix A, Section 7.10 for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.11DEDEPLFIRE" target="_blank"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART13PRPEFE_S13.5APAM" target="_blank"
                     >
                         Link to relevant Ordinance
                     </Button>
@@ -280,7 +292,7 @@ export const zoningPrereqs = [
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.11DEDEPLFIRE" target="_blank"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART13PRPEFE_S13.5APAM" target="_blank"
                     >
                         Link to relevant Ordinance
                     </Button>
@@ -314,7 +326,7 @@ export const zoningPrereqs = [
     },
     {
         id: 22, 
-        name: 'Building Elevations Plan Book', 
+        name: 'Building Elevations', 
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
@@ -336,15 +348,18 @@ export const zoningPrereqs = [
     },
     {
         id: 24, 
-        name: 'Proposed Preliminary Plat', 
+        name: 'Proposed Final Plat', 
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
                     Must be prepared by a land surveyor or professional engineer and certified by a land surveyor registered by the state and provide items identified in Chapter 86-123.               
                 </Text>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Read Chapter 86, Section 86-127 for details:
+                </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH86SU_ARTIIISURE_DIV4MASU_S86-123SPPRPLDOBESU" target="_blank"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH86SU_ARTIIISURE_DIV4MASU_S86-128SPFIPLDOBESU" target="_blank"
                     >
                         Link to Relevant Ordinance
                     </Button>
@@ -353,7 +368,7 @@ export const zoningPrereqs = [
     },
     { // Subdivision and Combination Specific
         id: 25, 
-        name: 'Property Owner Authorization (if Applicant is not the Property Owner', 
+        name: 'Property Owner Authorization (if Applicant is not the Property Owner)', 
         tip: 
             <Container css={{padding: "3px"}}>
                 <Row justify="center">
@@ -368,31 +383,58 @@ export const zoningPrereqs = [
     {
         id: 26, 
         name: 'The original documents and the specified number of copies of the maintenance bonds or surety required by this article for all public improvements', 
-        tip: ''
+        tip:
+            <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Read Chapter 86, Section 86-127 for details:
+                </Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH86SU_ARTIIISURE_DIV4MASU_S86-127FIPLAPREPR" target="_blank"
+                    >
+                        Link to Relevant Ordinance
+                    </Button>
+                </Row>
+            </Container>
     },
     {
         id: 27, 
         name: '"As-built" drawings showing the location, dimensions, and materials used to construct all improvements within the subdivision', 
-        tip: ''
+        tip:
+            <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Read Chapter 86, Section 86-127 for details:
+                </Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH86SU_ARTIIISURE_DIV4MASU_S86-127FIPLAPREPR" target="_blank"
+                    >
+                        Link to Relevant Ordinance
+                    </Button>
+                </Row>
+            </Container>
     },
     {
         id: 28, 
         name: 'Map showing the locations of all street signs, street lights, and fire hydrants', 
-        tip: ''
-    },
-    { // Land Development Specific
-        id: 29, 
-        name: 'Property Owner Authorization (if Applicant is not the Property Owner', 
-        tip: 
+        tip:
             <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Read Chapter 86, Section 86-127 for details:
+                </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://www.claytoncountyga.gov/download/98/forms/29618/property-owner-authorization-form.pdf" target="_blank"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH86SU_ARTIIISURE_DIV4MASU_S86-127FIPLAPREPR" target="_blank"
                     >
-                        Download Property Owner Authorization Form
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
             </Container>
+    },
+    {
+        id: 29, 
+        name: '', 
+        tip: ''
     },
     {
         id: 30, 
@@ -563,9 +605,12 @@ export const zoningPrereqs = [
     },
     {
         id: 40,
-        name: 'Subdivision construction plans shall be prepared for all required improvements and provide items identified in Chapter 86, Section 86-125',
+        name: 'Subdivision Construction Plans',
         tip: 
             <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Shall be prepared for all required improvements and provide items identified in Chapter 86, Section 86-125.
+                </Text>
                 <Text color="white" css={{textAlign: "center"}}>
                     Read Chapter 86, Section 86-125 for details:
                 </Text>
@@ -696,11 +741,11 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 7.10, A3 for details:
+                    Read Appendix A, Section 7.11 for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
-                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.10CODEPLFIRE" target="_blank"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.11DEDEPLFIRE" target="_blank"
                     >
                         Link to relevant Ordinance
                     </Button>

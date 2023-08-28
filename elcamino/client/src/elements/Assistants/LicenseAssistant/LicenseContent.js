@@ -102,7 +102,7 @@ export function LicenseContent() {
         if(category === 'License Category') {
             return "primary"
         } else if(category === 'Information') {
-            return "primary"
+            return "warning"
         } else {
             return "secondary"
         };

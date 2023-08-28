@@ -107,7 +107,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Section 13.5, E5 states:
+                    Section 13.5 (E)(5) states:
                 </Text>
                 <Text color="white" css={{textAlign: "center"}}>
                     A location map showing and clearly identifying the subject property and showing all land within 1 mile of the subject property. The location map should identify the current zoning and use of all property within 1,320 feet of the subject property.
@@ -116,7 +116,7 @@ export const zoningPrereqs = [
                     <Button ghost size="sm" color="warning" as="a"
                     href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART13PRPEFE_S13.5APAM" target="_blank"
                     >
-                        Link to relevant Ordinance
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
             </Container>
@@ -127,13 +127,13 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 13.5, E6 for details:
+                    Read Section 13.5(E)(6) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
                     href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART13PRPEFE_S13.5APAM" target="_blank"
                     >
-                        Link to relevant Ordinance
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
             </Container>
@@ -144,13 +144,13 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 13.5, E7 for details:
+                    Read Section 13.5(E)(7) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
                     href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART13PRPEFE_S13.5APAM" target="_blank"
                     >
-                        Link to relevant Ordinance
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
             </Container>
@@ -161,13 +161,13 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 13.16, A3 for details:
+                    Read Section 13.16(A)(3) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
                     href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART13PRPEFE_S13.16COUSPRCU" target="_blank"
                     >
-                        Link to relevant Ordinance
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
                 <Row justify="center">
@@ -223,13 +223,13 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 7.11, A3 for details:
+                    Read Section 7.11(C) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
                     href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.11DEDEPLFIRE" target="_blank"
                     >
-                        Link to relevant Ordinance
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
             </Container>
@@ -254,30 +254,30 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 7.10, B for details:
+                    Read Section 7.10(B) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
                     href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.10CODEPLFIRE" target="_blank"
                     >
-                        Link to relevant Ordinance
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
             </Container>
     },
-    {
+    {   // Specific to PUD Concept
         id: 16, 
         name: 'Location/Vicinity Map', 
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 7.10 for details:
+                    Read Section 7.10(A)(1 and 2) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART13PRPEFE_S13.5APAM" target="_blank"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.10CODEPLFIRE" target="_blank"
                     >
-                        Link to relevant Ordinance
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
             </Container>
@@ -288,13 +288,13 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 13.5, E6 for details:
+                    Read Section 13.5(E)(6) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
                     href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART13PRPEFE_S13.5APAM" target="_blank"
                     >
-                        Link to relevant Ordinance
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
             </Container>
@@ -348,18 +348,18 @@ export const zoningPrereqs = [
     },
     {
         id: 24, 
-        name: 'Proposed Final Plat', 
+        name: 'Proposed Preliminary Plat', 
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Must be prepared by a land surveyor or professional engineer and certified by a land surveyor registered by the state and provide items identified in Chapter 86-123.               
+                    Must be prepared by a land surveyor or professional engineer and certified by a land surveyor registered by the state and provide items identified in Chapter 86, Section 123.               
                 </Text>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Chapter 86, Section 86-127 for details:
+                    Read Chapter 86, Section 86, Section 123 for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH86SU_ARTIIISURE_DIV4MASU_S86-128SPFIPLDOBESU" target="_blank"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH86SU_ARTIIISURE_DIV4MASU_S86-123SPPRPLDOBESU" target="_blank"
                     >
                         Link to Relevant Ordinance
                     </Button>
@@ -386,7 +386,7 @@ export const zoningPrereqs = [
         tip:
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Chapter 86, Section 86-127 for details:
+                    Read Chapter 86, Section 127 for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -403,7 +403,7 @@ export const zoningPrereqs = [
         tip:
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Chapter 86, Section 86-127 for details:
+                    Read Chapter 86, Section 127 for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -420,7 +420,7 @@ export const zoningPrereqs = [
         tip:
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Chapter 86, Section 86-127 for details:
+                    Read Chapter 86, Section 127 for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -456,7 +456,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 11.4, C1 for details:
+                    Read Section 11.4(C)(1) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -473,7 +473,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 11.4, C2 for details:
+                    Read Section 11.4(C)(2) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -490,7 +490,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 11.4, C3 for details:
+                    Read Section 11.4(C)(3) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -507,7 +507,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 11.4, C4 for details:
+                    Read Section 11.4(C)(4) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -524,7 +524,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Chapter 86, Section 86-73 for details:
+                    Read Chapter 86, Section 73 for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -541,7 +541,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 11.4, C5 for details:
+                    Read Section 11.4(C)(5) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -558,7 +558,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 11.4, C6 for details:
+                    Read Section 11.4(C)(6) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -575,7 +575,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 11.4, C7 for details:
+                    Read Section 11.4(C)(7) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -592,7 +592,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 11.7 for details:
+                    Read Section 11.7 for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -609,10 +609,10 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Shall be prepared for all required improvements and provide items identified in Chapter 86, Section 86-125.
+                    Shall be prepared for all required improvements and provide items identified in Chapter 86, Section 125.
                 </Text>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Chapter 86, Section 86-125 for details:
+                    Read Chapter 86, Section 125 for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -674,7 +674,7 @@ export const zoningPrereqs = [
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Chapter 86, Section 86-72 for details:
+                    Read Chapter 86, Section 72 for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
@@ -735,19 +735,19 @@ export const zoningPrereqs = [
                 </Text>
             </Container>
     },
-    {
+    {   // Specific to PUD Concept
         id: 53, 
         name: 'Sewer/Septic Letter', 
         tip: 
             <Container css={{padding: "3px"}}>
                 <Text color="white" css={{textAlign: "center"}}>
-                    Read Appendix A, Section 7.11 for details:
+                    Section 7.10(A)(3) for details:
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
-                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.11DEDEPLFIRE" target="_blank"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.10CODEPLFIRE" target="_blank"
                     >
-                        Link to relevant Ordinance
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
                 <Row justify="center">
@@ -762,6 +762,91 @@ export const zoningPrereqs = [
                     href="https://www.ccwa.us/" target="_blank"
                     >
                         Link to CCWA Website
+                    </Button>
+                </Row>
+            </Container>
+    },
+    {   // Specific to PUD
+        id: 54, 
+        name: 'Location/Vicinity Map', 
+        tip: 
+            <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Read Section 7.11(A)(1 and 2) for details:
+                </Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.11DEDEPLFIRE" target="_blank"
+                    >
+                        Link to Relevant Ordinance
+                    </Button>
+                </Row>
+            </Container>
+    },
+    {   // Specific to PUD
+        id: 55, 
+        name: 'Sewer/Septic Letter', 
+        tip: 
+            <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Section 7.11(A)(3) for details:
+                </Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.11DEDEPLFIRE" target="_blank"
+                    >
+                        Link to Relevant Ordinance
+                    </Button>
+                </Row>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
+                    href="https://www.claytoncountypublichealth.org/" target="_blank"
+                    >
+                        Link to CCPH Website
+                    </Button>
+                </Row>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://www.ccwa.us/" target="_blank"
+                    >
+                        Link to CCWA Website
+                    </Button>
+                </Row>
+            </Container>
+    },
+    {
+        id: 56, 
+        name: 'Proposed Final Plat', 
+        tip: 
+            <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Must be prepared by a land surveyor or professional engineer and certified by a land surveyor registered by the state and provide items identified in Chapter 86, Section 128.               
+                </Text>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Read Chapter 86, Section 128 for details:
+                </Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_CH86SU_ARTIIISURE_DIV4MASU_S86-128SPFIPLDOBESU" target="_blank"
+                    >
+                        Link to Relevant Ordinance
+                    </Button>
+                </Row>
+            </Container>
+    },
+    {   // Specific to Site Development
+        id: 57, 
+        name: 'Location/Vicinity Map', 
+        tip: 
+            <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                    Read Section 11.4(C)(1) for details:
+                </Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.11DEDEPLFIRE" target="_blank"
+                    >
+                        Link to Relevant Ordinance
                     </Button>
                 </Row>
             </Container>

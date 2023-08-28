@@ -115,16 +115,23 @@ export const licensePrereqs = [
                 </Row>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
-                    href="https://www.claytoncountypublichealth.org/" target="_blank"
+                    href="https://www.claytoncountypublichealth.org/environmental-health/" target="_blank"
                     >
-                        Department of Community Health
+                        Clayton County Health District 
+                    </Button>
+                </Row>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
+                    href="https://dor.georgia.gov/" target="_blank"
+                    >
+                        Department of Revenue
                     </Button>
                 </Row>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://www.ccwa.us/" target="_blank"
+                    href="https://www.decal.ga.gov/ " target="_blank"
                     >
-                        Department of Revenue
+                        Georgia Department of Early Care and Learning 
                     </Button>
                 </Row>
             </Container>
@@ -234,7 +241,7 @@ export const licensePrereqs = [
             <Container css={{padding: "3px"}}>
                 <Row justify="center">
                     <Button color="warning" size="sm" ghost as="a"
-                    href="#" target="_blank"
+                    href="https://www.claytoncountyga.gov/download/99/business-and-alcohol-license-forms/69950/grocery-store-business-licenses-requirements.pdf" target="_blank"
                     >
                         Grocery Requirements Form
                     </Button>
@@ -498,5 +505,40 @@ export const licensePrereqs = [
         id: 33, 
         name: 'Copy of Lease Agreement', 
         tip: ''
+    },
+    {
+        id: 34, 
+        name: 'State Licenses (if required)', 
+        tip: 
+            <Container css={{padding: "3px"}}>
+                <Row justify="center">
+                    <Button color="warning" size="sm" ghost as="a" css={{marginBottom: "5px"}}
+                    href="https://secure.sos.state.ga.us/mylicense/Login.aspx?process=app" target="_blank"
+                    >
+                        Secretary of State's Professional Licensing
+                    </Button>
+                </Row>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
+                    href="https://dch.georgia.gov/divisionsoffices/hfrd/hfrd-forms-applications/licensure-forms-applications" target="_blank"
+                    >
+                        Georgia Department of Community Health
+                    </Button>
+                </Row>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
+                    href="https://dor.georgia.gov/" target="_blank"
+                    >
+                        Department of Revenue
+                    </Button>
+                </Row>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://www.decal.ga.gov/ " target="_blank"
+                    >
+                        Georgia Department of Early Care and Learning 
+                    </Button>
+                </Row>
+            </Container>
     },
 ];

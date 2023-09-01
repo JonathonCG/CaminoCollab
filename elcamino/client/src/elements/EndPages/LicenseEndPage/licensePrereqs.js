@@ -543,10 +543,9 @@ export const licensePrereqs = [
     },
     {
         id: 35, 
-        name: 'Notarized Distilled Spirits by Drink Sales Tax Acknowledgement', 
+        name: "Notarized 'Distilled Spirits by Drink' Sales Tax Acknowledgement", 
         tip: 
             <Container css={{padding: "3px"}}>
-                <Text color="white" css={{textAlign: "center"}}>The certificate of residency can be found on pages 7 and 8 of this form.</Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
                     href="https://www.claytoncountyga.gov/download/99/business-and-alcohol-license-forms/70818/distilled-spirits-by-drink-sales-tax-acknowledgement.pdf" target="_blank"

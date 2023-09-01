@@ -26,7 +26,7 @@ export const LicenseCards = [
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/businessLicense/apply/business/150',
     addinfo : 'License for existing businesses to solicit alcohol',
     endpage : true,
-    requirements : [27,28,29,30,31,32,33,8,4,6],
+    requirements : [27,28,29,30,31,32,33,8,4,6,35],
     },
     {questionText : 'General Business', 
     categoryText : 'License',

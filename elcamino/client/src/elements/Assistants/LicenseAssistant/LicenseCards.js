@@ -19,7 +19,7 @@ export const LicenseCards = [
     endpage : false,
     requirements : [],
     },
-    {questionText : 'Alcohol License', 
+    {questionText : 'Alcohol', 
     categoryText : 'License',
     id : 2, 
     nextPage : 0,

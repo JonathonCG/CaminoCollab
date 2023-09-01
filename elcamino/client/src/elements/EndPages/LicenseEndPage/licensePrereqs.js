@@ -171,9 +171,9 @@ export const licensePrereqs = [
         <Container css={{padding: "3px"}}>
             <Row justify="center">
                 <Button ghost size="sm" color="warning" as="a"
-                href="https://dph.georgia.gov/environmental-health/food-service" target="_blank"
+                href="https://www.claytoncountypublichealth.org/environmental-health/" target="_blank"
                 >
-                    Georgia Department of Health Website
+                    Clayton County Public Health
                 </Button>
             </Row>
         </Container>
@@ -537,6 +537,21 @@ export const licensePrereqs = [
                     href="https://www.decal.ga.gov/ " target="_blank"
                     >
                         Georgia Department of Early Care and Learning 
+                    </Button>
+                </Row>
+            </Container>
+    },
+    {
+        id: 35, 
+        name: 'Notarized Distilled Spirits by Drink Sales Tax Acknowledgement', 
+        tip: 
+            <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>The certificate of residency can be found on pages 7 and 8 of this form.</Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://www.claytoncountyga.gov/download/99/business-and-alcohol-license-forms/70818/distilled-spirits-by-drink-sales-tax-acknowledgement.pdf" target="_blank"
+                    >
+                        Download Form
                     </Button>
                 </Row>
             </Container>

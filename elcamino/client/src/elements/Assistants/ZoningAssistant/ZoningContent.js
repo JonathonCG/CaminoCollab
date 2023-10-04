@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import { ZoningCards } from './ZoningCards'
 import { ZoningPages } from './ZoningPages'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Container, Spacer, Grid, Card, Row, Text, Button, Col, Divider } from "@nextui-org/react";
 
 
 //Draws the ZoningCards on the screen based on the ZoningPages array in QuestionCardsInfo.js
 export function ZoningContent() {
-    const [cardPage, setCardPage] = useState(0); //standard function component state changing 
+    // Read State from the URL, if no parameters are given, set page to zero
+    const [searchParams] = useSearchParams();
+    const cardPage = searchParams.get("page") ?? 0;
+
+    // Setting other state
     const [prevCardPage, setPrevCardPage] = useState(0);
     const navigate = useNavigate();
     console.log(cardPage);
@@ -20,11 +24,11 @@ export function ZoningContent() {
 
     const goBack = () => { /**this function changes the state setter back to 0, which is the 'first' page for the /Zoning page with the ZoningCards on it. */
         if(cardPage === 1 || 2){
-            setCardPage(0);
+            navigate("/ZoningAssistant?page=0");
             console.log(cardPage);
         }
         if(cardPage > 2){
-            setCardPage(prevCardPage);
+            navigate(`/ZoningAssistant?page=${prevCardPage}`);
             console.log(cardPage);
         }
     };
@@ -137,7 +141,7 @@ export function ZoningContent() {
                             else{
                                 setPrevCardPage((cardPage)); // set prevCardPage with cardPage
                                 return (
-                                    setCardPage((ZoningCards[cardList].nextPage)) // change CardPage based on 'nextPage' from ZoningCards
+                                    navigate(`/ZoningAssistant?page=${ZoningCards[cardList].nextPage}`)
                                 )
                             }
                             }}>

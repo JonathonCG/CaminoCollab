@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import { PermitCards } from './PermitCards'
 import { PermitPages } from './PermitPages'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Container, Spacer, Grid, Card, Row, Text, Button, Col, Divider } from "@nextui-org/react";
 
 
 //Draws the PermitCards on the screen based on the PermitPages array in QuestionCardsInfo.js
 export function PermitContent() {
-    const [cardPage, setCardPage] = useState(0); //standard function component state changing 
+    // Read state from the URL, if no parameters are given, set page to zero
+    const [searchParams] = useSearchParams();
+    const cardPage = searchParams.get("page") ?? 0;
+
+    // Setting other state
     const [prevCardPage, setPrevCardPage] = useState(0);
     const navigate = useNavigate();
     console.log(cardPage);
@@ -20,11 +24,11 @@ export function PermitContent() {
 
     const goBack = () => { /**this function changes the state setter back to 0, which is the 'first' page for the /Permit page with the PermitCards on it. */
         if(cardPage === 1 || 2){
-            setCardPage(0);
+            navigate("/PermitAssistant?page=0");
             console.log(cardPage);
         }
-        if(cardPage > 2){
-            setCardPage(prevCardPage);
+        else if(cardPage > 2){
+            navigate(`/PermitAssistant?page=${prevCardPage}`);
             console.log(cardPage);
         }
     };
@@ -137,7 +141,7 @@ export function PermitContent() {
                             else{
                                 setPrevCardPage((cardPage)); // set prevCardPage with cardPage
                                 return (
-                                    setCardPage((PermitCards[cardList].nextPage)) // change CardPage based on 'nextPage' from PermitCards
+                                    navigate(`/PermitAssistant?page=${PermitCards[cardList].nextPage}`)
                                 )
                             }
                             }}>

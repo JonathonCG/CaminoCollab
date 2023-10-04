@@ -718,6 +718,13 @@ export const zoningPrereqs = [
                 <Text color="white" css={{textAlign: "center"}}>
                     Must include the property Identification (address or parcel number), contact information, current date of the letter, detailed description of request.  describing the details of the variance being requested and stating how the request is consistent with the required findings of fact described by Section 10.8 of this Ordinance. The letter should include any written commitments being made by the petitioner.
                 </Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a" css={{marginBottom: "5px"}}
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART10BOCO_S10.8DESTVA" target="_blank"
+                    >
+                        Link to Relevant Ordinance
+                    </Button>
+                </Row>
             </Container>
     },
     {
@@ -844,7 +851,7 @@ export const zoningPrereqs = [
                 </Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART7PLUNDEPU_S7.11DEDEPLFIRE" target="_blank"
+                    href="https://library.municode.com/ga/clayton_county/codes/code_of_ordinances?nodeId=PTIICOCLCOGE_APXAZO_ART11SIDEPL_S11.4REPRST" target="_blank"
                     >
                         Link to Relevant Ordinance
                     </Button>

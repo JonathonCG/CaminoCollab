@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import { LicenseCards } from './LicenseCards'
 import { LicensePages } from './LicensePages'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Container, Spacer, Grid, Card, Row, Text, Button, Col, Divider } from "@nextui-org/react";
 
 
 //Draws the LicenseCards on the screen based on the LicensePages array in QuestionCardsInfo.js
 export function LicenseContent() {
-    const [cardPage, setCardPage] = useState(0); //standard function component state changing 
+    // Read State from the URL, if no parameters are given, set page to zero
+    const [searchParams] = useSearchParams();
+    const cardPage = searchParams.get("page") ?? 0;
+
+    // Setting other state
     const [prevCardPage, setPrevCardPage] = useState(0);
     const navigate = useNavigate();
     console.log(cardPage);
@@ -20,11 +24,11 @@ export function LicenseContent() {
 
     const goBack = () => { /**this function changes the state setter back to 0, which is the 'first' page for the /License page with the LicenseCards on it. */
         if(cardPage === 1 || 2){
-            setCardPage(0);
+            navigate("/LicenseAssistant?page=0");
             console.log(cardPage);
         }
         if(cardPage > 2){
-            setCardPage(prevCardPage);
+            navigate(`/LicenseAssistant?page=${prevCardPage}`);
             console.log(cardPage);
         }
     };
@@ -38,7 +42,7 @@ export function LicenseContent() {
     };
 
     function ReturnToAssistantButton() {
-        if(cardPage === 0){
+        if(cardPage == 0){
             return(
                 <Row justify="center">
                     <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/Assistant')}}>
@@ -146,7 +150,7 @@ export function LicenseContent() {
                             } else {
                                 setPrevCardPage((cardPage)); // set prevCardPage with cardPage
                                 return (
-                                    setCardPage((LicenseCards[cardList].nextPage)) // change CardPage based on 'nextPage' from LicenseCards
+                                    navigate(`/LicenseAssistant?page=${LicenseCards[cardList].nextPage}`)
                                 )
                             }
                             }}

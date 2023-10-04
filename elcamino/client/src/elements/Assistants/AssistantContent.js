@@ -13,21 +13,21 @@ export function AssistantContent() {
             headerText: 'Assistant Category',
             bodyText: 'Permit',
             footerText: 'Go to the Permit Assistant for help with permits.',
-            url: '/PermitAssistant'
+            url: '/PermitAssistant?'
         },
         {
             id: 1,
             headerText: 'Assistant Category',
             bodyText: 'License',
             footerText: 'Go to the License Assistant for help with licensing.',
-            url: '/LicenseAssistant'
+            url: '/LicenseAssistant?'
         },
         {
             id: 2,
             headerText: 'Assistant Category',
             bodyText: 'Planning and Zoning',
             footerText: 'Go to the Planning and Zoning Assistant for help with planning and zoning requests.',
-            url: '/ZoningAssistant'
+            url: '/ZoningAssistant?'
         }
     ];
 

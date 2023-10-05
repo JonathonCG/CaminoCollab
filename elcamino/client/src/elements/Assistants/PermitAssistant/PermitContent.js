@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { PermitCards } from './PermitCards'
 import { PermitPages } from './PermitPages'
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -7,35 +7,20 @@ import { Container, Spacer, Grid, Card, Row, Text, Button, Col, Divider } from "
 
 //Draws the PermitCards on the screen based on the PermitPages array in QuestionCardsInfo.js
 export function PermitContent() {
-    // Read state from the URL, if no parameters are given, set page to zero
+    // Read 'state' from the URL, if no parameters are given, set page to zero
     const [searchParams] = useSearchParams();
     const cardPage = searchParams.get("page") ?? 0;
 
-    // Setting other state
-    const [prevCardPage, setPrevCardPage] = useState(0);
     const navigate = useNavigate();
-    console.log(cardPage);
-    console.log('prev: ' + prevCardPage);
 
-    
-    const handlePress = () => { /**this function scroll the window back to the top of the page, is called on the "go back button" */
+    const goBack = () => {
         window.scrollTo(0,0);
-      };
-
-    const goBack = () => { /**this function changes the state setter back to 0, which is the 'first' page for the /Permit page with the PermitCards on it. */
-        if(cardPage === 1 || 2){
-            navigate("/PermitAssistant?page=0");
-            console.log(cardPage);
-        }
-        else if(cardPage > 2){
-            navigate(`/PermitAssistant?page=${prevCardPage}`);
-            console.log(cardPage);
-        }
+        navigate(-1);
     };
 
     function BackButton() { /* Function changes what is displayed in the continue button element based on if we are on the first page or not */
         return (
-            <Button auto size="sm" rounded ghost color="warning" onPress={() => {goBack(); handlePress();}}>
+            <Button auto size="sm" rounded ghost color="warning" onPress={() => {goBack()}} >
                 Back
             </Button> 
         )
@@ -65,7 +50,7 @@ export function PermitContent() {
                     <Text h5>Choose between 'Residential' and 'Non-Residential' permits</Text>
                 </Row>
                 <Row justify='center'>
-                    <Text p>Or choose 'Special Event' if you'd like to apply for a Special Event permit</Text>
+                    <Text p>or choose 'Special Event' if you'd like to apply for a Special Event permit</Text>
                 </Row>
                 </>
             )
@@ -137,9 +122,7 @@ export function PermitContent() {
                             console.log(PermitCards[cardList].nextPage);
                             if(PermitCards[cardList].endpage){
                                 return navigate(paramID);
-                            }
-                            else{
-                                setPrevCardPage((cardPage)); // set prevCardPage with cardPage
+                            } else {
                                 return (
                                     navigate(`/PermitAssistant?page=${PermitCards[cardList].nextPage}`)
                                 )

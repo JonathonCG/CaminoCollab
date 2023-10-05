@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { LicenseCards } from './LicenseCards'
 import { LicensePages } from './LicensePages'
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -7,42 +7,27 @@ import { Container, Spacer, Grid, Card, Row, Text, Button, Col, Divider } from "
 
 //Draws the LicenseCards on the screen based on the LicensePages array in QuestionCardsInfo.js
 export function LicenseContent() {
-    // Read State from the URL, if no parameters are given, set page to zero
+    // Read 'state' from the URL, if no parameters are given, set page to zero
     const [searchParams] = useSearchParams();
     const cardPage = searchParams.get("page") ?? 0;
 
-    // Setting other state
-    const [prevCardPage, setPrevCardPage] = useState(0);
     const navigate = useNavigate();
-    console.log(cardPage);
-    console.log('prev: ' + prevCardPage);
 
-    
-    const handlePress = () => { /**this function scroll the window back to the top of the page, is called on the "go back button" */
+    const goBack = () => {
         window.scrollTo(0,0);
-    };
-
-    const goBack = () => { /**this function changes the state setter back to 0, which is the 'first' page for the /License page with the LicenseCards on it. */
-        if(cardPage === 1 || 2){
-            navigate("/LicenseAssistant?page=0");
-            console.log(cardPage);
-        }
-        if(cardPage > 2){
-            navigate(`/LicenseAssistant?page=${prevCardPage}`);
-            console.log(cardPage);
-        }
+        navigate(-1);
     };
 
     function BackButton() { /* Function changes what is displayed in the continue button element based on if we are on the first page or not */
         return (
-            <Button auto size="sm" rounded ghost color="warning" onPress={() => {goBack(); handlePress();}}>
+            <Button auto size="sm" rounded ghost color="warning" onPress={() => {goBack()}}>
                 Back
             </Button> 
         )
     };
 
     function ReturnToAssistantButton() {
-        if(cardPage == 0){
+        if(!cardPage){
             return(
                 <Row justify="center">
                     <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/Assistant')}}>
@@ -57,7 +42,7 @@ export function LicenseContent() {
 
     // Function for displaying start page help, might need to be broken out into dedicated file
     function StartHelp() {
-        if(cardPage === 0){
+        if(cardPage){
             return (
                 <>
                 <Spacer y={1} />
@@ -65,7 +50,7 @@ export function LicenseContent() {
                     <Text h5>Choose between 'Commercial' and 'Home' licenses </Text>
                 </Row>
                 <Row justify='center'>
-                    <Text p>Or choose 'Alcohol' if you'd like to apply to serve alcohol</Text>
+                    <Text p>or choose 'Alcohol' if you'd like to apply to serve alcohol</Text>
                 </Row>
                 </>
             )
@@ -148,7 +133,6 @@ export function LicenseContent() {
                             } else if(LicenseCards[cardList].endpage) {
                                 return navigate(paramID);
                             } else {
-                                setPrevCardPage((cardPage)); // set prevCardPage with cardPage
                                 return (
                                     navigate(`/LicenseAssistant?page=${LicenseCards[cardList].nextPage}`)
                                 )

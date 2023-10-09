@@ -1,4 +1,4 @@
-import { Button, Container, Row, Spacer, Text } from "@nextui-org/react";
+import { Button, Container, Row, Text } from "@nextui-org/react";
 
 // I know this looks like a lot, but the jsx you see just populates the hoverable '?' tooltips on the EndPage
 
@@ -484,7 +484,7 @@ export const licensePrereqs = [
                 <Text color="white" css={{textAlign: "center"}}>Georgia Department of Revenue</Text>
                 <Row justify="center">
                     <Button ghost size="sm" color="warning" as="a"
-                    href="https://www.gsccca.org/" target="_blank"
+                    href="https://dor.georgia.gov/alcohol-tobacco/alcohol-licenses-permits" target="_blank"
                     >
                         Alcohol Licensing
                     </Button>

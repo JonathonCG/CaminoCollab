@@ -1,16 +1,16 @@
 import { Container } from "@nextui-org/react";
 import { EndPageNavbar } from '../elements/Navbar';
-import { EndPageContent } from '../elements/EndPage/EndPageContent'
+import { LEndPageContent } from '../elements/EndPages/LicenseEndPage/LEndPageContent'
 import { Footer } from "../elements/Footer";
 
-export function EndPage() {
-document.title = "Permit Requirements"
+export function LicenseEndPage() {
+document.title = "License Requirements"
 
 return (
   <>
   <EndPageNavbar />
   <Container lg>
-    <EndPageContent />
+    <LEndPageContent />
     <Footer />
   </Container>
   </>

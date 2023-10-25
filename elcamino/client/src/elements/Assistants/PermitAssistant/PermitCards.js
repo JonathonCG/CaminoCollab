@@ -1,7 +1,7 @@
-// These are the 'cards' shown in the Assistant
+// These are the 'cards' shown in the Permit Assistant
 import { Text } from "@nextui-org/react";
 
-export const AssistantCards = [
+export const PermitCards = [
     {questionText : 'Non-Residential',
     categoryText : 'Permit Category',
     id : 0, 
@@ -309,7 +309,7 @@ export const AssistantCards = [
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/70/0/0',
     addinfo : '',
     endpage : true,
-    requirements : [],
+    requirements : [14],
     },
     {questionText : '',
     categoryText : '',

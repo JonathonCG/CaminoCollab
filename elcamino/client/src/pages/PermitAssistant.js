@@ -1,16 +1,16 @@
 import { AssistantNavbar } from '../elements/Navbar';
 import { Container } from "@nextui-org/react";
-import { AssistantContent } from "../elements/Assistants/AssistantContent";
+import { PermitContent } from "../elements/Assistants/PermitAssistant/PermitContent";
 import { Footer } from '../elements/Footer';
 
-export function Assistant() {
-    document.title = "Assistant"
+export function PermitAssistant() {
+    document.title = "Permit Assistant"
 
     return (
         <>
         <AssistantNavbar />
         <Container lg>
-            <AssistantContent />
+            <PermitContent />
         </Container>
         <Footer />
         </>

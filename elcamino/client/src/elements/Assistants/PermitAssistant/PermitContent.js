@@ -1,48 +1,37 @@
-import React, { useState } from 'react'
-import { AssistantCards } from './AssistantCards'
-import { AssistantPages } from './AssistantPages'
-import { useNavigate } from 'react-router-dom';
+import React from 'react'
+import { PermitCards } from './PermitCards'
+import { PermitPages } from './PermitPages'
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Container, Spacer, Grid, Card, Row, Text, Button, Col, Divider } from "@nextui-org/react";
 
 
-//Draws the AssistantCards on the screen based on the AssistantPages array in QuestionCardsInfo.js
-export function AssistantContent() {
-    const [cardPage, setCardPage] = useState(0); //standard function component state changing 
-    const [prevCardPage, setPrevCardPage] = useState(0);
+//Draws the PermitCards on the screen based on the PermitPages array in QuestionCardsInfo.js
+export function PermitContent() {
+    // Read 'state' from the URL, if no parameters are given, set page to zero
+    const [searchParams] = useSearchParams();
+    const cardPage = searchParams.get("page") ?? 0;
+
     const navigate = useNavigate();
-    console.log(cardPage);
-    console.log('prev: ' + prevCardPage);
 
-    
-    const handlePress = () => { /**this function scroll the window back to the top of the page, is called on the "go back button" */
+    const goBack = () => {
         window.scrollTo(0,0);
-      };
-
-    const goBack = () => { /**this function changes the state setter back to 0, which is the 'first' page for the /Assistant page with the AssistantCards on it. */
-        if(cardPage === 1 || 2){
-            setCardPage(0);
-            console.log(cardPage);
-        }
-        if(cardPage > 2){
-            setCardPage(prevCardPage);
-            console.log(cardPage);
-        }
+        navigate(-1);
     };
 
     function BackButton() { /* Function changes what is displayed in the continue button element based on if we are on the first page or not */
         return (
-            <Button auto size="sm" rounded ghost color="warning" onPress={() => {goBack(); handlePress();}}>
+            <Button auto size="sm" rounded ghost color="warning" onPress={() => {goBack()}} >
                 Back
             </Button> 
         )
     };
 
-    function ReturnToAddressButton() {
+    function ReturnToAssistantButton() {
         if(cardPage === 0){
             return(
                 <Row justify="center">
-                    <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/')}}>
-                        Return to Address Lookup
+                    <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/Assistant')}}>
+                        Return to Assistant Selection
                     </Button>
                 </Row>
             )
@@ -61,7 +50,7 @@ export function AssistantContent() {
                     <Text h5>Choose between 'Residential' and 'Non-Residential' permits</Text>
                 </Row>
                 <Row justify='center'>
-                    <Text p>Or choose 'Special Event' if you are applying to host a Special Event.</Text>
+                    <Text p>or choose 'Special Event' if you'd like to apply for a Special Event permit</Text>
                 </Row>
                 </>
             )
@@ -77,7 +66,7 @@ export function AssistantContent() {
                 <Spacer y={1} />
                 <Row width="60%" align="baseline" justify="space-between">
                     <BackButton />
-                    <Text h5 weight="bold" css={{p: "0px 20px"}}>{AssistantPages[cardPage].name}</Text>
+                    <Text h5 weight="bold" css={{p: "0px 20px"}}>{PermitPages[cardPage].name}</Text>
                 </Row>
                 </>
             )
@@ -85,7 +74,7 @@ export function AssistantContent() {
         return
     };
 
-    // Function for giving non-endpage AssistantCards borders
+    // Function for giving non-endpage PermitCards borders
     function cardVariant(endpage) {
         if(endpage === false){
             return "bordered"
@@ -101,7 +90,7 @@ export function AssistantContent() {
     
     // Function for determining addinfo color based on categoryText
     function addinfoColor(category) {
-        const color = (category === 'Plans Review') ? 'error' : 'black';
+        const color = (category === 'Plans Review') ? 'error' : 'black'; // if category = plans, make text red (error color), if not, make it black
         return color
     };
 
@@ -120,40 +109,36 @@ export function AssistantContent() {
             <Divider />
             <Spacer y={1} />
             <Grid.Container gap={2} justify="center">
-                {AssistantPages[cardPage].cards.map((cardList) => ( //Maps the AssistantPages array
+                {PermitPages[cardPage].cards.map((cardList) => ( //Maps the PermitPages array
                     //Key to keep items organized per React rules
-                    <Grid xs={12} sm={6} md={5} lg={4} xl={4} justify="center" key={AssistantCards[cardList].id}> 
+                    <Grid xs={12} sm={6} md={5} lg={4} xl={4} justify="center" key={PermitCards[cardList].id}> 
                         <Card 
                         isPressable
                         isHoverable
-                        variant={cardVariant(AssistantCards[cardList].endpage)}
+                        variant={cardVariant(PermitCards[cardList].endpage)}
                         borderWeight="bold"
                         onPress={()=>{ // onClick function that changes the 'cardPage' state to the ID of the question displayed.
-                            const paramID = '/nextsteps/' + AssistantCards[cardList].id;
-                            console.log(AssistantCards[cardList].nextPage);
-                            if(AssistantCards[cardList].endpage){
+                            const paramID = '/PermitRequirements/' + PermitCards[cardList].id;
+                            console.log(PermitCards[cardList].nextPage);
+                            if(PermitCards[cardList].endpage){
                                 return navigate(paramID);
-                            }
-                            else{
-                                setPrevCardPage((cardPage)); // set prevCardPage with cardPage
+                            } else {
                                 return (
-                                    setCardPage((AssistantCards[cardList].nextPage)) // change CardPage based on 'nextPage' from AssistantCards
+                                    navigate(`/PermitAssistant?page=${PermitCards[cardList].nextPage}`)
                                 )
-                                console.log(cardPage);
-                                console.log('prev: ' + prevCardPage);
                             }
                             }}>
-                            <Card.Header>
-                                <Text weight="bold" color={headerColor(AssistantCards[cardList].categoryText)}>
-                                    {AssistantCards[cardList].categoryText}
+                            <Card.Header css={{paddingBottom: "0px"}}>
+                                <Text weight="bold" color={headerColor(PermitCards[cardList].categoryText)}>
+                                    {PermitCards[cardList].categoryText}
                                 </Text>
                             </Card.Header>
                             <Card.Body>
                                 <Row align="center">
                                     <Col>
-                                        <Text h3>{AssistantCards[cardList].questionText}</Text>
-                                        <Text p color={addinfoColor(AssistantCards[cardList].categoryText)}>
-                                            {AssistantCards[cardList].addinfo}
+                                        <Text h3>{PermitCards[cardList].questionText}</Text>
+                                        <Text p color={addinfoColor(PermitCards[cardList].categoryText)}>
+                                            {PermitCards[cardList].addinfo}
                                         </Text>
                                     </Col>
                                 </Row>
@@ -165,7 +150,7 @@ export function AssistantContent() {
             <Spacer y={1} />
             <Divider />
             <Spacer y={1} />
-            <ReturnToAddressButton />
+            <ReturnToAssistantButton />
             <PageIndicator />
         </Container>
          );  

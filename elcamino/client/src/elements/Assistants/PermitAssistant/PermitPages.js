@@ -1,7 +1,7 @@
-export const AssistantPages = [
+export const PermitPages = [
     {id : 0,
     cards : [0,1,55],
-    name : 'Start'},
+    name : ''},
     {id : 1,
     cards : [61,2,3,4,5,6,64],
     name : 'Non-Residential Permits'},

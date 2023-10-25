@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Card, Container, Row, Spacer, Text } from "@nextui-org/react";
+import { Button, Card, Row, Text } from "@nextui-org/react";
 
 export function HelpMenu() {
     const [open, setOpen] = useState(false);

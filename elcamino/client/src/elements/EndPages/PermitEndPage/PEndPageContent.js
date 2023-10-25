@@ -1,19 +1,19 @@
-import { AssistantCards } from "../Assistant/AssistantCards"
+import { PermitCards } from '../../Assistants/PermitAssistant/PermitCards';
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { Spacer, Grid, Card, Row, Text, Button, Checkbox, Divider } from "@nextui-org/react";
-import { ContinueButton } from './ContinueButton'
-import { prereqs } from "./prereqs";
-import { PrereqTips } from "./PrereqTips";
+import { ContinueButton } from '../ContinueButton'
+import { permitPrereqs } from "./permitPrereqs";
+import { PrereqTips } from "./PermitPrereqTips";
 
 
-export function EndPageContent() {
+export function PEndPageContent() {
     const { id } = useParams();
     const navigate = useNavigate()
     const [selected, setSelected] = useState(false); /**State setting for the checkbox */
     const [groupSelected, setGroupSelected] = useState([])
-    const card = AssistantCards[id]
+    const card = PermitCards[id]
     const cardReqs = card.requirements
     const cardCategoryText = card.categoryText
 
@@ -72,8 +72,8 @@ export function EndPageContent() {
               onChange={setGroupSelected}
               > 
               {card.requirements.map((reqs) => ( //Mapping requirements to Checkboxes
-                <Checkbox lineThrough value={prereqs[reqs].id}>
-                  {prereqs[reqs].name} <PrereqTips tip={prereqs[reqs].tip} />
+                <Checkbox lineThrough value={permitPrereqs[reqs].id}>
+                  {permitPrereqs[reqs].name} <PrereqTips tip={permitPrereqs[reqs].tip} />
                 </Checkbox>
               ))}
             </Checkbox.Group>
@@ -128,8 +128,8 @@ export function EndPageContent() {
                 onChange={setGroupSelected}
                 > 
                 {card.requirements.map((reqs) => ( //Mapping requirements to Checkboxes
-                  <Checkbox lineThrough value={prereqs[reqs].id}>
-                    {prereqs[reqs].name} <PrereqTips tip={prereqs[reqs].tip} />
+                  <Checkbox lineThrough value={permitPrereqs[reqs].id}>
+                    {permitPrereqs[reqs].name} <PrereqTips tip={permitPrereqs[reqs].tip} />
                   </Checkbox>
                 ))}
               </Checkbox.Group>
@@ -149,14 +149,14 @@ export function EndPageContent() {
                 <ContinueButton category={cardCategoryText} selected={selected} cardlink={card.endpagelink} />
               </Row>
               <Row justify="center">
-                <Text color="#6e6e6e" p>
+                <Text color="error" p>
                   ** You will be required to login/register to our Customer Self-Service on the next page
                 </Text>
               </Row>
               <Spacer y={2} />
               <Row justify="center">
-                <Button auto size="sm" onPress={() => {return navigate('/assistant')}}>
-                Go back
+                <Button auto size="sm" rounded ghost color="warning" onPress={() => {navigate('/Assistant')}}>
+                  Restart Assistant
                 </Button>
               </Row>
           </Grid>

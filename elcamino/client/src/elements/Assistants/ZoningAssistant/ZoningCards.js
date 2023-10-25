@@ -36,7 +36,7 @@ export const ZoningCards = [
     endpagelink: 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/plan/apply/37/0/0',
     addinfo: 'Request to develop land.',
     endpage: true,
-    requirements: [30,6,11,57,32,33,34,35,36,37,38,39,40],
+    requirements: [0,30,6,11,57,32,33,34,35,36,37,38,39,40],
     },
     {questionText: 'Trees', 
     categoryText: 'Request Category',

@@ -180,7 +180,7 @@ export const PermitCards = [
     endpagelink : 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/permit/apply/34/0/0',
     addinfo : 'Required for building a structure connected to the main structure such as a deck or room.',
     endpage : true,
-    requirements : [1,3,4,8,9,10,11,12,13,14,22],
+    requirements : [1,3,4,8,9,10,11,12,13,14,27,28],
     },
     {questionText : 'House Moving, Into the County',
     categoryText : 'Permit',

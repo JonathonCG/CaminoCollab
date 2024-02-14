@@ -12,7 +12,7 @@ export function HomeContent() {
                         <Text h1>Community Development Assistant</Text>
                     </Row>
                     <Row justify="center">
-                        <Text h4>The Community Development Assistant is here to help you file a permit, zoning change requests, and acquire licensing in unincorporated Clayton County</Text>
+                        <Text h4>The Community Development Assistant is here to help you file a permit, zoning requests, and acquire licensing in unincorporated Clayton County</Text>
                     </Row>
                     <Spacer y={2} />
                     <Row justify="center">

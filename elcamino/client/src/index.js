@@ -8,7 +8,7 @@ import { theme } from './styles/theme';
 import ReactGA from 'react-ga4';
 
 // Google Analytics
-ReactGA.initialize("G-YV3GGF3B3Q");
+ReactGA.initialize("G-N6T9KG86GQ");
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

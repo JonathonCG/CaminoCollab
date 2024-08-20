@@ -9,7 +9,7 @@ export const ZoningCards = [
     endpagelink: 'https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/plan/apply/56/0/0',
     addinfo: 'Most Zoning requests and processes require an initial meeting to state your intentions to be approved or denied in front either the Board of Commissioners or the Board of Zoning Appeals.',
     endpage: true,
-    requirements: [0,1],
+    requirements: [0,1,58],
     },
     {questionText: 'BOC Hearing Required', 
     categoryText: 'Request Category',

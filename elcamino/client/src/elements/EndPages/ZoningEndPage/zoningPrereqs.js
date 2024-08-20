@@ -858,4 +858,21 @@ export const zoningPrereqs = [
                 </Row>
             </Container>
     },
+    {   // Specific to Site Development
+        id: 58, 
+        name: 'Future Land Use Plan Amendment Supplemental Application', 
+        tip: 
+            <Container css={{padding: "3px"}}>
+                <Text color="white" css={{textAlign: "center"}}>
+                For proposed land use changes, a Future Land Use Plan Amendment Supplemental is required.
+                </Text>
+                <Row justify="center">
+                    <Button ghost size="sm" color="warning" as="a"
+                    href="https://form.jotform.com/241793737729068" target="_blank"
+                    >
+                        Link to Future Land Use Plan Amendment Supplemental Application
+                    </Button>
+                </Row>
+            </Container>
+    },
 ];

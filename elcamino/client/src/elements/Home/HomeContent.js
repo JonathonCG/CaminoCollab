@@ -19,7 +19,7 @@ export function HomeContent() {
                         <Text h5>Type an address below to verify that it is in Unincorporated Clayton County</Text>
                     </Row>
                     <Row justify="center">
-                        <Text p>Then you'll be able to find the right permit, along with the required documents you'll need while filing</Text>
+                        <Text p>Then you'll be able to advance to the Assistant</Text>
                     </Row>
                     <Row justify="center">
                         <SearchBox />

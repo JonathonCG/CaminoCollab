@@ -29,7 +29,7 @@ export function UnincorpAddr({zone, addr}) {
                             *For official zoning, file for a <Text 
                             css={{textDecoration: "underline"}} 
                             as="a" 
-                            href="https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/plan/apply/60/0/0"
+                            href="https://claytoncountyga-energovweb.tylerhost.net/apps/selfservice#/plan/apply/60/0/0"
                             target="_blank"
                             >
                                 Zoning Verification Letter
@@ -45,7 +45,7 @@ export function UnincorpAddr({zone, addr}) {
                             <Button 
                             css={{width: "40%", margin: "3% 25% 0%"}} 
                             auto size="xs" color="primary" ghost
-                            as="a" href={`https://selfservice.claytoncountyga.gov/EnerGovProd/SelfService#/search?m=1&fm=1&ps=10&pn=1&em=true&st=${encodeURIComponent(addr)}`}
+                            as="a" href={`https://claytoncountyga-energovweb.tylerhost.net/apps/selfservice#/search?m=1&fm=1&ps=10&pn=1&em=true&st=${encodeURIComponent(addr)}`}
                             target="_blank"
                             >
                                 Existing permits and licenses at this address

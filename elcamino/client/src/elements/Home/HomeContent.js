@@ -44,7 +44,7 @@ export function HomeContent() {
                             ghost
                             css={{zIndex: "0"}}
                             as="a" 
-                            href="https://selfservice.claytoncountyga.gov/energovprod/selfservice/#/home"
+                            href="https://claytoncountyga-energovweb.tylerhost.net/apps/selfservice/#/home"
                             >
                                 Existing Customers with CSS Login
                             </Button>
